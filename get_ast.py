@@ -65,7 +65,8 @@ def iterative_scrape_calldata(root,fns):
                         print("Call detected before function definition!")
                         print("Function called: "+node.func.id)
                 else:
-                    current_fn.addCall(node.func.id)
+                    if node.func.id in [x.name for x in fns]:
+                        current_fn.addCall(node.func.id)
     return fns
         
 
@@ -75,6 +76,10 @@ def getAST(filename):
     f.close()
     fns = scrape_functions(root)
     fns = iterative_scrape_calldata(root,fns)
+    for fn in fns:
+        print()
+        print(fn.name)
+        print(fn.calls)
 
 if __name__== '__main__':
     #filename = getFilename()
