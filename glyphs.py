@@ -1,4 +1,5 @@
 from random import randint
+import sys,ast,os.path
 
 class fn: 
     def __init__(self, identifier, name):
@@ -47,16 +48,50 @@ def writeWeights(fns,filename="outputWeights.csv"):
         f.write(fn.name+","+str(fn.weight)+"\n")
     f.close()
     
-    
-def test():
-    n = 15 # number of test functions to create
-    fns = [fn(i,str(i)+"_name") for i in range(n)]
-    for i in range(n):
-        fns[i].setWeight(randint(1,100))
-    for i in range(n):
-        for j in range(n):
-            if randint(0,3) > 1:
-                fns[i].addCall(fns[j])
-    writeMatrix(fns)
-    writeWeights(fns)
+def scrape_functiondata(node):
+    fns = []
+    n = 0
+    for node in ast.walk(node):
+        if isinstance(node, ast.FunctionDef):
+            fns.append(fn(n,node.name))
+            n += 1
     return fns
+            
+def scrape_calldata(root,fns):
+    unprocessed_nodes=[root]
+    while unprocessed_nodes != []:
+        node = unprocessed_nodes.pop()
+        unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
+        if isinstance(node,ast.FunctionDef):
+            for fn in fns:
+                if fn.name == node.name:
+                    current_fn = fn
+                    break
+        if isinstance(node,ast.Call):
+            if isinstance(node.func,ast.Name):
+                if "current_fn" not in locals():
+                    if node.func.id == 'main':
+                        pass
+                    else:
+                        print("Call detected before function definition!")
+                        print("Function called: "+node.func.id)
+                else:
+                    if node.func.id in [x.name for x in fns]:
+                        current_fn.addCall(node.func.id)
+    return fns
+    
+def getAST(filename):
+    f = open(filename)
+    root = ast.parse(f.read())
+    f.close()
+    fns = scrape_functiondata(root)
+    fns = scrape_calldata(root,fns)
+    for fn in fns:
+        print()
+        print(fn.name)
+        print(fn.calls)
+        
+if __name__== '__main__':
+    #filename = getFilename()
+    filename = "mandelbrot.py"
+    s = getAST(filename)        
