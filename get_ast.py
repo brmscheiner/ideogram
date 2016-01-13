@@ -68,20 +68,6 @@ def iterative_scrape_calldata(root,fns):
                     current_fn.addCall(node.func.id)
     return fns
         
-    
-def recursive_scrape_calldata(node,fns,current_fn='none'):
-    # Deprecated because input files will need indeterminate recursion depth.
-    if isinstance(node, ast.FunctionDef):
-        for fn in fns:
-            if fn.name == node.name:
-                current_fn = fn
-                break
-    if isinstance(node, ast.Call):
-        if isinstance(node.func, ast.Name):
-            current_fn.addCall(node.func.id)
-    for each in ast.iter_child_nodes(node):
-        fns = scrape_calldata(node,fns,current_fn)
-    return fns 
 
 def getAST(filename):
     f = open(filename)
