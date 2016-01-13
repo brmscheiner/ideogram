@@ -2,12 +2,16 @@ from random import randint
 
 class fn: 
     def __init__(self, identifier, name):
-        self.id    = identifier 
-        self.name  = name
-        self.calls = dict()
+        self.id     = identifier 
+        self.name   = name
+        self.weight = 0
+        self.calls  = dict()
     
     def setWeight(self,weight):
         self.weight = weight 
+        
+    def increaseWeight(self):
+        self.weight += 1
 
     def addCall(self,called):
         if called in self.calls:
