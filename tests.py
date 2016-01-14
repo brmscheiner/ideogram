@@ -1,4 +1,6 @@
 from glyphs import *
+from random import randint
+
 
 def test_csv_writers():
     n = 15 # number of test functions to create

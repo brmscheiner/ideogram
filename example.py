@@ -46,31 +46,7 @@ def writeWeights(fns,filename="outputWeights.csv"):
     for fn in fns:
         f.write(fn.name+","+str(fn.weight)+"\n")
     f.close()
-
-def ifNameEqualsMain(root):
-    # returns True if file of structure if __name__=='__main__'
-    # note: what about cases where if __name__=='__main__': main()?
-    unprocessed_nodes=[root]
-    depth=0
-    while unprocessed_nodes != [] and depth < 2:
-        # if __name__=='__main__' clause occurs at depth=1
-        node = unprocessed_nodes.pop()
-        unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
-        if isinstance(node, ast.If):
-            ifsubnodes = [i for i in ast.iter_child_nodes(node)]
-            for i in ifsubnodes:
-                if isinstance(i, ast.Compare):
-                    leftside   = i.left
-                    rightside  = i.comparators[0]
-                    if isinstance(leftside, ast.Name):
-                        left__name__  = leftside.id=="__name__"
-                    if isinstance(rightside, ast.Str):
-                        right__main__ = rightside.s=="__main__"
-                    if left__name__ and right__main__:
-                        return True
-        depth+=1
-    return False
-
+    
 def scrape_functiondata(node):
     fns = []
     n = 0
@@ -80,7 +56,7 @@ def scrape_functiondata(node):
             n += 1
     return fns
             
-def scrape_calldata(root,fns,current_fn=None):
+def scrape_calldata(root,fns):
     unprocessed_nodes=[root]
     while unprocessed_nodes != []:
         node = unprocessed_nodes.pop()
@@ -104,15 +80,11 @@ def scrape_calldata(root,fns,current_fn=None):
     return fns
     
 def getAST(filename):
-    with open(filename) as f:
-        root = ast.parse(f.read())
+    f = open(filename)
+    root = ast.parse(f.read())
+    f.close()
     fns = scrape_functiondata(root)
-    if ifNameEqualsMain(root):
-        NameEqMain=fn(len(fns),"NameEqMain")
-        fns.append(NameEqMain)
-        fns = scrape_calldata(root,fns,NameEqMain)
-    else:
-        fns = scrape_calldata(root,fns)
+    fns = scrape_calldata(root,fns)
     return fns
 
 def printfns(fns):
@@ -120,11 +92,11 @@ def printfns(fns):
         print()
         print(fn.name)
         print(fn.calls)
-    
+
 if __name__== '__main__':
     #filename = getFilename()
-    filename = "example.py"
+    filename = "itself.py"
     fns = getAST(filename)
     writeMatrix(fns)
     writeWeights(fns)
-    #printfns(fns)
+    printfns(fns)

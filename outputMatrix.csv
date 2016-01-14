@@ -1,0 +1,14 @@
+function_name,genMatrixHeader,genMatrixRow,writeMatrix,writeWeights,scrape_functiondata,scrape_calldata,getAST,printfns,__init__,setWeight,increaseWeight,addCall,NameEqMain
+genMatrixHeader,0,0,0,0,0,0,0,0,0,0,0,0,0
+genMatrixRow,0,0,0,0,0,0,0,0,0,0,0,0,0
+writeMatrix,1,1,0,0,0,0,0,0,0,0,0,0,0
+writeWeights,0,0,0,0,0,0,0,0,0,0,0,0,0
+scrape_functiondata,0,0,0,0,0,0,0,0,0,0,0,0,0
+scrape_calldata,0,0,0,0,0,0,0,0,0,0,0,0,0
+getAST,0,0,0,0,1,1,0,0,0,0,0,0,0
+printfns,0,0,0,0,0,0,0,0,0,0,0,0,0
+__init__,0,0,0,0,0,0,0,0,0,0,0,0,0
+setWeight,0,0,0,0,0,0,0,0,0,0,0,0,0
+increaseWeight,0,0,0,0,0,0,0,0,0,0,0,0,0
+addCall,0,0,0,0,0,0,0,0,0,0,0,0,0
+NameEqMain,0,0,1,1,0,0,1,1,0,0,0,0,0
