@@ -1,6 +1,6 @@
 import ast
 
-class fn: 
+class Fn: 
     def __init__(self, identifier, name):
         self.id     = identifier 
         self.name   = name
@@ -47,7 +47,7 @@ def writeWeights(fns,filename="outputWeights.csv"):
         f.write(fn.name+","+str(fn.weight)+"\n")
     f.close()
 
-def ifNameEqualsMain(root):
+def nameEqualsMain(root):
     # returns True if file of structure if __name__=='__main__'
     # note: what about cases where if __name__=='__main__': main()?
     unprocessed_nodes=[root]
@@ -68,6 +68,7 @@ def ifNameEqualsMain(root):
                         right__main__ = rightside.s=="__main__"
                     if left__name__ and right__main__:
                         return True
+                    break
         depth+=1
     return False
 
@@ -76,11 +77,12 @@ def scrape_functiondata(node):
     n = 0
     for node in ast.walk(node):
         if isinstance(node, ast.FunctionDef):
-            fns.append(fn(n,node.name))
+            fns.append(Fn(n,node.name))
             n += 1
     return fns
             
-def scrape_calldata(root,fns,current_fn=None):
+def match_calldata(root,fns):
+    current_fn=None
     unprocessed_nodes=[root]
     while unprocessed_nodes != []:
         node = unprocessed_nodes.pop()
@@ -90,29 +92,21 @@ def scrape_calldata(root,fns,current_fn=None):
                 if fn.name == node.name:
                     current_fn = fn
                     break
-        if isinstance(node,ast.Call):
+        if isinstance(node,ast.Call):            
             if isinstance(node.func,ast.Name):
-                if "current_fn" not in locals():
-                    if node.func.id == 'main':
-                        pass
-                    else:
-                        print("Call detected before function definition!")
-                        print("Function called: "+node.func.id)
-                else:
-                    if node.func.id in [x.name for x in fns]:
-                        current_fn.addCall(node.func.id)
+                if current_fn==None:
+                    name = "!main" if nameEqualsMain(root) else "!body" 
+                    current_fn = Fn(len(fns), name)
+                    fns.append(current_fn)
+                if node.func.id in [x.name for x in fns]:
+                    current_fn.addCall(node.func.id)
     return fns
     
 def getAST(filename):
     with open(filename) as f:
         root = ast.parse(f.read())
     fns = scrape_functiondata(root)
-    if ifNameEqualsMain(root):
-        NameEqMain=fn(len(fns),"NameEqMain")
-        fns.append(NameEqMain)
-        fns = scrape_calldata(root,fns,NameEqMain)
-    else:
-        fns = scrape_calldata(root,fns)
+    fns = match_calldata(root, fns)
     return fns
 
 def printfns(fns):
@@ -120,11 +114,14 @@ def printfns(fns):
         print()
         print(fn.name)
         print(fn.calls)
-    
-if __name__== '__main__':
-    #filename = getFilename()
-    filename = "example.py"
+
+def glyphData(filename):
     fns = getAST(filename)
     writeMatrix(fns)
     writeWeights(fns)
-    #printfns(fns)
+#    printfns(fns)
+    
+if __name__== '__main__':
+    #filename = getFilename()
+    filename = "mandelbrot.py"
+    glyphData(filename)
