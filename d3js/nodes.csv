@@ -1,0 +1,16 @@
+function_name,weight
+calc_mandelbrot_vals,0
+escapeval_to_color,0
+get_mb_corename,0
+extract_mb_filename,0
+write_mb,0
+read_mb,0
+get_mb_path,0
+write_array_file,0
+read_array_file,0
+get_mandelbrot,0
+mb_to_png,0
+mb_to_tkinter,0
+main,0
+println,0
+!main,0

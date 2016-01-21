@@ -19,33 +19,26 @@ class Fn:
         else: 
             self.calls[called] = 1
             
-def genMatrixHeader(fns):
-    yield "function_name"
+def genNodes(fns):
+    yield "function_name,weight"
     for fn in fns:
-        yield ","+fn.name
+        yield "\n"+fn.name+","+str(fn.weight)
     yield "\n"
     
-def genMatrixRow(fns,fn):
-    yield fn.name
-    for ifn in fns:
-        if ifn.name in fn.calls:
-            yield ","+str(fn.calls[ifn.name])
-        else: yield ",0"
-    yield "\n"
+def genLinks(fns):
+    yield "source,target,value\n"
+    for source_fn in fns:
+        for target_fn in source_fn.calls:
+            yield source_fn.name+","+target_fn+","+ \
+                  str(source_fn.calls[target_fn])+"\n"
     
-def writeMatrix(fns,filename="outputMatrix.csv"):
-    f = open(filename,'w')
-    f.writelines(genMatrixHeader(fns))
-    for fn in fns:
-        f.writelines(genMatrixRow(fns,fn))
-    f.close()
+def writeNodes(fns,filename="nodes.csv"):
+    with open(filename,'w') as f:
+        f.writelines(genNodes(fns))
     
-def writeWeights(fns,filename="outputWeights.csv"):
-    f = open(filename,'w')
-    f.write("function_name,weight\n")
-    for fn in fns:
-        f.write(fn.name+","+str(fn.weight)+"\n")
-    f.close()
+def writeLinks(fns,filename="links.csv"):
+    with open(filename,'w') as f:
+        f.writelines(genLinks(fns))
 
 def nameEqualsMain(root):
     # returns True if file of structure if __name__=='__main__'
@@ -117,8 +110,8 @@ def printfns(fns):
 
 def glyphData(filename):
     fns = getAST(filename)
-    writeMatrix(fns)
-    writeWeights(fns)
+    writeNodes(fns)
+    writeLinks(fns)
 #    printfns(fns)
     
 if __name__== '__main__':
