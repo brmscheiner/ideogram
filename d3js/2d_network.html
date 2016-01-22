@@ -7,14 +7,14 @@
 </head>
 <body>
 <script>
-var width = 500;
-var height = 500;
+var width = 800;
+var height = 800;
 var svg = d3.select("body").append("svg")
                 .attr("width",width)
                 .attr("height",height);
                 
 d3.csv("nodes.csv", function(node_error,node_data) {
- d3.csv("links.csv", function(link_error,error_data) {
+ d3.csv("links.csv", function(link_error,link_data) {
    if (node_error) throw node_error;
    if (link_error) throw link_error;
                    
@@ -27,13 +27,33 @@ d3.csv("nodes.csv", function(node_error,node_data) {
                    .attr("cy",function (d,i) {
                        return 200*Math.cos(i*2*Math.PI/node_data.length)+width/2; })
                    .attr("r",5)
+                   .attr("id",function(d){
+                            return 'id_'+d.function_name;})
+                            // what about !main?
                    .style("fill","black"); 
                    
-   var centerReference = svg.append("circle")
-                   .attr("cx",width/2)
-                   .attr("cy",height/2)
-                   .attr("r",5)
-                   .style("fill","red");
+                   
+                  // d3.select('#id_' + d.id)
+                   
+    var lines = svg.selectAll("line")
+                    .data(link_data)
+                    .enter()
+                    .append("line")
+                    .attr("x1",function (d) {
+                        return svg.select("#id_"+d.source).attr("cx");
+                    })
+                    .attr("y1",function (d) {
+                        return svg.select("#id_"+d.source).attr("cy");
+                    })
+                    .attr("x2",function (d) {
+                        return svg.select("#id_"+d.target).attr("cx");
+                    })
+                    .attr("y2",function (d) {
+                        return svg.select("#id_"+d.target).attr("cy");
+                    })
+                    .attr("stroke-width",2)
+                    .attr("stroke","grey");
+
  })
 });
 
