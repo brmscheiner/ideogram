@@ -88,7 +88,7 @@ def match_calldata(root,fns):
         if isinstance(node,ast.Call):            
             if isinstance(node.func,ast.Name):
                 if current_fn==None:
-                    name = "!main" if nameEqualsMain(root) else "!body" 
+                    name = "main_shuttle" if nameEqualsMain(root) else "body_code" 
                     current_fn = Fn(len(fns), name)
                     fns.append(current_fn)
                 if node.func.id in [x.name for x in fns]:
