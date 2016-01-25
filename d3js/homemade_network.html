@@ -32,9 +32,6 @@ d3.csv("nodes.csv", function(node_error,node_data) {
                             // what about !main?
                    .style("fill","black"); 
                    
-                   
-                  // d3.select('#id_' + d.id)
-                   
     var lines = svg.selectAll("line")
                     .data(link_data)
                     .enter()

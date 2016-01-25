@@ -32,11 +32,11 @@ def genLinks(fns):
             yield source_fn.name+","+target_fn+","+ \
                   str(source_fn.calls[target_fn])+"\n"
     
-def writeNodes(fns,filename="nodes.csv"):
+def writeNodes(fns,filename="d3js/nodes.csv"):
     with open(filename,'w') as f:
         f.writelines(genNodes(fns))
     
-def writeLinks(fns,filename="links.csv"):
+def writeLinks(fns,filename="d3js/links.csv"):
     with open(filename,'w') as f:
         f.writelines(genLinks(fns))
 
