@@ -52,6 +52,7 @@ Suggestions:
 __author__ = "Jack Trainor"
 __date__ = "2015-12-28"
 
+from random import randint
 import sys
 import re
 import os.path

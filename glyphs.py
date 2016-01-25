@@ -1,11 +1,11 @@
 import ast
 
 class Fn: 
-    def __init__(self, identifier, name):
-        self.id     = identifier 
-        self.name   = name
-        self.weight = 0
-        self.calls  = dict()
+    def __init__(self, name, module, weight=0):
+        self.name    = name
+        self.weight  = weight
+        self.module  = module
+        self.calls   = dict()
     
     def setWeight(self,weight):
         self.weight = weight 
@@ -65,16 +65,27 @@ def nameEqualsMain(root):
         depth+=1
     return False
 
-def scrape_functiondata(node):
+def scrape_functiondata(node, module_name):
     fns = []
-    n = 0
     for node in ast.walk(node):
         if isinstance(node, ast.FunctionDef):
-            fns.append(Fn(n,node.name))
-            n += 1
+            fns.append(Fn(node.name,module_name))
     return fns
             
-def match_calldata(root,fns):
+def scrape_importdata(node, fns):
+    imports = []
+    for node in ast.walk(node):
+        if isinstance(node, ast.Import):
+            for x in node.names:
+                imports.append(x.asname if x.asname else x.name)
+        if isinstance(node, ast.ImportFrom):
+            module_name = node.module
+            for x in node.names:
+                fn_name = x.asname if x.asname else x.name
+                fns.append(Fn(fn_name,module_name))
+    return fns,imports
+          
+def match_calldata(root, fns, module_name):
     current_fn=None
     unprocessed_nodes=[root]
     while unprocessed_nodes != []:
@@ -89,7 +100,7 @@ def match_calldata(root,fns):
             if isinstance(node.func,ast.Name):
                 if current_fn==None:
                     name = "main_shuttle" if nameEqualsMain(root) else "body_code" 
-                    current_fn = Fn(len(fns), name)
+                    current_fn = Fn(name, module_name)
                     fns.append(current_fn)
                 if node.func.id in [x.name for x in fns]:
                     current_fn.addCall(node.func.id)
@@ -98,8 +109,9 @@ def match_calldata(root,fns):
 def getAST(filename):
     with open(filename) as f:
         root = ast.parse(f.read())
-    fns = scrape_functiondata(root)
-    fns = match_calldata(root, fns)
+    fns = scrape_functiondata(root, filename)
+    fns,imports = scrape_importdata(root, fns)
+    fns = match_calldata(root, fns, filename)
     return fns
 
 def printfns(fns):

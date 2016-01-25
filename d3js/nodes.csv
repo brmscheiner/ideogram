@@ -13,4 +13,7 @@ mb_to_png,0
 mb_to_tkinter,0
 main,0
 println,0
+randint,0
+Image,0
+ImageDraw,0
 main_shuttle,0
