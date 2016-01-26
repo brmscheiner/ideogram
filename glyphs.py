@@ -1,4 +1,29 @@
+# weight nodes... based on number of AST children?
+# add support for .foo and . import statements
+# refactor so function names are unique (use path) 
 import ast
+import os
+from subprocess import call
+
+class Module:
+    def __init__(self, path, file):
+        self.path        = path
+        self.file        = file
+        self.name        = path+"\\"+file
+        self.callTree    = []
+
+    def addFns(self,invar):
+        # Accepts a single function or a list of functions
+        if isinstance(invar,Fn):
+            self.callTree.append(invar)
+        elif isinstance(invar,list):
+            for i in invar:
+                if isinstance(i,Fn):
+                    self.callTree.append(i)
+                else: 
+                    raise "AAAAAAAGHHHHHHHHH"
+        else:
+            raise "AAAAAAAGHHHHHHHHH"
 
 class Fn: 
     def __init__(self, name, module, weight=0):
@@ -65,68 +90,117 @@ def nameEqualsMain(root):
         depth+=1
     return False
 
-def scrape_functiondata(node, module_name):
+def scrape_imports(node, module):
+    imported_modules = []
     fns = []
-    for node in ast.walk(node):
-        if isinstance(node, ast.FunctionDef):
-            fns.append(Fn(node.name,module_name))
-    return fns
-            
-def scrape_importdata(node, fns):
-    imports = []
     for node in ast.walk(node):
         if isinstance(node, ast.Import):
             for x in node.names:
-                imports.append(x.asname if x.asname else x.name)
+                imported_modules.append(x.asname if x.asname else x.name)
         if isinstance(node, ast.ImportFrom):
-            module_name = node.module
+            new_module_name = node.module
             for x in node.names:
                 fn_name = x.asname if x.asname else x.name
-                fns.append(Fn(fn_name,module_name))
-    return fns,imports
+                fns.append( Fn(fn_name, new_module_name) )
+    module.addFns(fns)
+    return imported_modules
+
+def scrape_functiondefs(node, module):
+    fns = []
+    for node in ast.walk(node):
+        if isinstance(node, ast.FunctionDef):
+            fns.append( Fn(node.name,module.name) )
+    module.addFns(fns)
+    return 
           
-def match_calldata(root, fns, module_name):
+def match_calldata(root, module, modules):
     current_fn=None
     unprocessed_nodes=[root]
     while unprocessed_nodes != []:
         node = unprocessed_nodes.pop()
         unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
-        if isinstance(node,ast.FunctionDef):
-            for fn in fns:
+        if isinstance( node, ast.FunctionDef ):
+            for fn in module.callTree:
                 if fn.name == node.name:
                     current_fn = fn
                     break
-        if isinstance(node,ast.Call):            
-            if isinstance(node.func,ast.Name):
+        if isinstance( node, ast.Call ):
+            print(ast.dump(node))
+            if isinstance( node.func, ast.Name ):
+                # calling function inside namespace, i.e. foo(x) or randint(x,y)
                 if current_fn==None:
                     name = "main_shuttle" if nameEqualsMain(root) else "body_code" 
-                    current_fn = Fn(name, module_name)
-                    fns.append(current_fn)
-                if node.func.id in [x.name for x in fns]:
+                    current_fn = Fn(name, module.name)
+                    module.addFns(current_fn)
+                if node.func.id in [x.name for x in module.callTree]:
                     current_fn.addCall(node.func.id)
-    return fns
+
+            if isinstance( node.func, ast.Attribute ): 
+                # calling function outside namespace, exe. random.randint(x,y)
+                module_name = node.func.value.id 
+                function_name = node.func.attr 
+                for mod in modules:
+                    if module_name == mod.file:
+                        for jfn in mod.callTree:
+                            if function_name == jfn.name:
+                                current_fn.addCall(function_name)
+                                #### refactor tomorrow
+                                break
+                        new_function = Fn(function_name,mod)
+                        mod.addFns(new_function)
+                        
+                
+                    # find function within module and add use .addCall method
+                    
+                else: # probably in stdlib!
+                    # if it's in the subfolders...
+                    print(node.func.attr)
+                #modules.append(newModule)
+                #modules.addFns(thisfn)
+                
+                
+    return
     
-def getAST(filename):
-    with open(filename) as f:
-        root = ast.parse(f.read())
-    fns = scrape_functiondata(root, filename)
-    fns,imports = scrape_importdata(root, fns)
-    fns = match_calldata(root, fns, filename)
-    return fns
+def addCallTrees(modules):
+    for module in modules:
+        print(module.name)
+        try:
+            with open(module.name) as f:
+                ast_root = ast.parse(f.read())
+        except: # if the program wont compile because its written for Python 2.x
+            try:
+                call(["2to3","-w",module.name])
+                with open(module.name) as f:
+                    ast_root = ast.parse(f.read())
+            except:
+                print("File "+module.name+" wont compile! Ignoring...")
+        imported_modules = scrape_imports(ast_root, module) # modifies module!
+        scrape_functiondefs(ast_root, module)
+        match_calldata(ast_root, module, modules)
+    return modules
 
-def printfns(fns):
-    for fn in fns:
-        print()
-        print(fn.name)
-        print(fn.calls)
-
-def glyphData(filename):
-    fns = getAST(filename)
-    writeNodes(fns)
-    writeLinks(fns)
-#    printfns(fns)
+def printModules(modules):
+    for module in modules:
+        print("========")
+        print(module.name)
+        for fn in module.callTree:
+            print("--------")
+            print("  "+fn.name)
+            for each in fn.calls:
+                print("    "+each)
+            print(len(module.callTree))
     
 if __name__== '__main__':
-    #filename = getFilename()
-    filename = "mandelbrot.py"
-    glyphData(filename)
+    #filepath = "bpl-compyler-master"
+    filepath = "test"
+    modules = []
+    for (path,dirs,files) in os.walk(filepath):
+        python_files = [x for x in files if x.endswith('.py')] 
+        for file in python_files:
+            current_module = Module(path,file)
+            modules.append(current_module)
+    addCallTrees(modules)
+    #printModules(modules)
+    
+    
+    

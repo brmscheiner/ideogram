@@ -13,4 +13,5 @@ def test_csv_writers():
                 fns[i].addCall(fns[j])
     writeMatrix(fns)
     writeWeights(fns)
+    print "hello!"
     return fns
