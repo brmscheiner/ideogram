@@ -119,15 +119,16 @@ def match_calldata(root, module, modules):
     while unprocessed_nodes != []:
         node = unprocessed_nodes.pop()
         unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
+        
         if isinstance( node, ast.FunctionDef ):
             for fn in module.callTree:
                 if fn.name == node.name:
                     current_fn = fn
                     break
+                
         if isinstance( node, ast.Call ):
-            print(ast.dump(node))
+             # calling function inside namespace, i.e. foo(x) or randint(x,y)
             if isinstance( node.func, ast.Name ):
-                # calling function inside namespace, i.e. foo(x) or randint(x,y)
                 if current_fn==None:
                     name = "main_shuttle" if nameEqualsMain(root) else "body_code" 
                     current_fn = Fn(name, module.name)
@@ -135,8 +136,11 @@ def match_calldata(root, module, modules):
                 if node.func.id in [x.name for x in module.callTree]:
                     current_fn.addCall(node.func.id)
 
+            # calling function outside namespace, exe. random.randint(x,y)
             if isinstance( node.func, ast.Attribute ): 
-                # calling function outside namespace, exe. random.randint(x,y)
+                if isinstance(node.func.value, ast.Str): break #wtf
+                print(node.func.value)
+                print(ast.dump(node))
                 module_name = node.func.value.id 
                 function_name = node.func.attr 
                 for mod in modules:
@@ -144,21 +148,12 @@ def match_calldata(root, module, modules):
                         for jfn in mod.callTree:
                             if function_name == jfn.name:
                                 current_fn.addCall(function_name)
-                                #### refactor tomorrow
+                                print("matched")
                                 break
-                        new_function = Fn(function_name,mod)
-                        mod.addFns(new_function)
-                        
-                
-                    # find function within module and add use .addCall method
-                    
-                else: # probably in stdlib!
-                    # if it's in the subfolders...
-                    print(node.func.attr)
-                #modules.append(newModule)
-                #modules.addFns(thisfn)
-                
-                
+ 
+                else: # its hopefully in stdlib!
+                    # print(node.func.attr)
+                    pass
     return
     
 def addCallTrees(modules):
@@ -191,8 +186,8 @@ def printModules(modules):
             print(len(module.callTree))
     
 if __name__== '__main__':
-    #filepath = "bpl-compyler-master"
-    filepath = "test"
+    filepath = "bpl-compyler-master"
+    #filepath = "test"
     modules = []
     for (path,dirs,files) in os.walk(filepath):
         python_files = [x for x in files if x.endswith('.py')] 
