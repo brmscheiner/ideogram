@@ -22,10 +22,11 @@ class Fn:
     def incWeight(self):
         self.weight += 1
         
-    def isReferenced(self,ast_call):
-        # returns True if ast_call is referring to this function.
-        #print(self.id)
-        return True
+    def isReferenced(self,ast_call,call_path):
+        if ast_call.func.id == self.name:
+            if call_path == self.path:
+                return True
+        return False
 
     def addCall(self,called):
         if called in self.calls:
@@ -59,7 +60,8 @@ def getAST(path,file):
     return root
     
 def getFns(root,path,file):
-    functions = []
+    body_code = Fn(path,file,'body_code')
+    functions = [body_code]
     for node in ast.walk(root):
         if isinstance(node, ast.FunctionDef):
             functions.append( Fn(path,file,node.name) )
@@ -74,6 +76,11 @@ def getFns(root,path,file):
             # and then add capability to match
             # object instantiation to obj.__init__
             # and obj.method() to obj.method...
+            
+            # also, not catching one-line function defs, 
+            # such as lambda functions and calls to function
+            # generators...
+            
             
     return functions
 
@@ -104,18 +111,57 @@ def getImports(root, path, functions):
                         
     importedFunctions = []
     for (module_name,fn_name) in importedFunctionStrings:
-        print("called "+module_name+" "+fn_name)
         for fn in functions:
-            if fn.filepath == module_name and fn.name == fn_name:
-                print("Success!!!")
-                importedFunctions.append(fn)
-    
+            if fn.filepath == module_name:
+                if fn.name == fn_name:
+                    importedFunctions.append(fn)
+                else:
+#                    print("No match found for "+fn_name+" in "+module_name)
+#                    print("...hopefully an inline function or class definition")
+                    pass
     return importedModules,importedFunctions
 
+def nameEqualsMain(root):
+    # returns True if file of structure if __name__=='__main__'
+    unprocessed_nodes=[root]
+    depth=0
+    while unprocessed_nodes != [] and depth < 2:
+        # if __name__=='__main__' clause occurs at depth=1
+        node = unprocessed_nodes.pop()
+        unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
+        if isinstance(node, ast.If):
+            ifsubnodes = [i for i in ast.iter_child_nodes(node)]
+            for i in ifsubnodes:
+                if isinstance(i, ast.Compare):
+                    leftside   = i.left
+                    rightside  = i.comparators[0]
+                    if isinstance(leftside, ast.Name):
+                        left__name__  = leftside.id=="__name__"
+                    if isinstance(rightside, ast.Str):
+                        right__main__ = rightside.s=="__main__"
+                    if left__name__ and right__main__:
+                        return True
+                    break
+        depth+=1
+    return False
+    
 def callMatching(root,path,file,functions):
     importedModules,importedFunctions = getImports(root,path,functions)
     #printImports(importedModules,importedFunctions,path,file)
-    current_fn=None
+    
+    n=0
+    m=0    
+    
+    if nameEqualsMain:
+        main_shuttle = Fn(path,file,'main_shuttle')
+        functions.append(main_shuttle)
+        sourceFunction = main_shuttle
+    else:
+        for fn in functions:
+            if fn.name == 'body_code':
+                sourceFunction = fn
+                break
+            
     unprocessed_nodes=[root]
     while unprocessed_nodes != []:
         node = unprocessed_nodes.pop()
@@ -123,18 +169,43 @@ def callMatching(root,path,file,functions):
         processed = False
         
         if isinstance( node, ast.Call ):
+            if isinstance( node.func, ast.Name ):
             # calling function inside namespace, i.e. foo(x) or randint(x,y)
-            for fn in functions:
-                if fn.isReferenced(node):
-                    pass # build a call
-                    processed = True
-            if not processed:
-                for fn in importedFunctions:
-                    if fn.isReferenced(node):
-                        pass
+                for fn in functions:
+                    if fn.isReferenced(node,fn.path):
+                        sourceFunction.addCall(fn)
                         processed = True
-                
+                if not processed:
+                    for fn in importedFunctions:
+                        if fn.isReferenced(node,fn.path):
+                            sourceFunction.addCall(fn)
+                            processed = True
         
+            elif isinstance( node.func, ast.Attribute):
+            # calling function outside namespace, exe. random.randint(x,y)
+                try:
+                    target_module   = node.func.value.id
+                    target_function = node.func.attr
+                    for iMod in importedModules:
+                        for fn in functions:
+                            if iMod == fn.filepath:
+                                if target_function == fn.name:
+                                    sourceFunction.addCall(fn)
+                                    processed = True
+                except AttributeError:
+#                    print("Import statement unusable..")
+#                    print(ast.dump(node))
+                    pass
+            
+            if processed: n+=1
+            if not processed:
+                m += 1
+#                print("Call not found.")
+#                print(ast.dump(node))
+                
+    print(path+'\\'+file)   
+    print(str(n)+" calls processed, "+str(m)+" calls not processed.")
+    print()
     return functions
 
 if __name__== '__main__':

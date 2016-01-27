@@ -31,17 +31,19 @@ var force = d3.layout.force()
     .charge(-120)
     .linkDistance(30)
     .size([width, height]);
+	
     
 d3.csv("nodes.csv", function(node_error,node_data) {
  d3.csv("links.csv", function(link_error,link_data) {
    if (node_error) throw node_error;
    if (link_error) throw link_error;
 
-        force
-            .nodes(node_data)
-            .links(link_data)
-            .start();
-                         
+        force = force.nodes(node_data);
+		debugger;
+        force = force.links(link_data);
+        force = force.start();
+
+		
         var link = svg.selectAll(".link")
             .data(link_data)
           .enter().append("line")
