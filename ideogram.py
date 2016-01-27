@@ -27,6 +27,16 @@ class Fn:
         else: 
             self.calls[called] = 1
 
+def printImports(importedModules,importedFunctions,path,file):
+    print("    Imported modules from "+path+'\\'+file)
+    print(importedModules)
+    print("    Imported functions from "+path+'\\'+file)
+    print(importedFunctions)
+    
+def printFunctions(functions):
+    for fn in functions:
+        print(fn.id)
+
 def getAST(path,file):
     filepath = path+'\\'+file
     try:
@@ -85,15 +95,17 @@ def getImports(root, path):
 
 def callMatching(root,path,file,functions):
     importedModules,importedFunctions = getImports(root,path)
-#    print("    Imported modules from "+path+'\\'+file)
-#    print(importedModules)
-#    print("    Imported functions from "+path+'\\'+file)
-#    print(importedFunctions)
+    
+    current_fn=None
+    unprocessed_nodes=[root]
+    while unprocessed_nodes != []:
+        node = unprocessed_nodes.pop()
+        unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
+        
+        # write Fn methods to check whether a call/functiondef 
+        # refers to self
+        
     return functions
-
-def printFunctions(functions):
-    for fn in functions:
-        print(fn.id)
 
 if __name__== '__main__':
     filepath = "bpl-compyler-master"

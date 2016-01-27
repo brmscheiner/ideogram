@@ -12,7 +12,6 @@ def getModulePath(path,module_name):
         pfile = pfile[:len(pfile)-1]
     return pfile
     
-def main():
-    a=getModulePath('bpl-compyler-master\\bpl-compyler-master','bpl')
+if __name__== "__main__":
+    a=getModulePath('test','mandelbrot')
     print(a)
-main()
