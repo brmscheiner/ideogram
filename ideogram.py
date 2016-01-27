@@ -210,6 +210,29 @@ def callMatching(root,path,file,functions):
     print()
     return functions
 
+def writeJSON(functions,outfile="out.json"):
+    data = dict()
+    nodelist = []
+    for fn in functions:
+        node = dict()
+        node["id"]   = fn.id
+        node["file"] = fn.filepath
+        nodelist.append(node)
+    data["nodes"] = nodelist
+    linklist = []
+    for fn in functions:
+        if len(fn.calls) > 0:
+            for key in fn.calls:
+                link = dict()
+                link["source"] = fn.id
+                link["target"] = key.id
+                link["value"]  = fn.calls[key]
+                linklist.append(link)
+    data["links"] = linklist
+    with open(outfile, 'w') as f:
+        f.write(json.dumps(data))
+    return
+
 if __name__== '__main__':
     filepath = "bpl-compyler-master"
     #filepath = "test"
@@ -229,6 +252,7 @@ if __name__== '__main__':
         functions = callMatching(ast_root,path,pfile,functions)
         
     #printFunctions(functions)
+    writeJSON(functions)
         
         
         
