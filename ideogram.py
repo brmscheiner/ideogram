@@ -79,10 +79,14 @@ def getImports(root, path):
             for x in node.names:
                 module_stub = x.asname if x.asname else x.name
                 module_name = modulePath.getModulePath(path,module_stub)
+#                if module_name: 
+#                    print(module_name+" was FOUND!") 
                 if module_name: importedModules.append(module_name)
         if isinstance(node, ast.ImportFrom):
             module_stub = node.module
             module_name = modulePath.getModulePath(path,module_stub)
+#            if module_name: 
+#                print(module_name+" was FOUND!") 
             if module_name:
                 for x in node.names:
                     fn_name = x.asname if x.asname else x.name
