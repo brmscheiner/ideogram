@@ -8,18 +8,24 @@ from subprocess import call
 
 class Fn: 
     def __init__(self, path, file, name, weight=0):
-        self.path    = forcestring(path)
-        self.path    = forcestring(file)
-        self.name    = forcestring(name)
-        self.id      = path+'\\'+file+'  '+name
-        self.weight  = weight
-        self.calls   = dict()
+        self.path     = forcestring(path)
+        self.file     = forcestring(file)
+        self.name     = forcestring(name)
+        self.filepath = path+'\\'+file
+        self.id       = path+'\\'+file+'  '+name
+        self.weight   = weight
+        self.calls    = dict()
     
     def setWeight(self,weight):
         self.weight = weight 
         
     def incWeight(self):
         self.weight += 1
+        
+    def isReferenced(self,ast_call):
+        # returns True if ast_call is referring to this function.
+        #print(self.id)
+        return True
 
     def addCall(self,called):
         if called in self.calls:
@@ -71,9 +77,9 @@ def getFns(root,path,file):
             
     return functions
 
-def getImports(root, path):
+def getImports(root, path, functions):
     importedModules = []
-    importedFunctions = []
+    importedFunctionStrings = []
     for node in ast.walk(root):
         if isinstance(node, ast.Import):
             for x in node.names:
@@ -94,20 +100,40 @@ def getImports(root, path):
                         # iterate through package and add all functions
                         pass
                     else:
-                        importedFunctions.append([module_name,fn_name])
+                        importedFunctionStrings.append((module_name,fn_name))
+                        
+    importedFunctions = []
+    for (module_name,fn_name) in importedFunctionStrings:
+        print("called "+module_name+" "+fn_name)
+        for fn in functions:
+            if fn.filepath == module_name and fn.name == fn_name:
+                print("Success!!!")
+                importedFunctions.append(fn)
+    
     return importedModules,importedFunctions
 
 def callMatching(root,path,file,functions):
-    importedModules,importedFunctions = getImports(root,path)
-    
+    importedModules,importedFunctions = getImports(root,path,functions)
+    #printImports(importedModules,importedFunctions,path,file)
     current_fn=None
     unprocessed_nodes=[root]
     while unprocessed_nodes != []:
         node = unprocessed_nodes.pop()
         unprocessed_nodes += [i for i in ast.iter_child_nodes(node)]
+        processed = False
         
-        # write Fn methods to check whether a call/functiondef 
-        # refers to self
+        if isinstance( node, ast.Call ):
+            # calling function inside namespace, i.e. foo(x) or randint(x,y)
+            for fn in functions:
+                if fn.isReferenced(node):
+                    pass # build a call
+                    processed = True
+            if not processed:
+                for fn in importedFunctions:
+                    if fn.isReferenced(node):
+                        pass
+                        processed = True
+                
         
     return functions
 
