@@ -33,7 +33,7 @@ var svg = d3.select("body").append("svg")
 
 d3.json("miserables.json", function(error, graph) {
   if (error) throw error;
-
+  debugger;
   force
       .nodes(graph.nodes)
       .links(graph.links)

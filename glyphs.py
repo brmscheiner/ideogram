@@ -67,7 +67,6 @@ def writeLinks(fns,filename="d3js/links.csv"):
 
 def nameEqualsMain(root):
     # returns True if file of structure if __name__=='__main__'
-    # note: what about cases where if __name__=='__main__': main()?
     unprocessed_nodes=[root]
     depth=0
     while unprocessed_nodes != [] and depth < 2:
@@ -138,11 +137,11 @@ def match_calldata(root, module, modules):
 
             # calling function outside namespace, exe. random.randint(x,y)
             if isinstance( node.func, ast.Attribute ): 
-                if isinstance(node.func.value, ast.Str): break #wtf
-                print(node.func.value)
-                print(ast.dump(node))
-                module_name = node.func.value.id 
-                function_name = node.func.attr 
+                try:
+                    module_name = node.func.value.id 
+                    function_name = node.func.attr 
+                except: 
+                    break
                 for mod in modules:
                     if module_name == mod.file:
                         for jfn in mod.callTree:
@@ -195,7 +194,7 @@ if __name__== '__main__':
             current_module = Module(path,file)
             modules.append(current_module)
     addCallTrees(modules)
-    #printModules(modules)
+    printModules(modules)
     
     
     
