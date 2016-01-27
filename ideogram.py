@@ -4,6 +4,7 @@ from bentools import *
 import modulePath
 import ast
 import os
+import json
 from subprocess import call
 
 class Fn: 
@@ -81,12 +82,11 @@ def getFns(root,path,file):
             # such as lambda functions and calls to function
             # generators...
             
-            
     return functions
 
 def getImports(root, path, functions):
     importedModules = []
-    importedFunctionStrings = []
+    importedFunctionStrs = []
     for node in ast.walk(root):
         if isinstance(node, ast.Import):
             for x in node.names:
@@ -104,13 +104,15 @@ def getImports(root, path, functions):
                 for x in node.names:
                     fn_name = x.asname if x.asname else x.name
                     if fn_name=='*':
-                        # iterate through package and add all functions
-                        pass
+                        for fn in functions:
+                            if fn.filepath == module_name:
+                                function_str_tuple = (module_name,fn.name)
+                                importedFunctionStrs.append(function_str_tuple)
                     else:
-                        importedFunctionStrings.append((module_name,fn_name))
+                        importedFunctionStrs.append((module_name,fn_name))
                         
     importedFunctions = []
-    for (module_name,fn_name) in importedFunctionStrings:
+    for (module_name,fn_name) in importedFunctionStrs:
         for fn in functions:
             if fn.filepath == module_name:
                 if fn.name == fn_name:
