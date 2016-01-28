@@ -34,6 +34,10 @@ class Fn:
             self.calls[called] += 1
         else: 
             self.calls[called] = 1
+            
+    def makeSimpleAttributes(self,filepath_dict,id_dict):
+        self.sid       = id_dict[self.id]
+        self.sfilepath = filepath_dict[self.filepath]
 
 def printImports(importedModules,importedFunctions,path,file):
     print("    Imported modules from "+path+'\\'+file)
@@ -210,13 +214,31 @@ def callMatching(root,path,file,functions):
     print()
     return functions
 
-def writeJSON(functions,outfile="out.json"):
+def addSimpleAttributes(functions):
+    i=0
+    j=0
+    id_dict = dict()
+    filepath_dict = dict()
+    for fn in functions:
+        sid = 'f'+str(i)
+        i += 1
+        id_dict[fn.id]=sid
+        if fn.filepath in filepath_dict.keys():
+            sfilepath = filepath_dict[fn.filepath]
+        else:
+            sfilepath = j
+            j += 1
+            filepath_dict[fn.filepath] = j
+        fn.makeSimpleAttributes(filepath_dict,id_dict)
+    return functions
+
+def writeJSON(functions,outfile="d3js\\out.json"):
     data = dict()
     nodelist = []
     for fn in functions:
         node = dict()
-        node["id"]   = fn.id
-        node["file"] = fn.filepath
+        node["id"]   = fn.sid
+        node["file"] = fn.sfilepath
         nodelist.append(node)
     data["nodes"] = nodelist
     linklist = []
@@ -224,13 +246,13 @@ def writeJSON(functions,outfile="out.json"):
         if len(fn.calls) > 0:
             for key in fn.calls:
                 link = dict()
-                link["source"] = fn.id
-                link["target"] = key.id
+                link["source"] = int(fn.sid[1:])
+                link["target"] = int(key.sid[1:])
                 link["value"]  = fn.calls[key]
                 linklist.append(link)
     data["links"] = linklist
     with open(outfile, 'w') as f:
-        f.write(json.dumps(data))
+        f.write(json.dumps(data, indent=2))
     return
 
 if __name__== '__main__':
@@ -252,6 +274,7 @@ if __name__== '__main__':
         functions = callMatching(ast_root,path,pfile,functions)
         
     #printFunctions(functions)
+    functions = addSimpleAttributes(functions)
     writeJSON(functions)
         
         
