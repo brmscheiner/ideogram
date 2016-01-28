@@ -41,12 +41,6 @@ class Fn:
         if self.name != "__init__":
             return False
         if ast_call.func.id == self.parent_class:
-            print(call_path)
-            print()
-            print()
-            print("whoo!!")
-            print()
-            print()
             return True
             
     def isModuleObjectInit(self,maybe_module_name,maybe_object_name):
@@ -106,7 +100,8 @@ def getFns(root,path,file):
             current_class = None
             
         if isinstance(node, ast.ClassDef):
-            before_parent = unprocessed_nodes[0]
+            if unprocessed_nodes:
+                before_parent = unprocessed_nodes[0]
             current_class = node.name
             
         unprocessed_nodes = [i for i in ast.iter_child_nodes(node)] + \
@@ -208,7 +203,6 @@ def callMatching(root,path,file,functions):
         processed = False
         
         if isinstance( node, ast.Call ):
-            print(ast.dump(node.func))
             if isinstance( node.func, ast.Name ):
             # calling function inside namespace, i.e. foo(x) or randint(x,y)
                 for fn in functions:
@@ -311,8 +305,7 @@ def writeJSON(functions,outfile="d3js\\out.json"):
     return
 
 if __name__== '__main__':
-    #filepath = "bpl-compyler-master"
-    filepath = "test"
+    filepath = "test\\demo"
     
     ASTs=[]
     for (path,dirs,files) in os.walk(filepath):
@@ -328,7 +321,7 @@ if __name__== '__main__':
     for (ast_root,path,pfile) in ASTs:
         functions = callMatching(ast_root,path,pfile,functions)
         
-    printFunctions(functions)
+    #printFunctions(functions)
     functions = addSimpleAttributes(functions)
     writeJSON(functions)
         
