@@ -36,6 +36,26 @@ class Fn:
             if call_path == self.path:
                 return True
         return False
+    
+    def isObjectInit(self,ast_call,call_path):
+        if self.name != "__init__":
+            return False
+        if ast_call.func.id == self.parent_class:
+            print(call_path)
+            print()
+            print()
+            print("whoo!!")
+            print()
+            print()
+            return True
+            
+    def isModuleObjectInit(self,maybe_module_name,maybe_object_name):
+        if self.name != "__init__":
+            return False
+        if maybe_module_name+".py" == self.file:
+            if maybe_object_name == self.parent_class:
+                return True
+        return False
 
     def addCall(self,called):
         if called in self.calls:
@@ -188,12 +208,18 @@ def callMatching(root,path,file,functions):
         processed = False
         
         if isinstance( node, ast.Call ):
+            print(ast.dump(node.func))
             if isinstance( node.func, ast.Name ):
             # calling function inside namespace, i.e. foo(x) or randint(x,y)
                 for fn in functions:
                     if fn.isReferenced(node,fn.path):
                         sourceFunction.addCall(fn)
                         processed = True
+                        
+                    if fn.isObjectInit(node,fn.path):
+                        sourceFunction.addCall(fn)
+                        processed = True
+                        
                 if not processed:
                     for fn in importedFunctions:
                         if fn.isReferenced(node,fn.path):
@@ -205,12 +231,30 @@ def callMatching(root,path,file,functions):
                 try:
                     target_module   = node.func.value.id
                     target_function = node.func.attr
+                    
+                    
                     for iMod in importedModules:
                         for fn in functions:
                             if iMod == fn.filepath:
                                 if target_function == fn.name:
                                     sourceFunction.addCall(fn)
                                     processed = True
+                                    break
+                                    
+                    if not processed:
+                        for fn in functions:
+                            if fn.name == target_function: 
+                            # is it an object method?
+                                sourceFunction.addCall(fn)
+                                processed = True
+                                break
+                            if fn.isModuleObjectInit(target_module,target_function):
+                            # is it an object init from a class defined in 
+                            # another module?
+                                sourceFunction.addCall(fn)
+                                processed = True
+                                break
+                                
                 except AttributeError:
 #                    print("Import statement unusable..")
 #                    print(ast.dump(node))
@@ -219,17 +263,6 @@ def callMatching(root,path,file,functions):
             if processed: n+=1
             if not processed:
                 m += 1
-                # seems like the classy calls are formatted the same way...
-#                print("Call not matched..")
-#                print(ast.dump(node))
-#                try:
-#                    print()
-#                    print()
-#                    print(node.func.attr)
-#                    print()
-#                    print()
-#                except:
-#                    pass
 
     print(path+'\\'+file)   
     print(str(n)+" calls processed, "+str(m)+" calls not processed.")

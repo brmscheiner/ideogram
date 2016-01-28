@@ -1,5 +1,16 @@
 {
-  "links": [],
+  "links": [
+    {
+      "source": 4,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 5,
+      "target": 1,
+      "value": 1
+    }
+  ],
   "nodes": [
     {
       "id": "f0",

@@ -1,5 +1,5 @@
 
-class test:
+class testy:
 	def __init__(self):
 		self.exists = True
 	def isHere(self):
@@ -8,5 +8,4 @@ class test:
 		return False
 
 		
-a = test()
-print(a.isHere())
+a = testy()
