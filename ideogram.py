@@ -8,7 +8,7 @@ import json
 from subprocess import call
 
 class Fn: 
-    def __init__(self, path, file, name, weight=0):
+    def __init__(self, path, file, name, parent_class=None, weight=0):
         self.path     = forcestring(path)
         self.file     = forcestring(file)
         self.name     = forcestring(name)
@@ -16,12 +16,20 @@ class Fn:
         self.id       = path+'\\'+file+'  '+name
         self.weight   = weight
         self.calls    = dict()
+        if parent_class:
+            forcestring(parent_class)
+        self.parent_class = parent_class
     
     def setWeight(self,weight):
         self.weight = weight 
         
     def incWeight(self):
         self.weight += 1
+        
+    def parentClassStr(self):
+        if not self.parent_class:
+            return "None."
+        return self.parent_class
         
     def isReferenced(self,ast_call,call_path):
         if ast_call.func.id == self.name:
@@ -48,6 +56,7 @@ def printImports(importedModules,importedFunctions,path,file):
 def printFunctions(functions):
     for fn in functions:
         print(fn.id)
+        print("           Class: "+fn.parentClassStr())
 
 def getAST(path,file):
     filepath = path+'\\'+file
@@ -67,24 +76,28 @@ def getAST(path,file):
 def getFns(root,path,file):
     body_code = Fn(path,file,'body_code')
     functions = [body_code]
-    for node in ast.walk(root):
+    
+    current_class = None
+    before_parent = None
+    unprocessed_nodes=[root]
+    while unprocessed_nodes != []:
+        node = unprocessed_nodes.pop(0)
+        if node == before_parent:
+            current_class = None
+            
+        if isinstance(node, ast.ClassDef):
+            before_parent = unprocessed_nodes[0]
+            current_class = node.name
+            
+        unprocessed_nodes = [i for i in ast.iter_child_nodes(node)] + \
+                                                            unprocessed_nodes
+                                                            
         if isinstance(node, ast.FunctionDef):
-            functions.append( Fn(path,file,node.name) )
+            functions.append( Fn(path,file,node.name,current_class) )
             
-            # for now, definitions of functions within 
-            # classes get added to the list without any 
-            # reference to their containing classes. 
-            # this means that they wont be matched 
-            # by any function calls. should either 
-            # drop them from analysis or figure out how
-            # to add them to the call tree properly 
-            # and then add capability to match
-            # object instantiation to obj.__init__
-            # and obj.method() to obj.method...
-            
-            # also, not catching one-line function defs, 
-            # such as lambda functions and calls to function
-            # generators...
+    # Am I catching one-line function defs, 
+    # such as lambda functions and calls to function
+    # generators?
             
     return functions
 
@@ -206,9 +219,18 @@ def callMatching(root,path,file,functions):
             if processed: n+=1
             if not processed:
                 m += 1
-#                print("Call not found.")
+                # seems like the classy calls are formatted the same way...
+#                print("Call not matched..")
 #                print(ast.dump(node))
-                
+#                try:
+#                    print()
+#                    print()
+#                    print(node.func.attr)
+#                    print()
+#                    print()
+#                except:
+#                    pass
+
     print(path+'\\'+file)   
     print(str(n)+" calls processed, "+str(m)+" calls not processed.")
     print()
@@ -256,8 +278,8 @@ def writeJSON(functions,outfile="d3js\\out.json"):
     return
 
 if __name__== '__main__':
-    filepath = "bpl-compyler-master"
-    #filepath = "test"
+    #filepath = "bpl-compyler-master"
+    filepath = "test"
     
     ASTs=[]
     for (path,dirs,files) in os.walk(filepath):
@@ -273,7 +295,7 @@ if __name__== '__main__':
     for (ast_root,path,pfile) in ASTs:
         functions = callMatching(ast_root,path,pfile,functions)
         
-    #printFunctions(functions)
+    printFunctions(functions)
     functions = addSimpleAttributes(functions)
     writeJSON(functions)
         
