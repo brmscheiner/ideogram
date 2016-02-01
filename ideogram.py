@@ -4,7 +4,7 @@ from bentools import *
 import modulePath
 import ast
 import os
-import json
+import outputFunctions
 from subprocess import call
 
 class Fn: 
@@ -259,7 +259,8 @@ def callMatching(root,path,file,functions):
                 m += 1
 
     print(path+'\\'+file)   
-    print(str(n)+" calls processed, "+str(m)+" calls not processed.")
+    #print(str(n)+" calls processed, "+str(m)+" calls not processed.")
+    print(str(n)+" calls processed.")
     print()
     return functions
 
@@ -281,31 +282,8 @@ def addSimpleAttributes(functions):
         fn.makeSimpleAttributes(filepath_dict,id_dict)
     return functions
 
-def writeJSON(functions,outfile="d3js\\out.json"):
-    data = dict()
-    nodelist = []
-    for fn in functions:
-        node = dict()
-        node["id"]   = fn.sid
-        node["file"] = fn.sfilepath
-        nodelist.append(node)
-    data["nodes"] = nodelist
-    linklist = []
-    for fn in functions:
-        if len(fn.calls) > 0:
-            for key in fn.calls:
-                link = dict()
-                link["source"] = int(fn.sid[1:])
-                link["target"] = int(key.sid[1:])
-                link["value"]  = fn.calls[key]
-                linklist.append(link)
-    data["links"] = linklist
-    with open(outfile, 'w') as f:
-        f.write(json.dumps(data, indent=2))
-    return
-
 if __name__== '__main__':
-    filepath = "test\\demo"
+    filepath = "test\\package"
     
     ASTs=[]
     for (path,dirs,files) in os.walk(filepath):
@@ -323,7 +301,7 @@ if __name__== '__main__':
         
     #printFunctions(functions)
     functions = addSimpleAttributes(functions)
-    writeJSON(functions)
+    outputFunctions.writeJSON(functions)
         
         
         

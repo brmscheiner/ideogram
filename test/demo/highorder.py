@@ -16,4 +16,5 @@ class higherorder(self):
 		
 if __name__ == "__main__":
 	obj = higherorder(5)
-	obj.evaluate("sin(x)",0)
+	dn = obj.evaluate("sin(x)",0)
+	print(dn.dump())
