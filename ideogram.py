@@ -302,10 +302,12 @@ def writeJSON(functions,outfile="d3js\\out.json"):
     data["links"] = linklist
     with open(outfile, 'w') as f:
         f.write(json.dumps(data, indent=2))
+    print(json.dumps(data, indent=2))
     return
 
 if __name__== '__main__':
-    filepath = "test\\demo"
+    filepath = "test\\package"
+    # os module for os-independent filepaths
     
     ASTs=[]
     for (path,dirs,files) in os.walk(filepath):
