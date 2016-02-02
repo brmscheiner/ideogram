@@ -72,20 +72,7 @@ def printFunctions(functions):
         print(fn.id)
         print("           Class: "+fn.parentClassStr())
 
-def getAST(path,file):
-    filepath = path+'\\'+file
-    try:
-        with open(filepath) as f:
-            root = ast.parse(f.read())
-    except: # if the program wont compile maybe its written for Python 2.x
-        try:
-            call(["2to3","-w",module.name])
-            with open(filepath) as f:
-                root = ast.parse(f.read())
-        except:
-            root = None
-            print("File "+filepath+" wont compile! Ignoring...")
-    return root
+
     
 def getFns(root,path,file):
     body_code = Fn(path,file,'body_code')
@@ -282,45 +269,11 @@ def addSimpleAttributes(functions):
         fn.makeSimpleAttributes(filepath_dict,id_dict)
     return functions
 
-<<<<<<< HEAD
-def writeJSON(functions,outfile="d3js\\out.json"):
-    data = dict()
-    nodelist = []
-    for fn in functions:
-        node = dict()
-        node["id"]   = fn.sid
-        node["file"] = fn.sfilepath
-        nodelist.append(node)
-    data["nodes"] = nodelist
-    linklist = []
-    for fn in functions:
-        if len(fn.calls) > 0:
-            for key in fn.calls:
-                link = dict()
-                link["source"] = int(fn.sid[1:])
-                link["target"] = int(key.sid[1:])
-                link["value"]  = fn.calls[key]
-                linklist.append(link)
-    data["links"] = linklist
-    with open(outfile, 'w') as f:
-        f.write(json.dumps(data, indent=2))
-    print(json.dumps(data, indent=2))
-    return
 
 if __name__== '__main__':
     filepath = "test\\package"
     # os module for os-independent filepaths
-=======
-if __name__== '__main__':
-    filepath = "test\\package"
->>>>>>> e8ca0071c4cd21d4134180cb663fe80a0a2d374b
     
-    ASTs=[]
-    for (path,dirs,files) in os.walk(filepath):
-        python_files = [x for x in files if x.endswith('.py')] 
-        for pfile in python_files:
-            ast_root = getAST(path,pfile)
-            if ast_root: ASTs.append((ast_root,path,pfile))
     
     functions = []
     for (ast_root,path,pfile) in ASTs:
