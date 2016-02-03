@@ -1,12 +1,12 @@
 import reader
 import converter
-import writer
+#import writer
 
-def getGraphData(path):
+def genGraphData(path):
 	ASTs     = reader.read(path)
 	nodeInfo = converter.convert(ASTs)
-	writer.write(nodeInfo)
+	#writer.write(nodeInfo)
 
 if __name__=="__main__":
-	project_directory = "test"
-	getGraphData(project_directory)
+	project_directory = "/Users/babe/Documents/glyph/test/package"
+	genGraphData(project_directory)

@@ -11,6 +11,7 @@ def read(projectpath):
             ast_root = getAST(path)
             if ast_root: 
                 ASTs.append((ast_root,path))
+    return ASTs
 
 def getAST(path):
     try:

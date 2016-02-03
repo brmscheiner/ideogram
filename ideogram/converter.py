@@ -70,7 +70,9 @@ def firstPass(ASTs):
 			fdefs.append(node)
 
 
-
+def convert(ASTs):
+	print(ASTs)
+	firstPass(ASTs)
 
 
 
