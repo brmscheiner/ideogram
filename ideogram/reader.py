@@ -1,23 +1,25 @@
+import os
 
 def read(filepath):
     ASTs=[]
-    for (path,dirs,files) in os.walk(filepath):
+    for (dirpath,__,files) in os.walk(filepath):
         python_files = [x for x in files if x.endswith('.py')] 
         for pfile in python_files:
-            ast_root = getAST(path,pfile)
-            if ast_root: ASTs.append((ast_root,path,pfile))
+            path = os.path.join(dirpath,pfile)
+            ast_root = getAST(path)
+            if ast_root: 
+                ASTs.append((ast_root,path))
 
-def getAST(path,file):
-    filepath = path+'\\'+file
+def getAST(path):
     try:
-        with open(filepath) as f:
+        with open(path) as f:
             root = ast.parse(f.read())
     except: # if the program wont compile maybe its written for Python 2.x
         try:
             call(["2to3","-w",module.name])
-            with open(filepath) as f:
+            with open(path) as f:
                 root = ast.parse(f.read())
         except:
-            root = None
-            print("File "+filepath+" wont compile! Ignoring...")
+            print("File "+path+" wont compile! Ignoring...")
+            return None
     return root
