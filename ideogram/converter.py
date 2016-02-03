@@ -32,42 +32,53 @@ def calcWeight(node):
 		stack = stack + children
 	return count
 
-def cullChildList(stack,node):
+def cullChildList(node,stack):
 	newstack = []
 	for x in stack:
-		if node in x.children:
-			x.children.remove(node)
-			newstack.append(x)
+		try: 
+			if node in x.children:
+				x.children.remove(node)
+				newstack.append(x)
+		except AttributeError:
+			pass # node ha
 	return newstack
 
-def traversal(root,fdefs=True,calls=True):
+def traversal(root):
 	stack     = [root]
 	processed = []
 	while len(stack) > 0:
 		node = stack.pop()
-		children = [x for x in ast.iter_child_nodes(node)]
-		if children: 
+		if hasattr(node,'children'):
+			if node.children == {}:
+				stack = cullChildList(node,stack)
+				yield (node,stack)
+			else:
+				print("ERROR!!")
+		else: 
+			children = [x for x in ast.iter_child_nodes(node)]
 			node.children = set(children)
 			stack.append(node)
 			stack = stack + children
-		else:
-			stack = cullChildList(stack,node)
-			if fdefs and isinstance(x, ast.FunctionDef):
-				node.type   = "fdef"
-				node.pclass = getCurrentClass(stack)
-				yield node
-			elif calls and isinstance(node, ast.Call):
-				node.type   = "call"
-				node.source = getCurrentFnDef(stack)
-				yield node
+
 
 def firstPass(ASTs):
 	fdefs=[]
 	for (root,path) in ASTs:
-		for node in traversal(root,fdefs=True,calls=False):
-			node.weight = calcWeight(node)
-			node.path = path
-			fdefs.append(node)
+		for (node,stack) in traversal(root):
+			if isinstance(node,ast.FunctionDef):
+				#node.name = getFnDefName(node)
+				node.weight = calcWeight(node)
+				node.path = path
+				node.pclass = getCurrentClass(stack)
+				fdefs.append(node)
+
+def secondPass(ASTs):
+	calls=[]
+	for (root,path) in ASTs:
+		for (node,stack) in traversal(root):
+			if isinstance(node, ast.Call):
+				node.source = getCurrentFnDef(stack)
+				calls.append(node)
 
 
 def convert(ASTs):
