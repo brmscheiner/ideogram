@@ -1,8 +1,10 @@
+import ast
 import os
+import subprocess
 
-def read(filepath):
+def read(projectpath):
     ASTs=[]
-    for (dirpath,__,files) in os.walk(filepath):
+    for (dirpath,__,files) in os.walk(projectpath):
         python_files = [x for x in files if x.endswith('.py')] 
         for pfile in python_files:
             path = os.path.join(dirpath,pfile)
@@ -16,7 +18,7 @@ def getAST(path):
             root = ast.parse(f.read())
     except: # if the program wont compile maybe its written for Python 2.x
         try:
-            call(["2to3","-w",module.name])
+            subprocess.call(["2to3","-w",module.name])
             with open(path) as f:
                 root = ast.parse(f.read())
         except:

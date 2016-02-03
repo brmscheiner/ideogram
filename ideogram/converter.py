@@ -40,7 +40,6 @@ def cullChildList(stack,node):
 			newstack.append(x)
 	return newstack
 
-
 def traversal(root,fdefs=True,calls=True):
 	stack     = [root]
 	processed = []
@@ -64,9 +63,11 @@ def traversal(root,fdefs=True,calls=True):
 
 def firstPass(ASTs):
 	fdefs=[]
-	for node in traversal(root,fdefs=True,calls=False):
-		node.weight = calcWeight(node)
-		fdefs.append(node)
+	for (root,path) in ASTs:
+		for node in traversal(root,fdefs=True,calls=False):
+			node.weight = calcWeight(node)
+			node.path = path
+			fdefs.append(node)
 
 
 
