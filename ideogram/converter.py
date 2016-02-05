@@ -32,34 +32,26 @@ def calcWeight(node):
 		stack = stack + children
 	return count
 
-def cullChildList(node,stack):
-	newstack = []
-	for x in stack:
-		try: 
-			if node in x.children:
-				x.children.remove(node)
-				newstack.append(x)
-		except AttributeError:
-			pass # node ha
-	return newstack
-
 def traversal(root):
-	stack     = [root]
-	processed = []
+	'''For each subtree, evaluate the leaf nodes. If leaf nodes have already been 
+	evaluated, their parent nodes become the new leaf nodes.'''
+	stack = [root]
 	while len(stack) > 0:
 		node = stack.pop()
 		if hasattr(node,'children'):
-			if node.children == {}:
-				stack = cullChildList(node,stack)
+			if node.children == set():
+				try:
+					stack[-1].children.remove(node)
+				except:
+					pass
 				yield (node,stack)
 			else:
-				print("ERROR!!")
+				childnode = node.children.pop()
+				stack += [node,childnode]
 		else: 
 			children = [x for x in ast.iter_child_nodes(node)]
 			node.children = set(children)
 			stack.append(node)
-			stack = stack + children
-
 
 def firstPass(ASTs):
 	fdefs=[]
@@ -68,7 +60,7 @@ def firstPass(ASTs):
 			if isinstance(node,ast.FunctionDef):
 				#node.name = getFnDefName(node)
 				node.weight = calcWeight(node)
-				node.path = path
+				node.path   = path
 				node.pclass = getCurrentClass(stack)
 				fdefs.append(node)
 
@@ -82,7 +74,7 @@ def secondPass(ASTs):
 
 
 def convert(ASTs):
-	print(ASTs)
+	#print(ASTs)
 	firstPass(ASTs)
 
 
