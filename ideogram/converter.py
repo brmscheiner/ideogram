@@ -19,9 +19,6 @@ def getCurrentFnDef(stack):
             return x
     return None # return "body?"
 
-def getFnDefName(node):
-    return node.name
-
 def calcWeight(node):
     '''Calculates the weight of a function definition by 
     recursively counting its child nodes in the AST. Note
@@ -107,7 +104,6 @@ def firstPass(ASTs):
         fdefs.append(body)
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
-                node.name = getFnDefName(node)
                 node.weight = calcWeight(node)
                 node.path   = path
                 node.pclass = getCurrentClass(stack)
