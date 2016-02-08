@@ -16,17 +16,22 @@ def getPrettyPath(path,numChars):
         return path
 
 def limitChars(x,numChars):
-	if len(x)>numChars:
-		diff = len(x)-numChars
-		x=x[diff:]
-	elif len(x)<numChars:
-		add = ' '*(numChars-len(x))
-		x+=add
-	return x
+    if len(x)>numChars:
+        diff = len(x)-numChars
+        x=x[diff:]
+    elif len(x)<numChars:
+        add = ' '*(numChars-len(x))
+        x+=add
+    return x
 
 def printFnDefs(fdefs):
-	for x in fdefs:
-		print(
-			getPrettyPath(x.path,30)+'     '+limitChars(x.name,30)
-			+limitChars(str(x.weight),10)+limitChars(getClassString(x.pclass),20)
-			)
+    fdeflists = list(fdefs.values())
+    fdeflist = [item for sublist in fdeflists for item in sublist]
+    print(len(fdeflist))
+    for x in fdeflist:
+        print(
+            getPrettyPath(x.path,30)+'     '
+            +limitChars(x.name,30)
+            +limitChars(str(x.weight),10)
+            +limitChars(getClassString(x.pclass),20)
+            )

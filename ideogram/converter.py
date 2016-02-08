@@ -1,5 +1,6 @@
 import ast
 from printing import printFnDefs
+import copy
 
 def show(node):
     ast.dump(node)
@@ -20,10 +21,9 @@ def getCurrentFnDef(stack):
     return None # return "body?"
 
 def calcWeight(node):
-    '''Calculates the weight of a function definition by 
-    recursively counting its child nodes in the AST. Note
-    that the tree traversal will become O(n^2) instead of 
-    O(n)'''
+    '''Calculates the weight of a function definition by recursively counting 
+    its child nodes in the AST. Note that the tree traversal will become 
+    O(n^2) instead of O(n) if this feature is enabled.'''
     stack = [node]
     count = 0
     while len(stack) > 0:
@@ -55,35 +55,40 @@ def traversal(root):
             stack.append(node)
 
 def firstPass(ASTs):
-    fdefs=[]
+    fdefs=dict()
     for (root,path) in ASTs:
+        fdefs[path] = []
         body        = root
         body.name   = "body"
         body.weight = calcWeight(body)
         body.path   = path
         body.pclass = None
-        fdefs.append(body)
+        fdefs[path].append(body)
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
                 #node.name is already defined by AST module
                 node.weight = calcWeight(node)
                 node.path   = path
                 node.pclass = getCurrentClass(stack)
-                fdefs.append(node)
+                fdefs[path].append(node)
     return fdefs
 
-def secondPass(ASTs):
+def secondPass(ASTs,fdefs):
     calls=[]
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
                 node.source = getCurrentFnDef(stack)
                 calls.append(node)
+    return calls
 
 
 def convert(ASTs):
+    copy_ASTs = copy.deepcopy(ASTs)
     fdefs = firstPass(ASTs)
     printFnDefs(fdefs)
+    calls = secondPass(copy_ASTs,fdefs)
+    
 
 
 
