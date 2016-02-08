@@ -1,5 +1,6 @@
 import reader
 import converter
+import os
 #import writer
 
 def genGraphData(path):
@@ -8,6 +9,5 @@ def genGraphData(path):
     #writer.write(nodeInfo)
 
 if __name__=="__main__":
-    #project_directory = "/Users/babe/Documents/glyph/test/package"
-    project_directory = "test\\package"
+    project_directory = os.path.join('test','package')
     genGraphData(project_directory)

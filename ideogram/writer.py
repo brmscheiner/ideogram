@@ -1,7 +1,8 @@
 import json
 from ideogram import Fn
 
-def jsonGraph(functions,outfile="d3js\\outGraph.json"):
+def jsonGraph(functions,outfile=['d3js','out.json']):
+    outpath = os.path.join(*outfile)
     data = dict()
     nodelist = []
     for fn in functions:
@@ -20,11 +21,12 @@ def jsonGraph(functions,outfile="d3js\\outGraph.json"):
                 link["value"]  = fn.calls[key]
                 linklist.append(link)
     data["links"] = linklist
-    with open(outfile, 'w') as f:
+    with open(outpath, 'w') as f:
         f.write(json.dumps(data, indent=2))
     return
     
-def jsonHierarchy(functions,outfile="d3js\\outHierarchy.json"):
+def jsonHierarchy(functions,outfile=['d3js','out.json']):
+    outpath = os.path.join(*outfile)
     # build later
     return
 
