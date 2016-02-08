@@ -43,23 +43,6 @@ def cullChildList(node,stack):
         except AttributeError:
             pass # node ha
     return newstack
-
-def traversal(root):
-    stack     = [root]
-    processed = []
-    while len(stack) > 0:
-        node = stack.pop()
-        if hasattr(node,'children'):
-            if node.children == {}:
-                stack = cullChildList(node,stack)
-                yield (node,stack)
-            else:
-                print("ERROR!!")
-        else: 
-            children = [x for x in ast.iter_child_nodes(node)]
-            node.children = set(children)
-            stack.append(node)
-            stack = stack + children
                 
 def traversal(root):
     '''For each subtree, evaluate the deepest nodes first. Then evaluate the
