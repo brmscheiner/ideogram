@@ -32,17 +32,6 @@ def calcWeight(node):
         count += len(children)
         stack = stack + children
     return count
-
-def cullChildList(node,stack):
-    newstack = []
-    for x in stack:
-        try: 
-            if node in x.children:
-                x.children.remove(node)
-                newstack.append(x)
-        except AttributeError:
-            pass # node ha
-    return newstack
                 
 def traversal(root):
     '''For each subtree, evaluate the deepest nodes first. Then evaluate the
