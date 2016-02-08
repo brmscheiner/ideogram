@@ -1,4 +1,5 @@
 import ast
+from printing import printFnDefs
 
 def show(node):
     ast.dump(node)
@@ -17,6 +18,9 @@ def getCurrentFnDef(stack):
         if isinstance(x, ast.FunctionDef):
             return x
     return None # return "body?"
+
+def getFnDefName(node):
+	return node.name
 
 def calcWeight(node):
     '''Calculates the weight of a function definition by 
@@ -71,6 +75,44 @@ def firstPass(ASTs):
                 node.path = path
                 node.pclass = getCurrentClass(stack)
                 fdefs.append(node)
+def traversal(root):
+	'''For each subtree, evaluate the deepest nodes first. Then evaluate the
+	next-deepest nodes and move on to the next subtree.'''
+	stack = [root]
+	while len(stack) > 0:
+		node = stack.pop()
+		if hasattr(node,'children'):
+			if node.children == set():
+				try:
+					stack[-1].children.remove(node)
+				except:
+					pass
+				yield (node,stack)
+			else:
+				childnode = node.children.pop()
+				stack += [node,childnode]
+		else: 
+			children = [x for x in ast.iter_child_nodes(node)]
+			node.children = set(children)
+			stack.append(node)
+
+def firstPass(ASTs):
+	fdefs=[]
+	for (root,path) in ASTs:
+		body        = root
+		body.name   = "body"
+		body.weight = calcWeight(body)
+		body.path   = path
+		body.pclass = None
+		fdefs.append(body)
+		for (node,stack) in traversal(root):
+			if isinstance(node,ast.FunctionDef):
+				node.name = getFnDefName(node)
+				node.weight = calcWeight(node)
+				node.path   = path
+				node.pclass = getCurrentClass(stack)
+				fdefs.append(node)
+	return fdefs
 
 def secondPass(ASTs):
     calls=[]
@@ -82,11 +124,8 @@ def secondPass(ASTs):
 
 
 def convert(ASTs):
-    print(ASTs)
-    firstPass(ASTs)
-
-
-
+	fdefs = firstPass(ASTs)
+	printFnDefs(fdefs)
 
 
 
