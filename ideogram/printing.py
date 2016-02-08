@@ -1,4 +1,20 @@
 
+def getClassString(node):
+    if node:
+        return node.name
+    return 'None'
+    
+def getPrettyPath(path,numChars):
+    if path.find("type_checker_test.py"):
+        pass # strange case!!
+    path=limitChars(path,numChars)
+    if path.find("\\"):
+        return limitChars(path[path.find('\\'):],numChars)
+    elif path.find("/"):
+        return limitChars(path[path.find('/'):],numChars)
+    else:
+        return path
+
 def limitChars(x,numChars):
 	if len(x)>numChars:
 		diff = len(x)-numChars
@@ -11,6 +27,6 @@ def limitChars(x,numChars):
 def printFnDefs(fdefs):
 	for x in fdefs:
 		print(
-			limitChars(x.path,30)+'     '+limitChars(x.name,30)
-			+limitChars(str(x.weight),10)+limitChars(str(x.pclass),15)
+			getPrettyPath(x.path,30)+'     '+limitChars(x.name,30)
+			+limitChars(str(x.weight),10)+limitChars(getClassString(x.pclass),20)
 			)

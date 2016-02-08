@@ -60,18 +60,7 @@ def traversal(root):
             node.children = set(children)
             stack.append(node)
             stack = stack + children
-
-
-def firstPass(ASTs):
-    fdefs=[]
-    for (root,path) in ASTs:
-        for (node,stack) in traversal(root):
-            if isinstance(node,ast.FunctionDef):
-                #node.name = getFnDefName(node)
-                node.weight = calcWeight(node)
-                node.path = path
-                node.pclass = getCurrentClass(stack)
-                fdefs.append(node)
+                
 def traversal(root):
     '''For each subtree, evaluate the deepest nodes first. Then evaluate the
     next-deepest nodes and move on to the next subtree.'''
@@ -104,6 +93,7 @@ def firstPass(ASTs):
         fdefs.append(body)
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
+                #node.name is already defined by AST module
                 node.weight = calcWeight(node)
                 node.path   = path
                 node.pclass = getCurrentClass(stack)
