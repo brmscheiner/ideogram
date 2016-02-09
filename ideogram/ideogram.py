@@ -9,5 +9,8 @@ def genGraphData(project_path):
     #writer.write(nodeInfo)
 
 if __name__=="__main__":
-    project_path = os.path.join('test','package','bpl-compiler-master','bpl')
+    project_path = os.path.join(
+                                'C:\\','Users','scheinerbock','Desktop',
+                                'glyph','test','package','bpl-compyler-master'
+                                )
     genGraphData(project_path)

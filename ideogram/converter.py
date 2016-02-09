@@ -96,8 +96,7 @@ def firstPass(ASTs,project_path):
                 name   = getImportFromFn(node)
                 imp_funcs[module] = name
             elif isinstance(node,ast.Import):
-                print("ACSDEF")
-                module = getImportModule(node,project_path)
+                module = getImportModule(node,path)
                 imp_mods.append(module)
     return fdefs,imp_funcs,imp_mods
 
@@ -112,10 +111,11 @@ def secondPass(ASTs,fdefs):
 
 def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
-    print("running")
+    print("Making first pass..")
     fdefs,imp_funcs,imp_mods = firstPass(ASTs,project_path)
-    print("still running")
+    print(imp_mods)
     #printFnDefs(fdefs)
+    print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs)
 
 
