@@ -3,11 +3,11 @@ import converter
 import os
 #import writer
 
-def genGraphData(path):
-    ASTs     = reader.read(path)
-    nodeInfo = converter.convert(ASTs)
+def genGraphData(project_path):
+    ASTs     = reader.read(project_path)
+    nodeInfo = converter.convert(ASTs,project_path)
     #writer.write(nodeInfo)
 
 if __name__=="__main__":
-    project_directory = os.path.join('test','package')
-    genGraphData(project_directory)
+    project_path = os.path.join('test','package','bpl-compiler-master','bpl')
+    genGraphData(project_path)

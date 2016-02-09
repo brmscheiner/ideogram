@@ -1,5 +1,9 @@
 import ast
 from printing import printFnDefs
+from importAnalysis import getModulePath
+from importAnalysis import getImportFromModule
+from importAnalysis import getImportFromFn
+from importAnalysis import getImportModule
 import copy
 
 def show(node):
@@ -32,7 +36,7 @@ def getSourceFnDef(stack,fdefs,path):
 def getTargetFnDef(fdefs):
     return None
 
-def calcWeight(node):
+def calcFnWeight(node):
     '''Calculates the weight of a function definition by recursively counting 
     its child nodes in the AST. Note that the tree traversal will become 
     O(n^2) instead of O(n) if this feature is enabled.'''
@@ -66,24 +70,36 @@ def traversal(root):
             node.children = set(children)
             stack.append(node)
 
-def firstPass(ASTs):
+def firstPass(ASTs,project_path):
+    '''Populate dictionary of function definition nodes, dictionary of imported  
+    function names and list of imported module names.'''
     fdefs=dict()
+    imp_funcs=dict()
+    imp_mods=[]
     for (root,path) in ASTs:
         fdefs[path] = []
         body        = root
         body.name   = "body"
-        body.weight = calcWeight(body)
+        body.weight = calcFnWeight(body)
         body.path   = path
         body.pclass = None
         fdefs[path].append(body)
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
                 #node.name is already defined by AST module
-                node.weight = calcWeight(node)
+                node.weight = calcFnWeight(node)
                 node.path   = path
                 node.pclass = getCurrentClass(stack)
                 fdefs[path].append(node)
-    return fdefs
+            elif isinstance(node,ast.ImportFrom):
+                module = getImportFromModule(node)
+                name   = getImportFromFn(node)
+                imp_funcs[module] = name
+            elif isinstance(node,ast.Import):
+                print("ACSDEF")
+                module = getImportModule(node,project_path)
+                imp_mods.append(module)
+    return fdefs,imp_funcs,imp_mods
 
 def secondPass(ASTs,fdefs):
     calls=[]
@@ -94,13 +110,13 @@ def secondPass(ASTs,fdefs):
                 calls.append(node)
     return calls
 
-
-def convert(ASTs):
+def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
-    fdefs = firstPass(ASTs)
+    print("running")
+    fdefs,imp_funcs,imp_mods = firstPass(ASTs,project_path)
+    print("still running")
     #printFnDefs(fdefs)
     calls = secondPass(copy_ASTs,fdefs)
-
 
 
 
