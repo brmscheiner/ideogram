@@ -37,6 +37,8 @@ def getSourceFnDef(stack,fdefs,path):
     raise
     
 def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods):
+    '''Need to go back through and compare parent classes.
+    Also, what about method calls like hat.compare(sombrero)'''
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
         if path in fdefs:
@@ -50,7 +52,17 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods):
         return None
     # CASE 2: # calling function outside namespace, like random.randint(x,y)
     elif isinstance(node.func,ast.Attribute):
-        pass
+        try:
+            module   = node.func.value.id
+            fn_name  = node.func.attr
+        except AttributeError:
+            return None
+        if module in imp_mods[path] and module in fdefs:
+            print("inhere")
+            for x in fdefs[module]:
+                if x.name == fn_name:
+                    return x
+       # print(module+"    "+fn_name)
     return None
 
 def calcFnWeight(node):
