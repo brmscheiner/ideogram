@@ -21,6 +21,7 @@ def getCurrentClass(stack):
     return None
 
 def getSourceFnDef(stack,fdefs,path):
+    '''VERY VERY VERY VERY VERY VERY SLOW'''
     found = False
     for x in stack:
         if isinstance(x, ast.FunctionDef):
@@ -35,7 +36,21 @@ def getSourceFnDef(stack,fdefs,path):
                 return y
     raise
     
-def getTargetFnDef(fdefs):
+def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods):
+    #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
+    if isinstance(node.func,ast.Name):
+        if path in fdefs:
+            for x in fdefs[path]:
+                if node.func.id == x.name:
+                    return x
+        if path in imp_funcs:
+            for x in imp_funcs[path]:
+                if node.func.id == x.name:
+                    return x
+        return None
+    # CASE 2: # calling function outside namespace, like random.randint(x,y)
+    elif isinstance(node.func,ast.Attribute):
+        pass
     return None
 
 def calcFnWeight(node):
@@ -89,16 +104,18 @@ def formatFunctionNode(node,path,stack):
     node.pclass = getCurrentClass(stack)
     return node
 
-def firstPass(ASTs,project_path):
+def firstPass(ASTs):
     '''Populate dictionary of function definition nodes, dictionary of imported  
-    function names and list of imported module names.'''
+    function names and dictionary of imported module names. All three 
+    dictionaries use source file paths as keys.'''
     fdefs=dict()
     imp_func_strs=dict()
-    imp_mods=[]
+    imp_mods=dict()
     for (root,path) in ASTs:
         fdefs[path] = []
         fdefs[path].append(formatBodyNode(root,path))
         imp_func_strs[path] = []
+        imp_mods[path] = []
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
                 fdefs[path].append(formatFunctionNode(node,path,stack))
@@ -111,7 +128,7 @@ def firstPass(ASTs,project_path):
                     print("No module found "+ast.dump(node))
             elif isinstance(node,ast.Import):
                 module = getImportModule(node,path)
-                imp_mods.append(module)
+                imp_mods[path].append(module)
     return fdefs,imp_func_strs,imp_mods
 
 def matchImpFuncStrs(fdefs,imp_func_strs):
@@ -128,30 +145,35 @@ def matchImpFuncStrs(fdefs,imp_func_strs):
             else:
                 fn_node = [x for x in fdefs[mod] if x.name==func]
                 if fn_node==[]:
-                    print(func+" was not found!")
+                    pass #probably an imported class
                 else:
                     imp_funcs[source] += fn_node
     return imp_funcs
 
-def secondPass(ASTs,fdefs):
+def secondPass(ASTs,fdefs,imp_funcs,imp_mods):
+    nfound=0
     calls=[]
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
                 node.source = getSourceFnDef(stack,fdefs,path)
+                node.target = getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods)
+                if node.target: 
+                    nfound+=1
                 calls.append(node)
+    print(str(nfound)+" call matches were made")
     return calls
 
 def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
-    fdefs,imp_func_strs,imp_mods = firstPass(ASTs,project_path)
-    printFnDefs(fdefs)
+    fdefs,imp_func_strs,imp_mods = firstPass(ASTs)
+    #printFnDefs(fdefs)
     imp_funcs=matchImpFuncStrs(fdefs,imp_func_strs)
-    printImpFuncs(imp_funcs)
-    #print(imp_funcs)
+    #printImpFuncs(imp_funcs)
     print("Making second pass..")
-    calls = secondPass(copy_ASTs,fdefs)
+    calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods)
+    print(len(calls))
 
 
 
