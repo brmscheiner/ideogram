@@ -36,12 +36,17 @@ def printFnDefs(fdefs):
             +limitChars(getClassString(x.pclass),20)
             )
             
-def printImpFuncs(imp_funcs):
-    for i in imp_funcs:
-        if imp_funcs[i]:
-            print(imp_funcs[i]+" imported from "+i)
+def printImpFuncStrs(imp_func_strs):
+    for i in imp_func_strs:
+        if imp_func_strs[i]:
+            print(imp_func_strs[i])
+            for j in imp_func_strs[i]:
+                if j:
+                    print(j+" imported from "+i)
+                else:
+                    print("None imported from "+i)
         else:
-            print("None imported from "+i)
+            print("No such module "+i)
     
     
     

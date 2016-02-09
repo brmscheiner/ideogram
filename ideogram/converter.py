@@ -1,6 +1,6 @@
 import ast
 from printing import printFnDefs
-from printing import printImpFuncs
+from printing import printImpFuncStrs
 from importAnalysis import getModulePath
 from importAnalysis import getImportFromModule
 from importAnalysis import getImportFromFn
@@ -75,7 +75,7 @@ def firstPass(ASTs,project_path):
     '''Populate dictionary of function definition nodes, dictionary of imported  
     function names and list of imported module names.'''
     fdefs=dict()
-    imp_funcs=dict()
+    imp_func_strs=dict()
     imp_mods=[]
     for (root,path) in ASTs:
         fdefs[path] = []
@@ -94,15 +94,17 @@ def firstPass(ASTs,project_path):
                 fdefs[path].append(node)
             elif isinstance(node,ast.ImportFrom):
                 module = getImportFromModule(node,path)
-                name   = getImportFromFn(node,path)
                 if module:
-                    imp_funcs[module] = name
+                    if module in imp_func_strs.keys():
+                        imp_func_strs[module].append(getImportFromFn(node,path))
+                    else:
+                        imp_func_strs[module]=[getImportFromFn(node,path)]
                 else:
                     print("no module found")
             elif isinstance(node,ast.Import):
                 module = getImportModule(node,path)
                 imp_mods.append(module)
-    return fdefs,imp_funcs,imp_mods
+    return fdefs,imp_func_strs,imp_mods
 
 def secondPass(ASTs,fdefs):
     calls=[]
@@ -116,8 +118,8 @@ def secondPass(ASTs,fdefs):
 def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
-    fdefs,imp_funcs,imp_mods = firstPass(ASTs,project_path)
-    printImpFuncs(imp_funcs)
+    fdefs,imp_func_strs,imp_mods = firstPass(ASTs,project_path)
+    printImpFuncStrs(imp_func_strs)
     #printFnDefs(fdefs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs)
