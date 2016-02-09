@@ -80,6 +80,14 @@ def formatBodyNode(root,path):
     body.pclass = None
     return body
 
+def formatFunctionNode(node,path,stack):
+    '''Add some helpful attributes to node.'''
+    #node.name is already defined by AST module
+    node.weight = calcFnWeight(node)
+    node.path   = path
+    node.pclass = getCurrentClass(stack)
+    return node
+
 def firstPass(ASTs,project_path):
     '''Populate dictionary of function definition nodes, dictionary of imported  
     function names and list of imported module names.'''
@@ -92,22 +100,28 @@ def firstPass(ASTs,project_path):
         imp_func_strs[path] = []
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
-                #node.name is already defined by AST module
-                node.weight = calcFnWeight(node)
-                node.path   = path
-                node.pclass = getCurrentClass(stack)
-                fdefs[path].append(node)
+                fdefs[path].append(formatFunctionNode(node,path,stack))
             elif isinstance(node,ast.ImportFrom):
                 module = getImportFromModule(node,path)
                 if module:
                     fn_name = getImportFromFn(node,path)
                     imp_func_strs[path].append((module,fn_name))
                 else:
-                    print("No module found")
+                    print("No module found "+ast.dump(node))
             elif isinstance(node,ast.Import):
                 module = getImportModule(node,path)
                 imp_mods.append(module)
     return fdefs,imp_func_strs,imp_mods
+
+def matchImpFuncStrs(fdefs,imp_func_strs):
+    imp_funcs=dict()
+    for source in imp_func_strs:
+        for (mod,func) in imp_func_strs[source]:
+            try:
+                a=fdefs[mod]
+            except KeyError:
+                print(mod+" is not part of the project")
+    return
 
 def secondPass(ASTs,fdefs):
     calls=[]
@@ -122,8 +136,8 @@ def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
     fdefs,imp_func_strs,imp_mods = firstPass(ASTs,project_path)
-    printImpFuncStrs(imp_func_strs)
-    #printFnDefs(fdefs)
+    imp_funcs=matchImpFuncStrs(fdefs,imp_func_strs)
+    print(imp_funcs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs)
 

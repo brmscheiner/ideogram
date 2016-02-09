@@ -46,7 +46,7 @@ def printImpFuncStrs(imp_func_strs):
                 else:
                     print("   Nothing imported from "+mod)
         else:
-            print("No such module "+i)
+            print("No functions imported in file "+i)
     
     
     
