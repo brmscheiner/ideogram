@@ -14,11 +14,23 @@ def getCurrentClass(stack):
             return x
     return None
 
-def getCurrentFnDef(stack):
+def getSourceFnDef(stack,fdefs,path):
+    found = False
     for x in stack:
         if isinstance(x, ast.FunctionDef):
-            return x
-    return None # return "body?"
+            for y in fdefs[path]:
+                if ast.dump(x)==ast.dump(y):
+                    found = True
+                    return y
+            raise
+    if not found:
+        for y in fdefs[path]:
+            if y.name=='body':
+                return y
+    raise
+    
+def getTargetFnDef(fdefs):
+    return None
 
 def calcWeight(node):
     '''Calculates the weight of a function definition by recursively counting 
@@ -78,7 +90,7 @@ def secondPass(ASTs,fdefs):
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
-                node.source = getCurrentFnDef(stack)
+                node.source = getSourceFnDef(stack,fdefs,path)
                 calls.append(node)
     return calls
 
@@ -86,9 +98,8 @@ def secondPass(ASTs,fdefs):
 def convert(ASTs):
     copy_ASTs = copy.deepcopy(ASTs)
     fdefs = firstPass(ASTs)
-    printFnDefs(fdefs)
+    #printFnDefs(fdefs)
     calls = secondPass(copy_ASTs,fdefs)
-    
 
 
 
