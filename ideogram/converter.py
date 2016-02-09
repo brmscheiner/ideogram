@@ -1,5 +1,6 @@
 import ast
 from printing import printFnDefs
+from printing import printImpFuncs
 from importAnalysis import getModulePath
 from importAnalysis import getImportFromModule
 from importAnalysis import getImportFromFn
@@ -92,9 +93,12 @@ def firstPass(ASTs,project_path):
                 node.pclass = getCurrentClass(stack)
                 fdefs[path].append(node)
             elif isinstance(node,ast.ImportFrom):
-                module = getImportFromModule(node)
-                name   = getImportFromFn(node)
-                imp_funcs[module] = name
+                module = getImportFromModule(node,path)
+                name   = getImportFromFn(node,path)
+                if module:
+                    imp_funcs[module] = name
+                else:
+                    print("no module found")
             elif isinstance(node,ast.Import):
                 module = getImportModule(node,path)
                 imp_mods.append(module)
@@ -113,7 +117,7 @@ def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
     fdefs,imp_funcs,imp_mods = firstPass(ASTs,project_path)
-    print(imp_mods)
+    printImpFuncs(imp_funcs)
     #printFnDefs(fdefs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs)

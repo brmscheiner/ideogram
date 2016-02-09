@@ -8,7 +8,8 @@ def getModulePath(project_path,module_name):
     try:
         package = pkgutil.get_loader(module_name)
     except ImportError:
-        package = None
+        print("Parent module for "+module_name+" not found.")
+        return None
     if package: 
         if package.get_code(module_name):
             filename = package.get_code(module_name).co_filename
@@ -17,10 +18,12 @@ def getModulePath(project_path,module_name):
         print ("Module "+module_name+" not found.")
         return None
 
-def getImportFromModule(node):
-    return None
+def getImportFromModule(node,filepath):
+    path = filepath[:filepath.rfind("\\")]
+    module_name = node.module
+    return getModulePath(path,module_name)
 
-def getImportFromFn(node):
+def getImportFromFn(node,filepath):
     return None
 
 def getImportModule(node,filepath):

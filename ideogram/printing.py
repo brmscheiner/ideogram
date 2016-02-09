@@ -35,3 +35,16 @@ def printFnDefs(fdefs):
             +limitChars(str(x.weight),10)
             +limitChars(getClassString(x.pclass),20)
             )
+            
+def printImpFuncs(imp_funcs):
+    for i in imp_funcs:
+        if imp_funcs[i]:
+            print(imp_funcs[i]+" imported from "+i)
+        else:
+            print("None imported from "+i)
+    
+    
+    
+    
+    
+    
