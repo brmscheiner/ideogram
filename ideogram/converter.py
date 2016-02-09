@@ -1,6 +1,7 @@
 import ast
 from printing import printFnDefs
 from printing import printImpFuncStrs
+from printing import printImpFuncs
 from importAnalysis import getModulePath
 from importAnalysis import getImportFromModule
 from importAnalysis import getImportFromFn
@@ -116,12 +117,21 @@ def firstPass(ASTs,project_path):
 def matchImpFuncStrs(fdefs,imp_func_strs):
     imp_funcs=dict()
     for source in imp_func_strs:
+        imp_funcs[source]=[]
         for (mod,func) in imp_func_strs[source]:
-            try:
-                a=fdefs[mod]
-            except KeyError:
+            if mod not in fdefs:
                 print(mod+" is not part of the project")
-    return
+                break
+            if func=='*':
+                all_fns = [x for x in fdefs[mod] if x.name!='body']
+                imp_funcs[source] += all_fns
+            else:
+                fn_node = [x for x in fdefs[mod] if x.name==func]
+                if fn_node==[]:
+                    print(func+" was not found!")
+                else:
+                    imp_funcs[source] += fn_node
+    return imp_funcs
 
 def secondPass(ASTs,fdefs):
     calls=[]
@@ -136,8 +146,10 @@ def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
     fdefs,imp_func_strs,imp_mods = firstPass(ASTs,project_path)
+    printFnDefs(fdefs)
     imp_funcs=matchImpFuncStrs(fdefs,imp_func_strs)
-    print(imp_funcs)
+    printImpFuncs(imp_funcs)
+    #print(imp_funcs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs)
 

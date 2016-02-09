@@ -48,6 +48,13 @@ def printImpFuncStrs(imp_func_strs):
         else:
             print("No functions imported in file "+i)
     
+def printImpFuncs(imp_funcs):
+    for i in imp_funcs:
+        if imp_funcs[i]:
+            print("Functions imported in "+i)
+            print([x.name for x in imp_funcs[i]])
+        else:
+            print("No functions imported in file "+i)
     
     
     

@@ -5,6 +5,11 @@ DATE: Feb. 20, 2014
 Token class and associated methods for use in a compiler for the BPL
 programming language. Implemented for CS331 at Oberlin College.
 """
+import random
+import json
+import pkgutil
+import sys
+from os import path
 
 # Hacking together an Enum data type
 def enum(*sequential, **named):
