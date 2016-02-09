@@ -24,7 +24,9 @@ def getImportFromModule(node,filepath):
     return getModulePath(path,module_name)
 
 def getImportFromFn(node,filepath):
-    return None
+    for x in node.names:
+        fn_name = x.asname if x.asname else x.name
+    return fn_name
 
 def getImportModule(node,filepath):
     path = filepath[:filepath.rfind("\\")]

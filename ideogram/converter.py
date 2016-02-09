@@ -71,6 +71,15 @@ def traversal(root):
             node.children = set(children)
             stack.append(node)
 
+def formatBodyNode(root,path):
+    '''Format the root node for use as the body node.'''
+    body        = root
+    body.name   = "body"
+    body.weight = calcFnWeight(body)
+    body.path   = path
+    body.pclass = None
+    return body
+
 def firstPass(ASTs,project_path):
     '''Populate dictionary of function definition nodes, dictionary of imported  
     function names and list of imported module names.'''
@@ -79,12 +88,8 @@ def firstPass(ASTs,project_path):
     imp_mods=[]
     for (root,path) in ASTs:
         fdefs[path] = []
-        body        = root
-        body.name   = "body"
-        body.weight = calcFnWeight(body)
-        body.path   = path
-        body.pclass = None
-        fdefs[path].append(body)
+        fdefs[path].append(formatBodyNode(root,path))
+        imp_func_strs[path] = []
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
                 #node.name is already defined by AST module
@@ -95,12 +100,10 @@ def firstPass(ASTs,project_path):
             elif isinstance(node,ast.ImportFrom):
                 module = getImportFromModule(node,path)
                 if module:
-                    if module in imp_func_strs.keys():
-                        imp_func_strs[module].append(getImportFromFn(node,path))
-                    else:
-                        imp_func_strs[module]=[getImportFromFn(node,path)]
+                    fn_name = getImportFromFn(node,path)
+                    imp_func_strs[path].append((module,fn_name))
                 else:
-                    print("no module found")
+                    print("No module found")
             elif isinstance(node,ast.Import):
                 module = getImportModule(node,path)
                 imp_mods.append(module)

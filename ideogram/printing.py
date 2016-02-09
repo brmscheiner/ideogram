@@ -39,12 +39,12 @@ def printFnDefs(fdefs):
 def printImpFuncStrs(imp_func_strs):
     for i in imp_func_strs:
         if imp_func_strs[i]:
-            print(imp_func_strs[i])
-            for j in imp_func_strs[i]:
-                if j:
-                    print(j+" imported from "+i)
+            print("Functions imported in "+i)
+            for (mod,func) in imp_func_strs[i]:
+                if func:
+                    print("   "+func+" imported from "+mod)
                 else:
-                    print("None imported from "+i)
+                    print("   Nothing imported from "+mod)
         else:
             print("No such module "+i)
     
