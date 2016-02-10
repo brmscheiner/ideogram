@@ -47,7 +47,20 @@ def printImpFuncStrs(imp_func_strs):
                     print("   Nothing imported from "+mod)
         else:
             print("No functions imported in file "+i)
-    
+            
+def printImpClassStrs(imp_class_strs):
+    for i in imp_class_strs:
+        if imp_class_strs[i]:
+            print("Classes imported in "+i)
+            for (mod,clss) in imp_class_strs[i]:
+                if clss:
+                    print("   "+clss+" imported from "+mod)
+                else:
+                    print("   Nothing imported from "+mod)
+        else:
+            #print("No classes imported in file "+i)
+            pass
+            
 def printImpFuncs(imp_funcs):
     for i in imp_funcs:
         if imp_funcs[i]:

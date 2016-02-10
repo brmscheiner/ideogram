@@ -1,6 +1,7 @@
 import ast
 from printing import printFnDefs
 from printing import printImpFuncStrs
+from printing import printImpClassStrs
 from printing import printImpFuncs
 from importAnalysis import getModulePath
 from importAnalysis import getImportFromModule
@@ -21,12 +22,12 @@ def getCurrentClass(stack):
     return None
 
 def getSourceFnDef(stack,fdefs,path):
-    '''VERY VERY VERY VERY VERY VERY SLOW'''
+    '''VERY VERY SLOW'''
     found = False
     for x in stack:
         if isinstance(x, ast.FunctionDef):
             for y in fdefs[path]:
-                if ast.dump(x)==ast.dump(y):
+                if ast.dump(x)==ast.dump(y): #probably causing slowdown
                     found = True
                     return y
             raise
@@ -145,8 +146,10 @@ def firstPass(ASTs):
 
 def matchImpFuncStrs(fdefs,imp_func_strs):
     imp_funcs=dict()
+    imp_class_strs=dict()
     for source in imp_func_strs:
         imp_funcs[source]=[]
+        imp_class_strs[source]=[]
         for (mod,func) in imp_func_strs[source]:
             if mod not in fdefs:
                 print(mod+" is not part of the project")
@@ -157,10 +160,10 @@ def matchImpFuncStrs(fdefs,imp_func_strs):
             else:
                 fn_node = [x for x in fdefs[mod] if x.name==func]
                 if fn_node==[]:
-                    pass #probably an imported class
+                    imp_class_strs[source].append((mod,func))
                 else:
                     imp_funcs[source] += fn_node
-    return imp_funcs
+    return imp_funcs,imp_class_strs
 
 def secondPass(ASTs,fdefs,imp_funcs,imp_mods):
     nfound=0
@@ -181,11 +184,12 @@ def convert(ASTs,project_path):
     print("Making first pass..")
     fdefs,imp_func_strs,imp_mods = firstPass(ASTs)
     #printFnDefs(fdefs)
-    imp_funcs=matchImpFuncStrs(fdefs,imp_func_strs)
+    imp_funcs,imp_class_strs=matchImpFuncStrs(fdefs,imp_func_strs)
+    printImpClassStrs(imp_class_strs)
     #printImpFuncs(imp_funcs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods)
-    print(len(calls))
+    print(str(len(calls))+" total calls")
 
 
 
