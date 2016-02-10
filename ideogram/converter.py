@@ -148,11 +148,13 @@ def matchImpFuncStrs(fdefs,imp_func_strs):
     imp_funcs=dict()
     imp_class_strs=dict()
     for source in imp_func_strs:
+        if imp_func_strs[source]==[]:
+            break
         imp_funcs[source]=[]
         imp_class_strs[source]=[]
         for (mod,func) in imp_func_strs[source]:
             if mod not in fdefs:
-                print(mod+" is not part of the project")
+                print(mod+" is not part of the project.")
                 break
             if func=='*':
                 all_fns = [x for x in fdefs[mod] if x.name!='body']
@@ -164,6 +166,26 @@ def matchImpFuncStrs(fdefs,imp_func_strs):
                 else:
                     imp_funcs[source] += fn_node
     return imp_funcs,imp_class_strs
+    
+def matchImpClassStrs(fdefs,imp_class_strs):
+    imp_methods=dict()
+    for source in imp_class_strs:
+        if imp_class_strs[source]==[]:
+            break
+        imp_methods[source]=[]
+        for (mod,clss) in imp_class_strs[source]:
+            if mod not in fdefs:
+                print(mod+" is not part of the project.")
+                break
+            print(mod)
+            print(source)
+            valid = lambda x: hasattr(x,"pclass") and hasattr(x.pclass,"name")
+            classes = [x.pclass.name for x in fdefs[mod] if valid(x)]
+            matches = [x for x in fdefs[mod] if x.pclass==clss]
+            print(classes)
+            print(len(matches))
+    return imp_methods
+        
 
 def secondPass(ASTs,fdefs,imp_funcs,imp_mods):
     nfound=0
@@ -185,7 +207,8 @@ def convert(ASTs,project_path):
     fdefs,imp_func_strs,imp_mods = firstPass(ASTs)
     #printFnDefs(fdefs)
     imp_funcs,imp_class_strs=matchImpFuncStrs(fdefs,imp_func_strs)
-    printImpClassStrs(imp_class_strs)
+    imp_methods=matchImpClassStrs(fdefs,imp_class_strs)
+    #printImpClassStrs(imp_class_strs)
     #printImpFuncs(imp_funcs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods)
