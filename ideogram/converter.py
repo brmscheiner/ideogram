@@ -1,12 +1,6 @@
 import ast
-from printing import printFnDefs
-from printing import printImpFuncStrs
-from printing import printImpClassStrs
-from printing import printImpFuncs
-from importAnalysis import getModulePath
-from importAnalysis import getImportFromModule
-from importAnalysis import getImportFromFn
-from importAnalysis import getImportModule
+import printing as pr
+import importAnalysis as ia
 import copy
 
 def show(node):
@@ -122,37 +116,37 @@ def firstPass(ASTs):
     function names and dictionary of imported module names. All three 
     dictionaries use source file paths as keys.'''
     fdefs=dict()
-    imp_func_strs=dict()
+    imp_obj_strs=dict()
     imp_mods=dict()
     for (root,path) in ASTs:
         fdefs[path] = []
         fdefs[path].append(formatBodyNode(root,path))
-        imp_func_strs[path] = []
+        imp_obj_strs[path] = []
         imp_mods[path] = []
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
                 fdefs[path].append(formatFunctionNode(node,path,stack))
             elif isinstance(node,ast.ImportFrom):
-                module = getImportFromModule(node,path)
+                module = ia.getImportFromModule(node,path)
                 if module:
-                    fn_name = getImportFromFn(node,path)
-                    imp_func_strs[path].append((module,fn_name))
+                    fn_name = ia.getImportFromFn(node,path)
+                    imp_obj_strs[path].append((module,fn_name))
                 else:
                     print("No module found "+ast.dump(node))
             elif isinstance(node,ast.Import):
-                module = getImportModule(node,path)
+                module = ia.getImportModule(node,path)
                 imp_mods[path].append(module)
-    return fdefs,imp_func_strs,imp_mods
+    return fdefs,imp_obj_strs,imp_mods
 
-def matchImpFuncStrs(fdefs,imp_func_strs):
+def matchImpObjStrs(fdefs,imp_obj_strs):
     imp_funcs=dict()
     imp_class_strs=dict()
-    for source in imp_func_strs:
-        if imp_func_strs[source]==[]:
+    for source in imp_obj_strs:
+        if imp_obj_strs[source]==[]:
             break
         imp_funcs[source]=[]
         imp_class_strs[source]=[]
-        for (mod,func) in imp_func_strs[source]:
+        for (mod,func) in imp_obj_strs[source]:
             if mod not in fdefs:
                 print(mod+" is not part of the project.")
                 break
@@ -204,12 +198,14 @@ def secondPass(ASTs,fdefs,imp_funcs,imp_mods):
 def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
-    fdefs,imp_func_strs,imp_mods = firstPass(ASTs)
-    #printFnDefs(fdefs)
-    imp_funcs,imp_class_strs=matchImpFuncStrs(fdefs,imp_func_strs)
+    fdefs,imp_obj_strs,imp_mods = firstPass(ASTs)
+    #pr.printFnDefs(fdefs)
+    print(imp_obj_strs)
+    imp_funcs,imp_class_strs=matchImpObjStrs(fdefs,imp_obj_strs)
+    print(imp_class_strs)
     imp_methods=matchImpClassStrs(fdefs,imp_class_strs)
-    #printImpClassStrs(imp_class_strs)
-    #printImpFuncs(imp_funcs)
+    #pr.printImpClassStrs(imp_class_strs)
+    #pr.printImpFuncs(imp_funcs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods)
     print(str(len(calls))+" total calls")
