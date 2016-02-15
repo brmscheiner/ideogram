@@ -23,10 +23,11 @@ def getImportFromModule(node,filepath):
     module_name = node.module
     return getModulePath(path,module_name)
 
-def getImportFromFn(node,filepath):
-    for x in node.names:
-        fn_name = x.asname if x.asname else x.name
-    return fn_name
+def getImportFromObjects(node):
+    '''Returns a list of objects referenced by import from node'''
+    somenames = [x.asname for x in node.names if x.asname]
+    othernames = [x.name for x in node.names if not x.asname]
+    return somenames+othernames
 
 def getImportModule(node,filepath):
     path = filepath[:filepath.rfind("\\")]

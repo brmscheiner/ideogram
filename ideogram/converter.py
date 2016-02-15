@@ -129,8 +129,9 @@ def firstPass(ASTs):
             elif isinstance(node,ast.ImportFrom):
                 module = ia.getImportFromModule(node,path)
                 if module:
-                    fn_name = ia.getImportFromFn(node,path)
-                    imp_obj_strs[path].append((module,fn_name))
+                    fn_names = ia.getImportFromObjects(node)
+                    for fn_name in fn_names:
+                        imp_obj_strs[path].append((module,fn_name))
                 else:
                     print("No module found "+ast.dump(node))
             elif isinstance(node,ast.Import):
