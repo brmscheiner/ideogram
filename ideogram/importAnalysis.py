@@ -14,6 +14,11 @@ def getModulePath(project_path,module_name):
         if package.get_code(module_name):
             filename = package.get_code(module_name).co_filename
             return filename
+        elif package.find_spec(module_name).has_location==False:
+            return None #built-in module such as itertools
+        else:
+            pass #perhaps filename is in package.find_spec(module_name).origin?
+            pass #a good reference is https://www.python.org/dev/peps/pep-0302/
     else:
         print ("Module "+module_name+" not found.")
         return None
