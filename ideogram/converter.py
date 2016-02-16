@@ -172,13 +172,11 @@ def matchImpClassStrs(fdefs,imp_class_strs):
             if mod not in fdefs:
                 print(mod+" is not part of the project.")
                 break
-            print(mod)
-            print(source)
             valid = lambda x: hasattr(x,"pclass") and hasattr(x.pclass,"name")
-            classes = [x.pclass.name for x in fdefs[mod] if valid(x)]
+            classes = [x.pclass.name for x in fdefs[mod] if valid(x)] #all functions in fdefs with parent classes 
             matches = [x for x in fdefs[mod] if x.pclass==clss]
-            print(classes)
-            print(len(matches))
+            print(clss)
+            print([x.pclass.name for x in fdefs[mod] if valid(x)])
     return imp_methods
         
 
