@@ -140,6 +140,11 @@ def firstPass(ASTs):
     return fdefs,imp_obj_strs,imp_mods
 
 def matchImpObjStrs(fdefs,imp_obj_strs):
+    '''returns imp_funcs, a dictionary with filepath keys that contains lists 
+    of function objects that were imported using "from __ import __" style 
+    syntax and imp_class_strs, a dictionary with filepath keys that contains 
+    lists of non-function objects that were imported using 
+    "from __ import ___" style syntax'''
     imp_funcs=dict()
     imp_class_strs=dict()
     for source in imp_obj_strs:
@@ -154,11 +159,14 @@ def matchImpObjStrs(fdefs,imp_obj_strs):
             if func=='*':
                 all_fns = [x for x in fdefs[mod] if x.name!='body']
                 imp_funcs[source] += all_fns
+                '''note: must add all available classes in mod to imported list'''
+                #imp_class_strs[source] += all_available_classes
             else:
                 fn_node = [x for x in fdefs[mod] if x.name==func]
                 if fn_node==[]:
                     imp_class_strs[source].append((mod,func))
                 else:
+                    assert len(fn_node)==1
                     imp_funcs[source] += fn_node
     return imp_funcs,imp_class_strs
     
