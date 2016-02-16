@@ -31,7 +31,7 @@ def getSourceFnDef(stack,fdefs,path):
                 return y
     raise
     
-def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods):
+def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
     '''Need to go back through and compare parent classes.
     Also, what about method calls like hat.compare(sombrero)'''
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
@@ -188,14 +188,15 @@ def matchImpClassStrs(fdefs,imp_class_strs):
     return imp_methods
         
 
-def secondPass(ASTs,fdefs,imp_funcs,imp_mods):
+def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
     nfound=0
     calls=[]
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
                 node.source = getSourceFnDef(stack,fdefs,path)
-                node.target = getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods)
+                node.target = getTargetFnDef(node,path,fdefs,
+                                             imp_funcs,imp_mods,imp_class_strs)
                 if node.target: 
                     nfound+=1
                 calls.append(node)
@@ -208,12 +209,10 @@ def convert(ASTs,project_path):
     fdefs,imp_obj_strs,imp_mods = firstPass(ASTs)
     #pr.printFnDefs(fdefs)
     imp_funcs,imp_class_strs=matchImpObjStrs(fdefs,imp_obj_strs)
-    print(imp_class_strs)
-    imp_methods=matchImpClassStrs(fdefs,imp_class_strs)
     #pr.printImpClassStrs(imp_class_strs)
     #pr.printImpFuncs(imp_funcs)
     print("Making second pass..")
-    calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods)
+    calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
     print(str(len(calls))+" total calls")
 
 
