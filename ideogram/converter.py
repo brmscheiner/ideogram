@@ -112,8 +112,8 @@ def formatFunctionNode(node,path,stack):
     return node
 
 def firstPass(ASTs):
-    '''Populate dictionary of function definition nodes, dictionary of imported  
-    function names and dictionary of imported module names. All three 
+    '''Return a dictionary of function definition nodes, a dictionary of  
+    imported object names and a dictionary of imported module names. All three 
     dictionaries use source file paths as keys.'''
     fdefs=dict()
     imp_obj_strs=dict()
@@ -201,7 +201,6 @@ def convert(ASTs,project_path):
     print("Making first pass..")
     fdefs,imp_obj_strs,imp_mods = firstPass(ASTs)
     #pr.printFnDefs(fdefs)
-    print(imp_obj_strs)
     imp_funcs,imp_class_strs=matchImpObjStrs(fdefs,imp_obj_strs)
     print(imp_class_strs)
     imp_methods=matchImpClassStrs(fdefs,imp_class_strs)
