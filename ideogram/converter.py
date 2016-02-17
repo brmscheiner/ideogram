@@ -164,6 +164,9 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
             method = node.func.attr
         except AttributeError:
             return None #130 instances!
+        if obj == 'self':
+            print("hi")
+            return None #setting attrs in class def. not a leak! 85 instances.
             
         # CASE 2A: # calling module.function
         for modpath in imp_mods[path]:
@@ -188,7 +191,11 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     return None #0 instances! whooo =D
                     
         # CASE 2C: # calling imported class.method
+        print()
         for clss in imp_classes[path]:
+            if "parser.py" in path:
+                print(clss.name)
+                print(obj)
             if clss.name == obj:
                 print("doublehi")
 #        if path in imp_class_strs.keys():
