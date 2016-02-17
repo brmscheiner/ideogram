@@ -34,6 +34,7 @@ def getSourceFnDef(stack,fdefs,path):
 def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
     '''Need to go back through and compare parent classes.
     Also, what about method calls like hat.compare(sombrero)'''
+    
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
         if path in fdefs:
@@ -44,20 +45,21 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
             for x in imp_funcs[path]:
                 if node.func.id == x.name:
                     return x
-        return None
+        return None # 200 instances!
+        
     # CASE 2: # calling function outside namespace, like random.randint(x,y)
     elif isinstance(node.func,ast.Attribute):
         try:
-            module   = node.func.value.id
-            fn_name  = node.func.attr
+            obj    = node.func.value.id
+            method = node.func.attr
         except AttributeError:
-            return None
-        if module in imp_mods[path] and module in fdefs:
-            print("inhere")
-            for x in fdefs[module]:
-                if x.name == fn_name:
-                    return x
-       # print(module+"    "+fn_name)
+            return None #130 instances!
+            
+        # CASE 2A: # module imported and we have module.function
+        if obj in imp_mods[path]:
+            print(obj)
+                    
+        # CASE 2B: # class imported and we have class.method
     return None
 
 def calcFnWeight(node):
@@ -194,7 +196,7 @@ def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
-                node.source = getSourceFnDef(stack,fdefs,path)
+                #node.source = getSourceFnDef(stack,fdefs,path)
                 node.target = getTargetFnDef(node,path,fdefs,
                                              imp_funcs,imp_mods,imp_class_strs)
                 if node.target: 
@@ -212,6 +214,7 @@ def convert(ASTs,project_path):
     #pr.printImpClassStrs(imp_class_strs)
     #pr.printImpFuncs(imp_funcs)
     print("Making second pass..")
+    print(imp_mods)
     calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
     print(str(len(calls))+" total calls")
 

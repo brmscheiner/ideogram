@@ -6,6 +6,7 @@ A lexical scanner for the BPL programming language. Implemented for CS331 at Obe
 """
 
 from bpl.scanner.token import TokenType, Token
+import bpl.scanner.token
 
 class ScannerException(Exception):
     def __init__(self, line_number, index, message):
