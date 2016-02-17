@@ -10,19 +10,20 @@ import copy
     AND
     import bpl.scanner.token in \compiler.py isn't showing up in 
     imp_mods[\compiler.py]
+    
     '''
     
 def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
-    fdefs,imp_obj_strs,imp_mods = firstPass(ASTs)
+    fdefs,imp_obj_strs,imp_mods,cdefs = firstPass(ASTs)
     #pr.printFnDefs(fdefs)
-    imp_funcs,imp_class_strs=matchImpObjStrs(fdefs,imp_obj_strs)
+    imp_funcs,imp_classes=matchImpObjStrs(fdefs,imp_obj_strs,cdefs)
     #pr.printImpClassStrs(imp_class_strs)
     #pr.printImpFuncs(imp_funcs)
     print("Making second pass..")
-    calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
-    print(str(len(calls))+" total calls")    
+    #calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
+    #print(str(len(calls))+" total calls")    
     
 def traversal(root):
     '''Tree traversal function that generates nodes. For each subtree, the 
@@ -51,6 +52,7 @@ def firstPass(ASTs):
     imported object names and a dictionary of imported module names. All three 
     dictionaries use source file paths as keys.'''
     fdefs=dict()
+    cdefs=dict()
     imp_obj_strs=dict()
     imp_mods=dict()
     for (root,path) in ASTs:
@@ -58,6 +60,7 @@ def firstPass(ASTs):
         fdefs[path].append(formatBodyNode(root,path))
         imp_obj_strs[path] = []
         imp_mods[path] = []
+        cdefs[path] = []
         for (node,stack) in traversal(root):
             if isinstance(node,ast.FunctionDef):
                 fdefs[path].append(formatFunctionNode(node,path,stack))
@@ -71,9 +74,10 @@ def firstPass(ASTs):
                     print("No module found "+ast.dump(node))
             elif isinstance(node,ast.Import):
                 module = ia.getImportModule(node,path)
-                print(module)
                 imp_mods[path].append(module)
-    return fdefs,imp_obj_strs,imp_mods
+            elif isinstance(node,ast.ClassDef):
+                cdefs[path].append(node)
+    return fdefs,imp_obj_strs,imp_mods,cdefs
             
 def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
     nfound=0
@@ -167,7 +171,7 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
         # CASE 2A: # calling module.function
         for modpath in imp_mods[path]:
             if not modpath:
-                pass
+                continue
             elif obj+'.py' in modpath:
                 matches = [x for x in fdefs[modpath] if x.name==method]
                 if matches:
@@ -193,40 +197,41 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
                         return None
     return None
 
-def matchImpObjStrs(fdefs,imp_obj_strs):
-    '''returns imp_funcs and imp_class_strs. 
-    
-    imp_funcs is a dictionary
-    with filepath keys that contains lists of function objects 
-    that were imported using "from __ import __" style syntax.
-    
-    imp_class_strs is a dictionary with filepath keys that contains 
-    lists of non-function objects that were imported using 
-    "from __ import ___" style syntax.'''
+def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
+    '''returns imp_funcs, a dictionary with filepath keys that contains 
+    lists of function definition nodes that were imported using
+     "from __ import __" style syntax. also returns imp_classes, which 
+    is the same for class definition nodes.'''
     imp_funcs=dict()
     imp_class_strs=dict()
+    imp_classes=dict()
     for source in imp_obj_strs:
-        if imp_obj_strs[source]==[]:
-            break
+        if not imp_obj_strs[source]:
+            continue
         imp_funcs[source]=[]
+        imp_classes[source]=[]
         imp_class_strs[source]=[]
         for (mod,func) in imp_obj_strs[source]:
             if mod not in fdefs:
                 print(mod+" is not part of the project.")
-                break
+                continue
             if func=='*':
                 all_fns = [x for x in fdefs[mod] if x.name!='body']
                 imp_funcs[source] += all_fns
-                '''note: must add all available classes in mod to imported list'''
-                #imp_class_strs[source] += all_available_classes
+                all_cls = [x for x in cdefs[mod]]
+                imp_classes[source] += all_cls
             else:
                 fn_node = [x for x in fdefs[mod] if x.name==func]
-                if fn_node==[]:
-                    imp_class_strs[source].append((mod,func))
-                else:
-                    assert len(fn_node)==1
+                cls_node = [x for x in cdefs[mod] if x.name==func]
+                assert len(fn_node) in [1,0]
+                assert len(cls_node) in [1,0]
+                if cls_node:
+                    imp_classes[source] += cls_node
+                if fn_node:
                     imp_funcs[source] += fn_node
-    return imp_funcs,imp_class_strs
+                if not fn_node and not cls_node:
+                    print(func+' not found in function and class definitions.')
+    return imp_funcs,imp_classes
 
 
 
