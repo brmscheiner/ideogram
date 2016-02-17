@@ -60,6 +60,9 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
             print(obj)
                     
         # CASE 2B: # class imported and we have class.method
+            # once we match the call to an object in imp_class_strs,
+            # we will still have to look for the associated call in 
+            # fdefs[mod] 
     return None
 
 def calcFnWeight(node):
