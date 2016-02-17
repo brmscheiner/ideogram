@@ -7,7 +7,9 @@ import copy
 
     imp_mods[scanner\scanner.py] contains elements even though 
     scanner\scanner.py imports no modules (only from style imports)
-    
+    AND
+    import bpl.scanner.token in \compiler.py isn't showing up in 
+    imp_mods[\compiler.py]
     '''
 
 def show(node):
@@ -63,7 +65,7 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
         # CASE 2A: # calling module.function
         for modpath in imp_mods[path]:
             if not modpath:
-                break
+                pass
             elif obj+'.py' in modpath:
                 matches = [x for x in fdefs[modpath] if x.name==method]
                 if matches:
@@ -71,12 +73,18 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
                         print("multiple matches found for "+method)
                     return matches[0]
                 else:
-                    return None
+                    return None #0 instances! whooo =D
                     
         # CASE 2B: # calling class.method
-            # once we match the call to an object in imp_class_strs,
-            # we will still have to look for the associated call in 
-            # fdefs[mod] 
+        if path in imp_class_strs.keys():
+            for (modpath,clss) in imp_class_strs[path]:
+                print("object: "+obj)
+                print("class: "+clss)
+                if obj==clss:
+                    print(obj+" is a hit!")
+                # once we match the call to an object in imp_class_strs,
+                # we will still have to look for the associated call in 
+                # fdefs[mod] 
     return None
 
 def calcFnWeight(node):
