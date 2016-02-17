@@ -39,7 +39,7 @@ def getSourceFnDef(stack,fdefs,path):
     raise
     
 def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
-    ''' What about method calls like hat.compare(sombrero)'''
+    ''' Return the function node that the input call node targets. '''
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
         if path in fdefs:
@@ -87,9 +87,6 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
                         return matches[0]
                     else:
                         return None
-                # once we match the call to an object in imp_class_strs,
-                # we will still have to look for the associated call in 
-                # fdefs[mod] 
     return None
 
 def calcFnWeight(node):
@@ -202,24 +199,6 @@ def matchImpObjStrs(fdefs,imp_obj_strs):
                     assert len(fn_node)==1
                     imp_funcs[source] += fn_node
     return imp_funcs,imp_class_strs
-    
-def matchImpClassStrs(fdefs,imp_class_strs):
-    imp_methods=dict()
-    for source in imp_class_strs:
-        if imp_class_strs[source]==[]:
-            break
-        imp_methods[source]=[]
-        for (mod,clss) in imp_class_strs[source]:
-            if mod not in fdefs:
-                print(mod+" is not part of the project.")
-                break
-            valid = lambda x: hasattr(x,"pclass") and hasattr(x.pclass,"name")
-            classes = [x.pclass.name for x in fdefs[mod] if valid(x)] #all functions in fdefs with parent classes 
-            matches = [x for x in fdefs[mod] if x.pclass==clss]
-            print(clss)
-            print([x.pclass.name for x in fdefs[mod] if valid(x)])
-    return imp_methods
-        
 
 def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
     nfound=0
