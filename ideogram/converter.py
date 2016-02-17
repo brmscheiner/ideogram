@@ -11,16 +11,120 @@ import copy
     import bpl.scanner.token in \compiler.py isn't showing up in 
     imp_mods[\compiler.py]
     '''
-
-def show(node):
-    ast.dump(node)
-    return
+    
+def convert(ASTs,project_path):
+    copy_ASTs = copy.deepcopy(ASTs)
+    print("Making first pass..")
+    fdefs,imp_obj_strs,imp_mods = firstPass(ASTs)
+    #pr.printFnDefs(fdefs)
+    imp_funcs,imp_class_strs=matchImpObjStrs(fdefs,imp_obj_strs)
+    #pr.printImpClassStrs(imp_class_strs)
+    #pr.printImpFuncs(imp_funcs)
+    print("Making second pass..")
+    calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
+    print(str(len(calls))+" total calls")    
+    
+def traversal(root):
+    '''Tree traversal function that generates nodes. For each subtree, the 
+    deepest node is evaluated first. Then, the next-deepest nodes are 
+    evaluated until all the nodes in the subtree are generated.'''
+    stack = [root]
+    while len(stack) > 0:
+        node = stack.pop()
+        if hasattr(node,'children'):
+            if node.children == set():
+                try:
+                    stack[-1].children.remove(node)
+                except:
+                    pass
+                yield (node,stack)
+            else:
+                childnode = node.children.pop()
+                stack += [node,childnode]
+        else: 
+            children = [x for x in ast.iter_child_nodes(node)]
+            node.children = set(children)
+            stack.append(node)
+            
+def firstPass(ASTs):
+    '''Return a dictionary of function definition nodes, a dictionary of  
+    imported object names and a dictionary of imported module names. All three 
+    dictionaries use source file paths as keys.'''
+    fdefs=dict()
+    imp_obj_strs=dict()
+    imp_mods=dict()
+    for (root,path) in ASTs:
+        fdefs[path] = []
+        fdefs[path].append(formatBodyNode(root,path))
+        imp_obj_strs[path] = []
+        imp_mods[path] = []
+        for (node,stack) in traversal(root):
+            if isinstance(node,ast.FunctionDef):
+                fdefs[path].append(formatFunctionNode(node,path,stack))
+            elif isinstance(node,ast.ImportFrom):
+                module = ia.getImportFromModule(node,path)
+                if module:
+                    fn_names = ia.getImportFromObjects(node)
+                    for fn_name in fn_names:
+                        imp_obj_strs[path].append((module,fn_name))
+                else:
+                    print("No module found "+ast.dump(node))
+            elif isinstance(node,ast.Import):
+                module = ia.getImportModule(node,path)
+                print(module)
+                imp_mods[path].append(module)
+    return fdefs,imp_obj_strs,imp_mods
+            
+def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
+    nfound=0
+    calls=[]
+    for (root,path) in ASTs:
+        for (node,stack) in traversal(root):
+            if isinstance(node, ast.Call):
+                #node.source = getSourceFnDef(stack,fdefs,path)
+                node.target = getTargetFnDef(node,path,fdefs,
+                                             imp_funcs,imp_mods,imp_class_strs)
+                if node.target: 
+                    nfound+=1
+                calls.append(node)
+    print(str(nfound)+" call matches were made")
+    return calls
 
 def getCurrentClass(stack):
     for x in stack:
         if isinstance(x, ast.ClassDef):
             return x
     return None
+
+def formatBodyNode(root,path):
+    '''Format the root node for use as the body node.'''
+    body        = root
+    body.name   = "body"
+    body.weight = calcFnWeight(body)
+    body.path   = path
+    body.pclass = None
+    return body
+
+def formatFunctionNode(node,path,stack):
+    '''Add some helpful attributes to node.'''
+    #node.name is already defined by AST module
+    node.weight = calcFnWeight(node)
+    node.path   = path
+    node.pclass = getCurrentClass(stack)
+    return node
+    
+def calcFnWeight(node):
+    '''Calculates the weight of a function definition by recursively counting 
+    its child nodes in the AST. Note that the tree traversal will become 
+    O(n^2) instead of O(n) if this feature is enabled.'''
+    stack = [node]
+    count = 0
+    while len(stack) > 0:
+        node = stack.pop()
+        children = [x for x in ast.iter_child_nodes(node)]
+        count += len(children)
+        stack = stack + children
+    return count
 
 def getSourceFnDef(stack,fdefs,path):
     '''VERY VERY SLOW'''
@@ -89,92 +193,16 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
                         return None
     return None
 
-def calcFnWeight(node):
-    '''Calculates the weight of a function definition by recursively counting 
-    its child nodes in the AST. Note that the tree traversal will become 
-    O(n^2) instead of O(n) if this feature is enabled.'''
-    stack = [node]
-    count = 0
-    while len(stack) > 0:
-        node = stack.pop()
-        children = [x for x in ast.iter_child_nodes(node)]
-        count += len(children)
-        stack = stack + children
-    return count
-                
-def traversal(root):
-    '''For each subtree, evaluate the deepest nodes first. Then evaluate the
-    next-deepest nodes and move on to the next subtree.'''
-    stack = [root]
-    while len(stack) > 0:
-        node = stack.pop()
-        if hasattr(node,'children'):
-            if node.children == set():
-                try:
-                    stack[-1].children.remove(node)
-                except:
-                    pass
-                yield (node,stack)
-            else:
-                childnode = node.children.pop()
-                stack += [node,childnode]
-        else: 
-            children = [x for x in ast.iter_child_nodes(node)]
-            node.children = set(children)
-            stack.append(node)
-
-def formatBodyNode(root,path):
-    '''Format the root node for use as the body node.'''
-    body        = root
-    body.name   = "body"
-    body.weight = calcFnWeight(body)
-    body.path   = path
-    body.pclass = None
-    return body
-
-def formatFunctionNode(node,path,stack):
-    '''Add some helpful attributes to node.'''
-    #node.name is already defined by AST module
-    node.weight = calcFnWeight(node)
-    node.path   = path
-    node.pclass = getCurrentClass(stack)
-    return node
-
-def firstPass(ASTs):
-    '''Return a dictionary of function definition nodes, a dictionary of  
-    imported object names and a dictionary of imported module names. All three 
-    dictionaries use source file paths as keys.'''
-    fdefs=dict()
-    imp_obj_strs=dict()
-    imp_mods=dict()
-    for (root,path) in ASTs:
-        fdefs[path] = []
-        fdefs[path].append(formatBodyNode(root,path))
-        imp_obj_strs[path] = []
-        imp_mods[path] = []
-        for (node,stack) in traversal(root):
-            if isinstance(node,ast.FunctionDef):
-                fdefs[path].append(formatFunctionNode(node,path,stack))
-            elif isinstance(node,ast.ImportFrom):
-                module = ia.getImportFromModule(node,path)
-                if module:
-                    fn_names = ia.getImportFromObjects(node)
-                    for fn_name in fn_names:
-                        print(fn_name)
-                        imp_obj_strs[path].append((module,fn_name))
-                else:
-                    print("No module found "+ast.dump(node))
-            elif isinstance(node,ast.Import):
-                module = ia.getImportModule(node,path)
-                imp_mods[path].append(module)
-    return fdefs,imp_obj_strs,imp_mods
-
 def matchImpObjStrs(fdefs,imp_obj_strs):
-    '''returns imp_funcs, a dictionary with filepath keys that contains lists 
-    of function objects that were imported using "from __ import __" style 
-    syntax and imp_class_strs, a dictionary with filepath keys that contains 
+    '''returns imp_funcs and imp_class_strs. 
+    
+    imp_funcs is a dictionary
+    with filepath keys that contains lists of function objects 
+    that were imported using "from __ import __" style syntax.
+    
+    imp_class_strs is a dictionary with filepath keys that contains 
     lists of non-function objects that were imported using 
-    "from __ import ___" style syntax'''
+    "from __ import ___" style syntax.'''
     imp_funcs=dict()
     imp_class_strs=dict()
     for source in imp_obj_strs:
@@ -200,32 +228,7 @@ def matchImpObjStrs(fdefs,imp_obj_strs):
                     imp_funcs[source] += fn_node
     return imp_funcs,imp_class_strs
 
-def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
-    nfound=0
-    calls=[]
-    for (root,path) in ASTs:
-        for (node,stack) in traversal(root):
-            if isinstance(node, ast.Call):
-                #node.source = getSourceFnDef(stack,fdefs,path)
-                node.target = getTargetFnDef(node,path,fdefs,
-                                             imp_funcs,imp_mods,imp_class_strs)
-                if node.target: 
-                    nfound+=1
-                calls.append(node)
-    print(str(nfound)+" call matches were made")
-    return calls
 
-def convert(ASTs,project_path):
-    copy_ASTs = copy.deepcopy(ASTs)
-    print("Making first pass..")
-    fdefs,imp_obj_strs,imp_mods = firstPass(ASTs)
-    #pr.printFnDefs(fdefs)
-    imp_funcs,imp_class_strs=matchImpObjStrs(fdefs,imp_obj_strs)
-    #pr.printImpClassStrs(imp_class_strs)
-    #pr.printImpFuncs(imp_funcs)
-    print("Making second pass..")
-    calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
-    print(str(len(calls))+" total calls")
 
 
 

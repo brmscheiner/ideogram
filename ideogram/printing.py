@@ -1,4 +1,7 @@
 
+def show(node):
+    print(ast.dump(node))
+
 def getClassString(node):
     if node:
         return node.name
