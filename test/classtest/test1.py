@@ -9,3 +9,4 @@ class testy:
 
 		
 a = testy()
+a.isHere()

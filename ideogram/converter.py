@@ -73,6 +73,7 @@ def firstPass(ASTs):
                 module = ia.getImportModule(node,path)
                 imp_mods[path].append(module)
             elif isinstance(node,ast.ClassDef):
+                node.path=path
                 cdefs[path].append(node)
     return fdefs,imp_obj_strs,imp_mods,cdefs
             
@@ -144,7 +145,12 @@ def getSourceFnDef(stack,fdefs,path):
     raise
     
 def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
-    ''' Return the function node that the input call node targets. '''
+    ''' Return the function node that the input call node targets. 
+    
+    Note that cases 2b and 2c can possibly make false matches. If 
+    two classes are imported by the same program and they both have a 
+    method with an identical name, then class.method() will be associated
+    with the first class in imp_classes.'''
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
         if path in fdefs:
@@ -157,7 +163,7 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     return x
         return None # 200 instances!
         
-    # CASE 2: # calling function outside namespace, like random.randint(x,y)
+    # CASE 2: calling function outside namespace, like random.randint(x,y)
     elif isinstance(node.func,ast.Attribute):
         try:
             obj    = node.func.value.id
@@ -165,14 +171,14 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
         except AttributeError:
             return None #130 instances!
         if obj == 'self':
-            print("hi")
             return None #setting attrs in class def. not a leak! 85 instances.
             
-        # CASE 2A: # calling module.function
+        # CASE 2A: calling module.function
         for modpath in imp_mods[path]:
             if not modpath:
                 continue
             elif obj+'.py' in modpath:
+                print(modpath)
                 matches = [x for x in fdefs[modpath] if x.name==method]
                 if matches:
                     if len(matches)>1:
@@ -181,24 +187,34 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                 else:
                     return None #0 instances! whooo =D
                     
-        # CASE 2B: # calling infile class.method 
-        for clss in cdefs[path]:
-            if clss.name == obj:
-                cfns = [x for x in fdefs[path] if x.pclass == clss]
-                if cfns:
-                    return cfns[0]
-                else:
-                    return None #0 instances! whooo =D
+        # CASE 2B: calling infile class.method 
+        if path in cdefs:
+            for clss in cdefs[path]:
+                for x in fdefs[clss.path]:
+                    if x.pclass==clss:
+                        return x
+                
+#                if clss.name == obj:
+#                    cfns = [x for x in fdefs[path] if x.pclass == clss]
+#                    if cfns:
+#                        return cfns[0]
+#                    else:
+#                        return None #0 instances! whooo =D
                     
-        # CASE 2C: # calling imported class.method
-        print()
-        for clss in imp_classes[path]:
-            if "parser.py" in path:
-                print(clss.name)
-                print(obj)
-            if clss.name == obj:
-                print("doublehi")
-#        if path in imp_class_strs.keys():
+        # CASE 2C: calling imported class.method
+                    
+        if path in imp_classes:
+            for clss in imp_classes[path]:
+                for x in fdefs[clss.path]:
+                    print(x.pclass)
+                    if x.pclass==clss:
+                        if x.name==method:
+                            print("Found!!")
+                            return x
+                            
+                            
+                            
+#        if path in imp_classes:
 #            for (modpath,clss) in imp_class_strs[path]:
 #                #print("object: "+obj)
 #                #print("class: "+clss)
@@ -219,14 +235,12 @@ def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
      "from __ import __" style syntax. also returns imp_classes, which 
     is the same for class definition nodes.'''
     imp_funcs=dict()
-    imp_class_strs=dict()
     imp_classes=dict()
     for source in imp_obj_strs:
         if not imp_obj_strs[source]:
             continue
         imp_funcs[source]=[]
         imp_classes[source]=[]
-        imp_class_strs[source]=[]
         for (mod,func) in imp_obj_strs[source]:
             if mod not in fdefs:
                 print(mod+" is not part of the project.")

@@ -2,10 +2,10 @@ import ast
 import os
 import subprocess
 
-def read(projectpath):
+def fetch(project_path):
     ASTs=[]
-    for (dirpath,__,files) in os.walk(projectpath):
-        python_files = [x for x in files if x.endswith('.py')] 
+    for (dirpath,__,files) in os.walk(project_path):
+        python_files = [x for x in files if x.endswith('.py')]
         for pfile in python_files:
             path = os.path.join(dirpath,pfile)
             ast_root = getAST(path)
