@@ -14,9 +14,7 @@ import copy
 
 def show(node):
     ast.dump(node)
-
-def isImport(node):
-    pass
+    return
 
 def getCurrentClass(stack):
     for x in stack:
@@ -78,10 +76,17 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
         # CASE 2B: # calling class.method
         if path in imp_class_strs.keys():
             for (modpath,clss) in imp_class_strs[path]:
-                print("object: "+obj)
-                print("class: "+clss)
+                #print("object: "+obj)
+                #print("class: "+clss)
                 if obj==clss:
                     print(obj+" is a hit!")
+                    matches = [x for x in fdefs[modpath] if x.name==method]
+                    if matches:
+                        if len(matches)>1:
+                            print("multiple matches found for "+method)
+                        return matches[0]
+                    else:
+                        return None
                 # once we match the call to an object in imp_class_strs,
                 # we will still have to look for the associated call in 
                 # fdefs[mod] 
@@ -158,6 +163,7 @@ def firstPass(ASTs):
                 if module:
                     fn_names = ia.getImportFromObjects(node)
                     for fn_name in fn_names:
+                        print(fn_name)
                         imp_obj_strs[path].append((module,fn_name))
                 else:
                     print("No module found "+ast.dump(node))
