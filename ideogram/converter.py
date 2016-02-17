@@ -17,13 +17,10 @@ def convert(ASTs,project_path):
     copy_ASTs = copy.deepcopy(ASTs)
     print("Making first pass..")
     fdefs,imp_obj_strs,imp_mods,cdefs = firstPass(ASTs)
-    #pr.printFnDefs(fdefs)
     imp_funcs,imp_classes=matchImpObjStrs(fdefs,imp_obj_strs,cdefs)
-    #pr.printImpClassStrs(imp_class_strs)
-    #pr.printImpFuncs(imp_funcs)
     print("Making second pass..")
-    #calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
-    #print(str(len(calls))+" total calls")    
+    calls = secondPass(copy_ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes)
+    print(str(len(calls))+" total calls")    
     
 def traversal(root):
     '''Tree traversal function that generates nodes. For each subtree, the 
@@ -79,15 +76,15 @@ def firstPass(ASTs):
                 cdefs[path].append(node)
     return fdefs,imp_obj_strs,imp_mods,cdefs
             
-def secondPass(ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs):
+def secondPass(ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
     nfound=0
     calls=[]
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
                 #node.source = getSourceFnDef(stack,fdefs,path)
-                node.target = getTargetFnDef(node,path,fdefs,
-                                             imp_funcs,imp_mods,imp_class_strs)
+                node.target = getTargetFnDef(node,path,fdefs,cdefs,
+                                             imp_funcs,imp_mods,imp_classes)
                 if node.target: 
                     nfound+=1
                 calls.append(node)
@@ -146,7 +143,7 @@ def getSourceFnDef(stack,fdefs,path):
                 return y
     raise
     
-def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
+def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
     ''' Return the function node that the input call node targets. '''
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
@@ -181,20 +178,32 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
                 else:
                     return None #0 instances! whooo =D
                     
-        # CASE 2B: # calling class.method
-        if path in imp_class_strs.keys():
-            for (modpath,clss) in imp_class_strs[path]:
-                #print("object: "+obj)
-                #print("class: "+clss)
-                if obj==clss:
-                    print(obj+" is a hit!")
-                    matches = [x for x in fdefs[modpath] if x.name==method]
-                    if matches:
-                        if len(matches)>1:
-                            print("multiple matches found for "+method)
-                        return matches[0]
-                    else:
-                        return None
+        # CASE 2B: # calling infile class.method 
+        for clss in cdefs[path]:
+            if clss.name == obj:
+                cfns = [x for x in fdefs[path] if x.pclass == clss]
+                if cfns:
+                    return cfns[0]
+                else:
+                    return None #0 instances! whooo =D
+                    
+        # CASE 2C: # calling imported class.method
+        for clss in imp_classes[path]:
+            if clss.name == obj:
+                print("doublehi")
+#        if path in imp_class_strs.keys():
+#            for (modpath,clss) in imp_class_strs[path]:
+#                #print("object: "+obj)
+#                #print("class: "+clss)
+#                if obj==clss:
+#                    print(obj+" is a hit!")
+#                    matches = [x for x in fdefs[modpath] if x.name==method]
+#                    if matches:
+#                        if len(matches)>1:
+#                            print("multiple matches found for "+method)
+#                        return matches[0]
+#                    else:
+#                        return None
     return None
 
 def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
