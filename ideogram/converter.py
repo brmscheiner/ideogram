@@ -149,11 +149,11 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
     if isinstance(node.func,ast.Name):
         if path in fdefs:
             for x in fdefs[path]:
-                if node.func.id == x.name: # Need to go back through and compare parent classes.
+                if node.func.id == x.name:
                     return x
         if path in imp_funcs:
             for x in imp_funcs[path]:
-                if node.func.id == x.name: # Need to go back through and compare parent classes.
+                if node.func.id == x.name: 
                     return x
         return None # 200 instances!
         
