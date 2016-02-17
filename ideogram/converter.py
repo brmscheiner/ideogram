@@ -3,6 +3,13 @@ import printing as pr
 import importAnalysis as ia
 import copy
 
+''' known bugs:
+
+    imp_mods[scanner\scanner.py] contains elements even though 
+    scanner\scanner.py imports no modules (only from style imports)
+    
+    '''
+
 def show(node):
     ast.dump(node)
 
@@ -32,18 +39,16 @@ def getSourceFnDef(stack,fdefs,path):
     raise
     
 def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
-    '''Need to go back through and compare parent classes.
-    Also, what about method calls like hat.compare(sombrero)'''
-    
+    ''' What about method calls like hat.compare(sombrero)'''
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
         if path in fdefs:
             for x in fdefs[path]:
-                if node.func.id == x.name:
+                if node.func.id == x.name: # Need to go back through and compare parent classes.
                     return x
         if path in imp_funcs:
             for x in imp_funcs[path]:
-                if node.func.id == x.name:
+                if node.func.id == x.name: # Need to go back through and compare parent classes.
                     return x
         return None # 200 instances!
         
@@ -55,11 +60,20 @@ def getTargetFnDef(node,path,fdefs,imp_funcs,imp_mods,imp_class_strs):
         except AttributeError:
             return None #130 instances!
             
-        # CASE 2A: # module imported and we have module.function
-        if obj in imp_mods[path]:
-            print(obj)
+        # CASE 2A: # calling module.function
+        for modpath in imp_mods[path]:
+            if not modpath:
+                break
+            elif obj+'.py' in modpath:
+                matches = [x for x in fdefs[modpath] if x.name==method]
+                if matches:
+                    if len(matches)>1:
+                        print("multiple matches found for "+method)
+                    return matches[0]
+                else:
+                    return None
                     
-        # CASE 2B: # class imported and we have class.method
+        # CASE 2B: # calling class.method
             # once we match the call to an object in imp_class_strs,
             # we will still have to look for the associated call in 
             # fdefs[mod] 
@@ -217,7 +231,6 @@ def convert(ASTs,project_path):
     #pr.printImpClassStrs(imp_class_strs)
     #pr.printImpFuncs(imp_funcs)
     print("Making second pass..")
-    print(imp_mods)
     calls = secondPass(copy_ASTs,fdefs,imp_funcs,imp_mods,imp_class_strs)
     print(str(len(calls))+" total calls")
 
