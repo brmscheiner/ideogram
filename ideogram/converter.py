@@ -83,7 +83,8 @@ def secondPass(ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
     for (root,path) in ASTs:
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
-                #node.source = getSourceFnDef(stack,fdefs,path)
+                node.source = getSourceFnDef(stack,fdefs,path)
+                print(node.source.path)
                 node.target = getTargetFnDef(node,path,fdefs,cdefs,
                                              imp_funcs,imp_mods,imp_classes)
                 if node.target: 
@@ -147,20 +148,43 @@ def getSourceFnDef(stack,fdefs,path):
 def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
     ''' Return the function node that the input call node targets. 
     
-    Note that cases 2b and 2c can possibly make false matches. If 
-    two classes are imported by the same program and they both have a 
-    method with an identical name, then class.method() will be associated
-    with the first class in imp_classes.'''
+    Note that cases 2b and 2c might make false matches. If two classes are
+    imported by the same program and they both have a method with an identical
+    name, then class.method() will be associated with the first class in 
+    imp_classes.'''
+    
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
+        print(type(node))
+        print(node.func.id)
+        # CASE 1A: calling an infile function
         if path in fdefs:
             for x in fdefs[path]:
                 if node.func.id == x.name:
                     return x
+        # CASE 1B: calling an imported function
         if path in imp_funcs:
             for x in imp_funcs[path]:
                 if node.func.id == x.name: 
                     return x
+        # CASE 1C: infile object instantiation, i.e. a=Car()
+        if path in cdefs:
+            for x in cdefs[path]:
+                if node.func.id == x.name:
+                    classfuncs = [y for y in fdefs[path] if y.pclass==x]
+                    initfuncs = [z for z in classfuncs if z.name=='__init__']
+                    if initfuncs:
+                        return initfuncs[0]
+                        
+        # CASE 1D: imported object instantiation, from exe import car; a=Car()
+        if path in imp_classes:
+            for x in imp_classes[path]:
+                if node.func.id == x.name:
+                    classfuncs = [y for y in fdefs[x.path] if y.pclass==x]
+                    initfuncs = [z for z in classfuncs if z.name=='__init__']
+                    if initfuncs:
+                        return initfuncs[0]
+                    
         return None # 200 instances!
         
     # CASE 2: calling function outside namespace, like random.randint(x,y)
