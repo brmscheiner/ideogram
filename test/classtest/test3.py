@@ -1,4 +1,4 @@
-from test1 import testy
+from testo import testy
 def a():
 	b = testy()
 	b.isHere()

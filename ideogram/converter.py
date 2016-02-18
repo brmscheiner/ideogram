@@ -84,7 +84,6 @@ def secondPass(ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
         for (node,stack) in traversal(root):
             if isinstance(node, ast.Call):
                 node.source = getSourceFnDef(stack,fdefs,path)
-                print(node.source.path)
                 node.target = getTargetFnDef(node,path,fdefs,cdefs,
                                              imp_funcs,imp_mods,imp_classes)
                 if node.target: 
@@ -155,8 +154,6 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
     
     #CASE 1: calling function inside namespace, like foo(x) or randint(x,y)
     if isinstance(node.func,ast.Name):
-        print(type(node))
-        print(node.func.id)
         # CASE 1A: calling an infile function
         if path in fdefs:
             for x in fdefs[path]:
@@ -184,8 +181,8 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     initfuncs = [z for z in classfuncs if z.name=='__init__']
                     if initfuncs:
                         return initfuncs[0]
-                    
-        return None # 200 instances!
+        #print("jim we've lost one!")
+        return None 
         
     # CASE 2: calling function outside namespace, like random.randint(x,y)
     elif isinstance(node.func,ast.Attribute):
@@ -196,8 +193,7 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
             return None #130 instances!
         if obj == 'self':
             return None #setting attrs in class def. not a leak! 85 instances.
-            
-        # CASE 2A: calling module.function
+        # CASE 2A: calling imported module.function
         for modpath in imp_mods[path]:
             if not modpath:
                 continue
@@ -207,26 +203,33 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     if len(matches)>1:
                         print("multiple matches found for "+method)
                     return matches[0]
-                else:
-                    return None #0 instances! whooo =D
                     
-        # CASE 2B: calling infile class.method 
+            # CASE 2B: object instantiation with an imported module
+            if not cdefs[modpath]:
+                continue
+            for clss in cdefs[modpath]:
+                if clss.name==method:
+                    classfuncs = [y for y in fdefs[clss.path] if y.pclass==clss]
+                    initfuncs = [z for z in classfuncs if z.name=='__init__']
+                    if initfuncs:
+                        return initfuncs[0]
+                    
+        # CASE 2C: calling infile class.method 
         if path in cdefs:
             for clss in cdefs[path]:
                 for x in fdefs[clss.path]:
                     if x.pclass==clss:
                         return x
                     
-        # CASE 2C: calling imported class.method
-                    
+        # CASE 2D: calling imported class.method         
         if path in imp_classes:
             for clss in imp_classes[path]:
                 for x in fdefs[clss.path]:
                     if x.pclass==clss:
                         if x.name==method:
                             return x
-                            
         return None
+                    
 
 def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
     '''returns imp_funcs, a dictionary with filepath keys that contains 

@@ -1,3 +1,3 @@
-import test1
+import testo
 
-a = test.testy()
+a = testo.testy()
