@@ -178,7 +178,6 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
             if not modpath:
                 continue
             elif obj+'.py' in modpath:
-                print(modpath)
                 matches = [x for x in fdefs[modpath] if x.name==method]
                 if matches:
                     if len(matches)>1:
@@ -193,41 +192,17 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                 for x in fdefs[clss.path]:
                     if x.pclass==clss:
                         return x
-                
-#                if clss.name == obj:
-#                    cfns = [x for x in fdefs[path] if x.pclass == clss]
-#                    if cfns:
-#                        return cfns[0]
-#                    else:
-#                        return None #0 instances! whooo =D
                     
         # CASE 2C: calling imported class.method
                     
         if path in imp_classes:
             for clss in imp_classes[path]:
                 for x in fdefs[clss.path]:
-                    print(x.pclass)
                     if x.pclass==clss:
                         if x.name==method:
-                            print("Found!!")
                             return x
                             
-                            
-                            
-#        if path in imp_classes:
-#            for (modpath,clss) in imp_class_strs[path]:
-#                #print("object: "+obj)
-#                #print("class: "+clss)
-#                if obj==clss:
-#                    print(obj+" is a hit!")
-#                    matches = [x for x in fdefs[modpath] if x.name==method]
-#                    if matches:
-#                        if len(matches)>1:
-#                            print("multiple matches found for "+method)
-#                        return matches[0]
-#                    else:
-#                        return None
-    return None
+        return None
 
 def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
     '''returns imp_funcs, a dictionary with filepath keys that contains 
