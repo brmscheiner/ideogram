@@ -11,6 +11,8 @@ import copy
     import bpl.scanner.token in \compiler.py isn't showing up in 
     imp_mods[\compiler.py]
     
+    error on certain imports (i.e. ast, test)
+    
     '''
     
 def convert(ASTs,project_path):
@@ -20,7 +22,7 @@ def convert(ASTs,project_path):
     imp_funcs,imp_classes=matchImpObjStrs(fdefs,imp_obj_strs,cdefs)
     print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes)
-    print(str(len(calls))+" total calls")    
+    return fdefs,calls
     
 def traversal(root):
     '''Tree traversal function that generates nodes. For each subtree, the 
@@ -68,7 +70,8 @@ def firstPass(ASTs):
                     for fn_name in fn_names:
                         imp_obj_strs[path].append((module,fn_name))
                 else:
-                    print("No module found "+ast.dump(node))
+                    #print("No module found "+ast.dump(node))
+                    pass
             elif isinstance(node,ast.Import):
                 module = ia.getImportModule(node,path)
                 imp_mods[path].append(module)
@@ -88,8 +91,8 @@ def secondPass(ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                                              imp_funcs,imp_mods,imp_classes)
                 if node.target: 
                     nfound+=1
-                calls.append(node)
-    print(str(nfound)+" call matches were made")
+                if node.source and node.target:
+                    calls.append(node)
     return calls
 
 def getCurrentClass(stack):
@@ -181,7 +184,6 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     initfuncs = [z for z in classfuncs if z.name=='__init__']
                     if initfuncs:
                         return initfuncs[0]
-        print(ast.dump(node.func))
         return None # builtin functions
         
     # CASE 2: calling function outside namespace, like random.randint(x,y)
@@ -201,7 +203,8 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                 matches = [x for x in fdefs[modpath] if x.name==method]
                 if matches:
                     if len(matches)>1:
-                        print("multiple matches found for "+method)
+                        pass
+                        #print("multiple matches found for "+method)
                     return matches[0]
                     
             # CASE 2B: object instantiation with an imported module
@@ -246,7 +249,7 @@ def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
         imp_classes[source]=[]
         for (mod,func) in imp_obj_strs[source]:
             if mod not in fdefs:
-                print(mod+" is not part of the project.")
+                #print(mod+" is not part of the project.")
                 continue
             if func=='*':
                 all_fns = [x for x in fdefs[mod] if x.name!='body']
@@ -263,7 +266,8 @@ def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
                 if fn_node:
                     imp_funcs[source] += fn_node
                 if not fn_node and not cls_node:
-                    print(func+' not found in function and class definitions.')
+                    pass
+                    #print(func+' not found in function and class definitions.')
     return imp_funcs,imp_classes
 
 
