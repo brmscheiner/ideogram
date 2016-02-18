@@ -181,8 +181,8 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     initfuncs = [z for z in classfuncs if z.name=='__init__']
                     if initfuncs:
                         return initfuncs[0]
-        #print("jim we've lost one!")
-        return None 
+        print(ast.dump(node.func))
+        return None # builtin functions
         
     # CASE 2: calling function outside namespace, like random.randint(x,y)
     elif isinstance(node.func,ast.Attribute):
@@ -190,9 +190,9 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
             obj    = node.func.value.id
             method = node.func.attr
         except AttributeError:
-            return None #130 instances!
+            return None #weird string thingies
         if obj == 'self':
-            return None #setting attrs in class def. not a leak! 85 instances.
+            return None #setting attrs in class def.
         # CASE 2A: calling imported module.function
         for modpath in imp_mods[path]:
             if not modpath:
@@ -205,7 +205,7 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     return matches[0]
                     
             # CASE 2B: object instantiation with an imported module
-            if not cdefs[modpath]:
+            if modpath not in cdefs:
                 continue
             for clss in cdefs[modpath]:
                 if clss.name==method:
@@ -228,7 +228,8 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
                     if x.pclass==clss:
                         if x.name==method:
                             return x
-        return None
+                            
+        return None #sys.method type calls, also some random builtins
                     
 
 def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
