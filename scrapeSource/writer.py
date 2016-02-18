@@ -1,9 +1,19 @@
 import json
 import os
 
+def jsPath(path):
+    '''Returns a relative path without \, -, and . so that 
+    the string will play nicely with javascript.'''
+    shortPath=path.replace(
+            "C:\\Users\\scheinerbock\\Desktop\\"+
+            "ideogram\\scrapeSource\\test\\","")
+    noDash = shortPath.replace("-","_dash_")
+    jsPath=noDash.replace("\\","_slash_").replace(".","_dot_")
+    return jsPath
+
 def jsName(path,name):
-    '''Returns a relative path with "_"s instead of "\"s
-    so that the string will play nicely with javascript.'''
+    '''Returns a name string without \, -, and . so that 
+    the string will play nicely with javascript.'''
     shortPath=path.replace(
             "C:\\Users\\scheinerbock\\Desktop\\"+
             "ideogram\\scrapeSource\\test\\","")
@@ -24,6 +34,25 @@ def assignID(ids,jsName):
             ids[jsName] = new_id
         return new_id,ids
 
+def getTaggedNode(fn,ids):
+    fn.jsname = jsName(fn.path,fn.name)
+    fn_id,ids = assignID(ids,fn.jsname)
+    fn.id = fn_id
+    node = dict()
+    node["id"]     = fn.id
+    node["name"]   = fn.jsname
+    node["path"]   = jsPath(fn.path)
+    node["weight"] = fn.weight
+    return node
+    
+def isInCalls(fn,calls):
+    for call in calls:
+        if call.source==fn:
+            return True
+        if call.target==fn:
+            return True
+    return False
+    
 def jsonGraph(fdefs,calls,outfile='out.json'):
     '''For reference, each node has:
     
@@ -40,15 +69,11 @@ def jsonGraph(fdefs,calls,outfile='out.json'):
     nodelist = []
     for fnlist in fdefs.values():
         for fn in fnlist:
-            fn.jsname = jsName(fn.path,fn.name)
-            fn_id,ids = assignID(ids,fn.jsname)
-            fn.id = fn_id
-            node = dict()
-            node["id"]     = fn.id
-            node["name"]   = fn.jsname
-            node["weight"] = fn.weight
-            nodelist.append(node)
-    data["nodes"] = nodelist
+            if isInCalls(fn,calls):
+                tagged_node = getTaggedNode(fn,ids)
+                nodelist.append(tagged_node)
+            else:
+                print("omitted")
     linklist = [] #list of links, NOT a linked list ;D
     for call in calls:
         for link in linklist:
@@ -62,7 +87,9 @@ def jsonGraph(fdefs,calls,outfile='out.json'):
             link["target"] = call.target.id
             link["value"]  = 1
             linklist.append(link)
+    
     data["links"] = linklist
+    data["nodes"] = nodelist
     with open(outpath, 'w') as f:
         f.write(json.dumps(data, indent=2))
     return
