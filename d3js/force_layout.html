@@ -36,7 +36,6 @@ var force = d3.layout.force()
     
 d3.json("out.json", function(error,graph) {
     if (error) throw error;
-    debugger;
     force = force.nodes(graph.nodes);
     force = force.links(graph.links);
     force = force.start();
@@ -53,11 +52,10 @@ d3.json("out.json", function(error,graph) {
       .enter().append("circle")
         .attr("class", "node")
         .attr("r", 5)
-        .style("fill", function (d) { return color(d.file); })
         .call(force.drag);
         
     node.append("title")
-        .text(function(d) { return d.sid; });
+        .text(function(d) { return d.id; });
     
     force.on("tick", function() {
       link.attr("x1", function(d) { return d.source.x; })

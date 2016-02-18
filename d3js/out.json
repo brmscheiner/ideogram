@@ -1,1028 +1,1156 @@
 {
   "links": [
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code",
+      "target": 52,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_compile"
+      "source": 84
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_parse",
+      "target": 34,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_compile"
+      "source": 84
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
+      "target": 21,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_compile"
+      "source": 84
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check",
+      "target": 59,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_compile"
+      "source": 84
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_reg",
-      "value": 8,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
+      "target": 74,
+      "value": 1,
+      "source": 59
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_reg",
+      "target": 68,
+      "value": 1,
+      "source": 59
+    },
+    {
+      "target": 66,
+      "value": 1,
+      "source": 59
+    },
+    {
+      "target": 62,
+      "value": 1,
+      "source": 59
+    },
+    {
+      "target": 65,
+      "value": 4,
+      "source": 58
+    },
+    {
+      "target": 61,
+      "value": 1,
+      "source": 58
+    },
+    {
+      "target": 67,
       "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
+      "source": 58
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression",
+      "target": 58,
+      "value": 1,
+      "source": 58
+    },
+    {
+      "target": 70,
       "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
+      "source": 58
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_direct",
+      "target": 68,
+      "value": 9,
+      "source": 68
+    },
+    {
+      "target": 63,
+      "value": 4,
+      "source": 63
+    },
+    {
+      "target": 63,
+      "value": 1,
+      "source": 74
+    },
+    {
+      "target": 60,
+      "value": 5,
+      "source": 60
+    },
+    {
+      "target": 65,
+      "value": 2,
+      "source": 60
+    },
+    {
+      "target": 70,
+      "value": 8,
+      "source": 60
+    },
+    {
+      "target": 72,
       "value": 7,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
+      "source": 60
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement",
+      "target": 61,
       "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
+      "source": 60
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_no_operands",
+      "target": 69,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
+      "source": 60
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_reg",
-      "value": 4,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value"
+      "target": 64,
+      "value": 9,
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_reg",
-      "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value"
+      "target": 61,
+      "value": 8,
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_indirect_reg",
-      "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value"
+      "target": 72,
+      "value": 9,
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_reg",
-      "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_no_operands",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_reg",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_reg",
+      "target": 70,
       "value": 14,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg",
-      "value": 9,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "target": 58,
+      "value": 5,
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_indirect_reg",
+      "target": 67,
       "value": 10,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_indirect",
+      "target": 71,
       "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_reg",
+      "target": 65,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_no_operands",
+      "target": 69,
       "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "source": 61
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_direct",
-      "value": 9,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "target": 70,
+      "value": 2,
+      "source": 66
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression",
+      "target": 65,
+      "value": 1,
+      "source": 66
+    },
+    {
+      "target": 60,
+      "value": 1,
+      "source": 66
+    },
+    {
+      "target": 69,
+      "value": 1,
+      "source": 66
+    },
+    {
+      "target": 32,
+      "value": 1,
+      "source": 52
+    },
+    {
+      "target": 12,
+      "value": 1,
+      "source": 53
+    },
+    {
+      "target": 12,
+      "value": 1,
+      "source": 49
+    },
+    {
+      "target": 12,
+      "value": 2,
+      "source": 55
+    },
+    {
+      "target": 52,
+      "value": 2,
+      "source": 55
+    },
+    {
+      "target": 77,
+      "value": 1,
+      "source": 55
+    },
+    {
+      "target": 12,
+      "value": 1,
+      "source": 36
+    },
+    {
+      "target": 12,
+      "value": 1,
+      "source": 39
+    },
+    {
+      "target": 82,
+      "value": 1,
+      "source": 39
+    },
+    {
+      "target": 77,
+      "value": 2,
+      "source": 46
+    },
+    {
+      "target": 12,
       "value": 8,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
+      "source": 48
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value",
-      "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_build_string_table",
+      "target": 12,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code"
+      "source": 32
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function",
+      "target": 12,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code"
+      "source": 33
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_header",
+      "target": 80,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code"
+      "source": 33
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets",
+      "target": 12,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code"
+      "source": 37
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_build_string_table",
-      "value": 9,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_build_string_table"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets_statement",
+      "target": 52,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets"
+      "source": 47
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets_statement",
-      "value": 4,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_mul_op",
+      "target": 12,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_T"
+      "source": 50
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_T"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_type_token",
-      "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_local_decs"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_write_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_rel_op",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_add_op",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_E"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_E"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_statement_list"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_if_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_type_token",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
-      "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
+      "target": 12,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration"
+      "source": 41
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
+      "target": 12,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_compound_statement"
+      "source": 43
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
-      "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param"
+      "target": 52,
+      "value": 5,
+      "source": 42
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_type_token",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_while_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_return_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 8,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_factor"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
+      "target": 12,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_F"
+      "source": 42
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
+      "target": 77,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_writeln_statement"
+      "source": 42
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
+      "target": 12,
+      "value": 2,
+      "source": 40
+    },
+    {
+      "target": 76,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expect"
+      "source": 40
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
+      "target": 52,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__"
+      "source": 40
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_indent",
+      "target": 52,
+      "value": 1,
+      "source": 44
+    },
+    {
+      "target": 4,
+      "value": 1,
+      "source": 52
+    },
+    {
+      "target": 11,
+      "value": 23,
+      "source": 12
+    },
+    {
+      "target": 13,
       "value": 22,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
+      "source": 11
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_str_if_not_none",
+      "target": 14,
       "value": 20,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
+      "source": 11
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "value": 23,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_dec_info",
+      "target": 15,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
+      "source": 11
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_enum",
+      "target": 81,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_body"
+      "source": 10
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py___init__",
+      "target": 79,
       "value": 26,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_get_next_token"
+      "source": 5
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__",
+      "target": 4,
       "value": 4,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_get_next_token"
+      "source": 5
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_get_next_token",
+      "target": 4,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__"
+      "source": 4
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_enum",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_body"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py___init__",
+      "target": 78,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_enum"
+      "source": 81
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code",
+      "target": 81,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_body"
+      "source": 75
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check",
+      "target": 21,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_body"
+      "source": 19
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_parse",
+      "target": 52,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_body"
+      "source": 19
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
+      "target": 34,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_body"
+      "source": 19
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
+      "target": 59,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_parser_test_dot_py_body"
+      "source": 19
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_parse",
+      "target": 34,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_parser_test_dot_py_body"
+      "source": 17
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__",
+      "target": 52,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_scanner_test_dot_py_body"
+      "source": 17
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_get_next_token",
+      "target": 5,
       "value": 2,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_scanner_test_dot_py_body"
+      "source": 16
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check",
+      "target": 4,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_type_checker_test_dot_py_body"
+      "source": 16
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_parse",
+      "target": 34,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_type_checker_test_dot_py_body"
+      "source": 56
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
+      "target": 52,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_type_checker_test_dot_py_body"
+      "source": 56
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression",
+      "target": 21,
+      "value": 1,
+      "source": 56
+    },
+    {
+      "target": 22,
       "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement"
+      "source": 23
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement",
+      "target": 23,
       "value": 4,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement"
+      "source": 23
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
-      "value": 4,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
+      "target": 24,
       "value": 8,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement"
+      "source": 23
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression",
-      "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement",
-      "value": 4,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
+      "target": 24,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__"
+      "source": 24
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression",
+      "target": 29,
+      "value": 1,
+      "source": 26
+    },
+    {
+      "target": 26,
       "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression"
+      "source": 26
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
+      "target": 24,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression"
+      "source": 26
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_lookup",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
-      "value": 23,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression"
-    },
-    {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression",
+      "target": 22,
       "value": 9,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression"
+      "source": 22
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_is_l_value",
+      "target": 24,
+      "value": 23,
+      "source": 22
+    },
+    {
+      "target": 27,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression"
+      "source": 22
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
+      "target": 25,
+      "value": 1,
+      "source": 30
+    },
+    {
+      "target": 24,
       "value": 5,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references"
+      "source": 30
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement",
+      "target": 28,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references"
+      "source": 21
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references",
+      "target": 30,
       "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check"
+      "source": 21
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_declarations",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check"
+      "target": 25,
+      "value": 4,
+      "source": 25
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement",
-      "value": 1,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_declarations"
+      "target": 26,
+      "value": 5,
+      "source": 25
     },
     {
-      "target": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
+      "target": 24,
+      "value": 4,
+      "source": 25
+    },
+    {
+      "target": 24,
       "value": 3,
-      "source": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_declarations"
+      "source": 28
+    },
+    {
+      "target": 23,
+      "value": 1,
+      "source": 28
     }
   ],
   "nodes": [
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash___init___dot_py_body",
-      "weight": 0
+      "id": 1,
+      "weight": 0,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash___init___dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash___init___dot_py_body",
-      "weight": 0
+      "id": 2,
+      "weight": 0,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash___init___dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_body",
-      "weight": 1691
+      "id": 3,
+      "weight": 1691,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_get_next_token",
-      "weight": 1564
+      "id": 4,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__",
-      "weight": 83
+      "id": 4,
+      "weight": 83,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py___init__",
-      "weight": 28
+      "id": 5,
+      "weight": 1564,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_get_next_token"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash___init___dot_py_body",
-      "weight": 0
+      "id": 6,
+      "weight": 0,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash___init___dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash___init___dot_py_body",
-      "weight": 0
+      "id": 7,
+      "weight": 0,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash___init___dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_setup_dot_py_body",
-      "weight": 39
+      "id": 8,
+      "weight": 39,
+      "name": "bpl_dash_compyler_dash_master_slash_setup_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash___init___dot_py_body",
-      "weight": 0
+      "id": 9,
+      "weight": 0,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash___init___dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_body",
-      "weight": 2296
+      "id": 10,
+      "weight": 2296,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 36
+      "id": 11,
+      "weight": 23,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 37
+      "id": 12,
+      "weight": 20,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 54
+      "id": 12,
+      "weight": 34,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 44
+      "id": 11,
+      "weight": 69,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 26
+      "id": 12,
+      "weight": 36,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 23
+      "id": 11,
+      "weight": 47,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 20
+      "id": 11,
+      "weight": 44,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 30
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 11,
+      "weight": 79,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 44
+      "id": 12,
+      "weight": 38,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 73
+      "id": 13,
+      "weight": 47,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_indent"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 40
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 11,
+      "weight": 47,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 36
+      "id": 14,
+      "weight": 30,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_str_if_not_none"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 47
+      "id": 12,
+      "weight": 41,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 41
+      "id": 11,
+      "weight": 72,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 72
+      "id": 12,
+      "weight": 20,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_dec_info",
-      "weight": 166
+      "id": 11,
+      "weight": 44,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 47
+      "id": 12,
+      "weight": 48,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 48
+      "id": 11,
+      "weight": 70,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 70
+      "id": 12,
+      "weight": 42,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 44
+      "id": 11,
+      "weight": 86,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 40
+      "id": 11,
+      "weight": 40,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 20
+      "id": 12,
+      "weight": 37,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 11,
+      "weight": 76,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 47
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 30
+      "id": 11,
+      "weight": 30,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 11,
+      "weight": 47,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 34
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 69
+      "id": 12,
+      "weight": 44,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 79
+      "id": 11,
+      "weight": 73,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 38
+      "id": 12,
+      "weight": 51,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 36
+      "id": 12,
+      "weight": 26,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 86
+      "id": 12,
+      "weight": 36,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 42
+      "id": 11,
+      "weight": 54,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_indent",
-      "weight": 47
+      "id": 12,
+      "weight": 44,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 20
+      "id": 12,
+      "weight": 20,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 44
+      "id": 11,
+      "weight": 40,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 51
+      "id": 11,
+      "weight": 47,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 28
+      "id": 11,
+      "weight": 30,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 47
+      "id": 12,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_str_if_not_none",
-      "weight": 30
+      "id": 11,
+      "weight": 37,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___str__",
-      "weight": 76
+      "id": 12,
+      "weight": 36,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py___init__",
-      "weight": 37
+      "id": 15,
+      "weight": 166,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_dec_info"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_scanner_test_dot_py_body",
-      "weight": 126
+      "id": 16,
+      "weight": 126,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_scanner_test_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_parser_test_dot_py_body",
-      "weight": 112
+      "id": 17,
+      "weight": 112,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_parser_test_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash___init___dot_py_body",
-      "weight": 0
+      "id": 18,
+      "weight": 0,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash___init___dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_body",
-      "weight": 214
+      "id": 19,
+      "weight": 214,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_body",
-      "weight": 2986
+      "id": 20,
+      "weight": 2986,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_is_l_value",
-      "weight": 29
+      "id": 21,
+      "weight": 28,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_lookup",
-      "weight": 49
+      "id": 22,
+      "weight": 1419,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references",
-      "weight": 194
+      "id": 23,
+      "weight": 438,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_statement",
-      "weight": 438
+      "id": 24,
+      "weight": 25,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression",
-      "weight": 345
+      "id": 25,
+      "weight": 303,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_statement",
-      "weight": 303
+      "id": 26,
+      "weight": 345,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references_expression"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check",
-      "weight": 28
+      "id": 27,
+      "weight": 29,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_is_l_value"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_declarations",
-      "weight": 137
+      "id": 28,
+      "weight": 137,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_declarations"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_type_check_expression",
-      "weight": 1419
+      "id": 29,
+      "weight": 49,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_lookup"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py___init__",
-      "weight": 25
+      "id": 30,
+      "weight": 194,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_find_references"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_body",
-      "weight": 2453
+      "id": 31,
+      "weight": 2453,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
-      "weight": 25
+      "id": 32,
+      "weight": 65,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_return_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_statement_list",
-      "weight": 105
+      "id": 33,
+      "weight": 86,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_E"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_write_statement",
-      "weight": 62
+      "id": 34,
+      "weight": 10,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_parse"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration_list",
-      "weight": 55
+      "id": 35,
+      "weight": 55,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration_list"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__",
-      "weight": 23
+      "id": 36,
+      "weight": 101,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_if_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_if_statement",
-      "weight": 101
+      "id": 37,
+      "weight": 62,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_write_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_return_statement",
-      "weight": 65
+      "id": 38,
+      "weight": 82,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_args"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_writeln_statement",
-      "weight": 52
+      "id": 39,
+      "weight": 86,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_T"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_E",
-      "weight": 86
+      "id": 40,
+      "weight": 160,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_parse",
-      "weight": 10
+      "id": 41,
+      "weight": 139,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_F"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_F",
-      "weight": 139
+      "id": 42,
+      "weight": 302,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expect",
-      "weight": 52
+      "id": 43,
+      "weight": 52,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_writeln_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param_list",
-      "weight": 90
+      "id": 44,
+      "weight": 52,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expect"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_factor",
-      "weight": 353
+      "id": 45,
+      "weight": 10,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_program"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression",
-      "weight": 160
+      "id": 46,
+      "weight": 68,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_local_decs"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_args",
-      "weight": 82
+      "id": 47,
+      "weight": 105,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_statement_list"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_while_statement",
-      "weight": 64
+      "id": 48,
+      "weight": 353,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_factor"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression_statement",
-      "weight": 57
+      "id": 49,
+      "weight": 64,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_while_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_statement",
-      "weight": 136
+      "id": 50,
+      "weight": 57,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_expression_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_T",
-      "weight": 86
+      "id": 51,
+      "weight": 136,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_local_decs",
-      "weight": 68
+      "id": 52,
+      "weight": 23,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param",
-      "weight": 168
+      "id": 53,
+      "weight": 56,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_compound_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_compound_statement",
-      "weight": 56
+      "id": 54,
+      "weight": 90,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param_list"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_declaration",
-      "weight": 302
+      "id": 55,
+      "weight": 168,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_param"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_program",
-      "weight": 10
+      "id": 52,
+      "weight": 25,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_type_checker_test_dot_py_body",
-      "weight": 160
+      "id": 56,
+      "weight": 160,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_type_checker_test_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_body",
-      "weight": 3220
+      "id": 57,
+      "weight": 3220,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_direct",
-      "weight": 21
+      "id": 58,
+      "weight": 252,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement",
-      "weight": 527
+      "id": 59,
+      "weight": 106,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_indirect",
-      "weight": 27
+      "id": 60,
+      "weight": 527,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_reg",
-      "weight": 24
+      "id": 61,
+      "weight": 1143,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_expression",
-      "weight": 1143
+      "id": 62,
+      "weight": 162,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_header"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg",
-      "weight": 21
+      "id": 63,
+      "weight": 196,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets_statement"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_indirect",
-      "weight": 27
+      "id": 64,
+      "weight": 21,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets",
-      "weight": 87
+      "id": 65,
+      "weight": 24,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_reg"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_indirect_reg",
-      "weight": 27
+      "id": 66,
+      "weight": 88,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_reg",
-      "weight": 24
+      "id": 67,
+      "weight": 27,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_indirect_reg"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_code_function",
-      "weight": 88
+      "id": 68,
+      "weight": 307,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_build_string_table"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_header",
-      "weight": 162
+      "id": 69,
+      "weight": 18,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_no_operands"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_l_value",
-      "weight": 252
+      "id": 70,
+      "weight": 24,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_reg"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_no_operands",
-      "weight": 18
+      "id": 71,
+      "weight": 27,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_reg_indirect"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets_statement",
-      "weight": 196
+      "id": 72,
+      "weight": 21,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_direct"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_build_string_table",
-      "weight": 307
+      "id": 73,
+      "weight": 27,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_gen_immediate_indirect"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_generate_code",
-      "weight": 106
+      "id": 74,
+      "weight": 87,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_compute_offsets"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_body",
-      "weight": 428
+      "id": 75,
+      "weight": 428,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_add_op",
-      "weight": 41
+      "id": 76,
+      "weight": 81,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_rel_op"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_rel_op",
-      "weight": 81
+      "id": 77,
+      "weight": 51,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_type_token"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_mul_op",
-      "weight": 51
+      "id": 78,
+      "weight": 34,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py___str__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_type_token",
-      "weight": 51
+      "id": 79,
+      "weight": 31,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py___init__"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_enum",
-      "weight": 76
+      "id": 80,
+      "weight": 41,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_add_op"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py___init__",
-      "weight": 31
+      "id": 81,
+      "weight": 76,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_enum"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py___str__",
-      "weight": 34
+      "id": 82,
+      "weight": 51,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_is_mul_op"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_body",
-      "weight": 58
+      "id": 83,
+      "weight": 58,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_body"
     },
     {
-      "id": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_compile",
-      "weight": 33
+      "id": 84,
+      "weight": 33,
+      "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_compile"
     }
   ]
 }

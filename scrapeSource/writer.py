@@ -9,7 +9,20 @@ def jsName(path,name):
             "ideogram\\scrapeSource\\test\\","")
     noDash = shortPath.replace("-","_dash_")
     jsPath=noDash.replace("\\","_slash_").replace(".","_dot_")
-    return jsPath+'_'+name
+    jsName=jsPath+'_'+name
+    return jsName
+    
+def assignID(ids,jsName):
+    if jsName in ids:
+        return ids[jsName],ids
+    else:
+        if ids.values():
+            new_id      = max(ids.values())+1
+            ids[jsName] = new_id
+        else:
+            new_id      = 1
+            ids[jsName] = new_id
+        return new_id,ids
 
 def jsonGraph(fdefs,calls,outfile='out.json'):
     '''For reference, each node has:
@@ -23,29 +36,30 @@ def jsonGraph(fdefs,calls,outfile='out.json'):
     '''
     outpath = os.path.join('data',outfile)
     data = dict()
+    ids = dict()
     nodelist = []
     for fnlist in fdefs.values():
         for fn in fnlist:
-            fn.jsid = jsName(fn.path,fn.name)
+            fn.jsname = jsName(fn.path,fn.name)
+            fn_id,ids = assignID(ids,fn.jsname)
+            fn.id = fn_id
             node = dict()
-            node["id"]     = fn.jsid
+            node["id"]     = fn.id
+            node["name"]   = fn.jsname
             node["weight"] = fn.weight
             nodelist.append(node)
     data["nodes"] = nodelist
     linklist = [] #list of links, NOT a linked list ;D
     for call in calls:
         for link in linklist:
-            print(call.source)
-            print(call.source.jsid)
-            print(type(link))
-            if call.source.jsid == link["source"]:
-                if call.target.jsid == link["target"]:
+            if call.source.id == link["source"]:
+                if call.target.id == link["target"]:
                     link["value"] += 1
                     break
         else:
             link = dict()
-            link["source"] = call.source.jsid
-            link["target"] = call.target.jsid
+            link["source"] = call.source.id
+            link["target"] = call.target.id
             link["value"]  = 1
             linklist.append(link)
     data["links"] = linklist
