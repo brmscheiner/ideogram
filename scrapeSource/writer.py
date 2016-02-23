@@ -19,7 +19,7 @@ def jsName(path,name):
             "ideogram\\scrapeSource\\test\\","")
     noDash = shortPath.replace("-","_dash_")
     jsPath=noDash.replace("\\","_slash_").replace(".","_dot_")
-    jsName=jsPath+'_'+name
+    jsName=jsPath+'_slash_'+name
     return jsName
     
 def assignID(ids,jsName):
@@ -53,7 +53,22 @@ def isInCalls(fn,calls):
             return True
     return False
     
-def jsonGraph(fdefs,calls,outfile='out.json'):
+#def getUsedFdefs(fdefs,calls):
+#    u = dict()
+#    for source in fdefs:
+#        for fn in fdefs[source]:
+#            u[source] = []
+#            if isInCalls(fn,calls):
+#                
+    
+def jsonHierarchy(fdefs,calls,outfile='hout.json'):
+    outpath = os.path.join('data',outfile)
+    
+    with open(outpath, 'w') as f:
+        f.write(json.dumps(data, indent=2))
+    return
+    
+def jsonGraph(fdefs,calls,outfile='nout.json'):
     '''For reference, each node has:
     
     node.name   (string)
@@ -94,8 +109,4 @@ def jsonGraph(fdefs,calls,outfile='out.json'):
         f.write(json.dumps(data, indent=2))
     return
     
-def jsonHierarchy(fdefs,calls,outfile='out.json'):
-    outpath = os.path.join('data',outfile)
-    # build later
-    return
 
