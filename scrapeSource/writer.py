@@ -53,17 +53,49 @@ def isInCalls(fn,calls):
             return True
     return False
     
-#def getUsedFdefs(fdefs,calls):
-#    u = dict()
-#    for source in fdefs:
-#        for fn in fdefs[source]:
-#            u[source] = []
-#            if isInCalls(fn,calls):
-#                
+def getStartNodes(fdefs,calls):
+    '''Return a list of nodes in fdefs that have no inbound edges'''
+    s=[]
+    for source in fdefs:
+        for fn in fdefs[source]:
+            inboundEdges=False
+            for call in calls:
+                if call.target==fn:
+                    inboundEdges=True
+            if not inboundEdges:
+                s.append(fn)
+    return s
+    
+def getNewKids(current,calls,used):
+    '''return a list of the children of current that are not in used'''
+    return [c.target for c in calls if c.source==current and c.target not in used]
     
 def jsonHierarchy(fdefs,calls,outfile='hout.json'):
     outpath = os.path.join('data',outfile)
+    s=getStartNodes(fdefs,calls)
+    data = dict()
+    data["name"]="data"
+    data["children"]=[]
     
+    n=0
+    used=[]
+    while s:
+        cat = dict()
+        cat["name"]="Category "+str(n)
+        cat["children"]=[]
+        x=s.pop()
+        line=[x]
+        while line:
+            current = line.pop()
+            used.append(current)
+            line=getNewKids(current,calls,used)+line
+            newfn=dict()
+            newfn["name"]=jsName(current.path,current.name)
+            newfn["size"]=current.weight
+            cat["children"].append(newfn)
+        data["children"].append(cat)
+        n+=1
+        
     with open(outpath, 'w') as f:
         f.write(json.dumps(data, indent=2))
     return
@@ -88,7 +120,8 @@ def jsonGraph(fdefs,calls,outfile='nout.json'):
                 tagged_node = getTaggedNode(fn,ids)
                 nodelist.append(tagged_node)
             else:
-                print("omitted")
+                #print("omitted")
+                pass
     linklist = [] #list of links, NOT a linked list ;D
     for call in calls:
         for link in linklist:

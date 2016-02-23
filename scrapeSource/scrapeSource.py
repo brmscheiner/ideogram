@@ -6,7 +6,7 @@ import writer
 def genGraphData(project_path):
     ASTs        = reader.fetch(project_path)
     fdefs,calls = converter.convert(ASTs,project_path)
-    writer.jsonGraph(fdefs,calls)
+    writer.jsonHierarchy(fdefs,calls)
 
 if __name__=="__main__":
     project_path = os.path.join(
