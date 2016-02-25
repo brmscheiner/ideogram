@@ -12,6 +12,6 @@ def genGraphData(project_path):
 if __name__=="__main__":
     project_path = os.path.join(
                                 'C:\\','Users','scheinerbock','Desktop',
-                                'ideogram','scrapeSource','test','self'
+                                'ideogram','scrapeSource','test','erp5','product'
                                 )
     genGraphData(project_path)
