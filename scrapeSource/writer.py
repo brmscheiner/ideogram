@@ -31,7 +31,7 @@ def assignID(ids,jsName):
             new_id      = max(ids.values())+1
             ids[jsName] = new_id
         else:
-            new_id      = 1
+            new_id      = 0
             ids[jsName] = new_id
         return new_id,ids
 
