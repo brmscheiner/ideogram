@@ -10,9 +10,8 @@ import copy
     AND
     import bpl.scanner.token in \compiler.py isn't showing up in 
     imp_mods[\compiler.py]
-    
-    error on certain imports (i.e. ast, test)
-    
+        
+    not picking up asname imports 
     '''
     
 def convert(ASTs,project_path):
@@ -200,12 +199,13 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
             if not modpath:
                 continue
             elif obj+'.py' in modpath:
-                matches = [x for x in fdefs[modpath] if x.name==method]
-                if matches:
-                    if len(matches)>1:
-                        pass
-                        #print("multiple matches found for "+method)
-                    return matches[0]
+                if modpath in fdefs:
+                    matches = [x for x in fdefs[modpath] if x.name==method]
+                    if matches:
+                        if len(matches)>1:
+                            pass
+                            #print("multiple matches found for "+method)
+                        return matches[0]
                     
             # CASE 2B: object instantiation with an imported module
             if modpath not in cdefs:

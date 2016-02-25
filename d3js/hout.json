@@ -3,12 +3,8 @@
     {
       "children": [
         {
-          "size": 23,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        },
-        {
-          "size": 30,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash_str_if_not_none"
+          "size": 75,
+          "name": "self_slash_printing_dot_py_slash_printImpFuncStrs"
         }
       ],
       "name": "Category 0"
@@ -16,8 +12,8 @@
     {
       "children": [
         {
-          "size": 40,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 244,
+          "name": "self_slash_importAnalysis_dot_py_slash_body"
         }
       ],
       "name": "Category 1"
@@ -25,16 +21,12 @@
     {
       "children": [
         {
-          "size": 70,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 53,
+          "name": "self_slash_importAnalysis_dot_py_slash_getImportModule"
         },
         {
-          "size": 47,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash_indent"
-        },
-        {
-          "size": 47,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash_indent"
+          "size": 100,
+          "name": "self_slash_importAnalysis_dot_py_slash_getModulePath"
         }
       ],
       "name": "Category 2"
@@ -42,8 +34,56 @@
     {
       "children": [
         {
-          "size": 47,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 80,
+          "name": "self_slash_converter_dot_py_slash_convert"
+        },
+        {
+          "size": 271,
+          "name": "self_slash_converter_dot_py_slash_firstPass"
+        },
+        {
+          "size": 115,
+          "name": "self_slash_converter_dot_py_slash_secondPass"
+        },
+        {
+          "size": 262,
+          "name": "self_slash_converter_dot_py_slash_matchImpObjStrs"
+        },
+        {
+          "size": 36,
+          "name": "self_slash_converter_dot_py_slash_formatFunctionNode"
+        },
+        {
+          "size": 126,
+          "name": "self_slash_converter_dot_py_slash_traversal"
+        },
+        {
+          "size": 42,
+          "name": "self_slash_converter_dot_py_slash_formatBodyNode"
+        },
+        {
+          "size": 546,
+          "name": "self_slash_converter_dot_py_slash_getTargetFnDef"
+        },
+        {
+          "size": 87,
+          "name": "self_slash_converter_dot_py_slash_getSourceFnDef"
+        },
+        {
+          "size": 126,
+          "name": "self_slash_converter_dot_py_slash_traversal"
+        },
+        {
+          "size": 22,
+          "name": "self_slash_converter_dot_py_slash_getCurrentClass"
+        },
+        {
+          "size": 69,
+          "name": "self_slash_converter_dot_py_slash_calcFnWeight"
+        },
+        {
+          "size": 69,
+          "name": "self_slash_converter_dot_py_slash_calcFnWeight"
         }
       ],
       "name": "Category 3"
@@ -51,12 +91,8 @@
     {
       "children": [
         {
-          "size": 20,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
+          "size": 13,
+          "name": "self_slash_printing_dot_py_slash_show"
         }
       ],
       "name": "Category 4"
@@ -64,8 +100,8 @@
     {
       "children": [
         {
-          "size": 30,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 32,
+          "name": "self_slash_importAnalysis_dot_py_slash_getImportFromModule"
         }
       ],
       "name": "Category 5"
@@ -73,12 +109,8 @@
     {
       "children": [
         {
-          "size": 76,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        },
-        {
-          "size": 166,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash_dec_info"
+          "size": 399,
+          "name": "self_slash_printing_dot_py_slash_body"
         }
       ],
       "name": "Category 6"
@@ -86,8 +118,12 @@
     {
       "children": [
         {
-          "size": 37,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 87,
+          "name": "self_slash_scrapeSource_dot_py_slash_body"
+        },
+        {
+          "size": 48,
+          "name": "self_slash_scrapeSource_dot_py_slash_genGraphData"
         }
       ],
       "name": "Category 7"
@@ -95,8 +131,8 @@
     {
       "children": [
         {
-          "size": 86,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 174,
+          "name": "self_slash_reader_dot_py_slash_body"
         }
       ],
       "name": "Category 8"
@@ -104,8 +140,28 @@
     {
       "children": [
         {
-          "size": 47,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 224,
+          "name": "self_slash_writer_dot_py_slash_jsonGraph"
+        },
+        {
+          "size": 32,
+          "name": "self_slash_writer_dot_py_slash_isInCalls"
+        },
+        {
+          "size": 98,
+          "name": "self_slash_writer_dot_py_slash_getTaggedNode"
+        },
+        {
+          "size": 73,
+          "name": "self_slash_writer_dot_py_slash_assignID"
+        },
+        {
+          "size": 45,
+          "name": "self_slash_writer_dot_py_slash_jsPath"
+        },
+        {
+          "size": 58,
+          "name": "self_slash_writer_dot_py_slash_jsName"
         }
       ],
       "name": "Category 9"
@@ -113,8 +169,28 @@
     {
       "children": [
         {
-          "size": 36,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
+          "size": 94,
+          "name": "self_slash_printing_dot_py_slash_printFnDefs"
+        },
+        {
+          "size": 69,
+          "name": "self_slash_printing_dot_py_slash_limitChars"
+        },
+        {
+          "size": 12,
+          "name": "self_slash_printing_dot_py_slash_getClassString"
+        },
+        {
+          "size": 69,
+          "name": "self_slash_printing_dot_py_slash_limitChars"
+        },
+        {
+          "size": 72,
+          "name": "self_slash_printing_dot_py_slash_getPrettyPath"
+        },
+        {
+          "size": 69,
+          "name": "self_slash_printing_dot_py_slash_limitChars"
         }
       ],
       "name": "Category 10"
@@ -122,8 +198,8 @@
     {
       "children": [
         {
-          "size": 73,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 51,
+          "name": "self_slash_importAnalysis_dot_py_slash_getImportFromObjects"
         }
       ],
       "name": "Category 11"
@@ -131,8 +207,8 @@
     {
       "children": [
         {
-          "size": 51,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
+          "size": 57,
+          "name": "self_slash_printing_dot_py_slash_printImpObjs"
         }
       ],
       "name": "Category 12"
@@ -140,8 +216,16 @@
     {
       "children": [
         {
-          "size": 54,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 233,
+          "name": "self_slash_writer_dot_py_slash_jsonHierarchy"
+        },
+        {
+          "size": 35,
+          "name": "self_slash_writer_dot_py_slash_getNewKids"
+        },
+        {
+          "size": 63,
+          "name": "self_slash_writer_dot_py_slash_getStartNodes"
         }
       ],
       "name": "Category 13"
@@ -149,8 +233,12 @@
     {
       "children": [
         {
-          "size": 26,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
+          "size": 85,
+          "name": "self_slash_reader_dot_py_slash_fetch"
+        },
+        {
+          "size": 81,
+          "name": "self_slash_reader_dot_py_slash_getAST"
         }
       ],
       "name": "Category 14"
@@ -158,8 +246,8 @@
     {
       "children": [
         {
-          "size": 44,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 1677,
+          "name": "self_slash_converter_dot_py_slash_body"
         }
       ],
       "name": "Category 15"
@@ -167,1652 +255,11 @@
     {
       "children": [
         {
-          "size": 47,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
+          "size": 874,
+          "name": "self_slash_writer_dot_py_slash_body"
         }
       ],
       "name": "Category 16"
-    },
-    {
-      "children": [
-        {
-          "size": 72,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 17"
-    },
-    {
-      "children": [
-        {
-          "size": 69,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 18"
-    },
-    {
-      "children": [
-        {
-          "size": 40,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 19"
-    },
-    {
-      "children": [
-        {
-          "size": 47,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 20"
-    },
-    {
-      "children": [
-        {
-          "size": 79,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 21"
-    },
-    {
-      "children": [
-        {
-          "size": 44,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 22"
-    },
-    {
-      "children": [
-        {
-          "size": 30,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 23"
-    },
-    {
-      "children": [
-        {
-          "size": 2296,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash_body"
-        },
-        {
-          "size": 76,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash_enum"
-        },
-        {
-          "size": 34,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___str__"
-        },
-        {
-          "size": 34,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___str__"
-        },
-        {
-          "size": 34,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___str__"
-        }
-      ],
-      "name": "Category 24"
-    },
-    {
-      "children": [
-        {
-          "size": 33,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_slash_compile"
-        },
-        {
-          "size": 10,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_parse"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check"
-        },
-        {
-          "size": 106,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_generate_code"
-        },
-        {
-          "size": 23,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash___init__"
-        },
-        {
-          "size": 194,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references"
-        },
-        {
-          "size": 137,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_declarations"
-        },
-        {
-          "size": 88,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_function"
-        },
-        {
-          "size": 307,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_build_string_table"
-        },
-        {
-          "size": 87,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_compute_offsets"
-        },
-        {
-          "size": 162,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_header"
-        },
-        {
-          "size": 83,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 303,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references_statement"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash___init__"
-        },
-        {
-          "size": 438,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_statement"
-        },
-        {
-          "size": 24,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_reg"
-        },
-        {
-          "size": 24,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_immediate_reg"
-        },
-        {
-          "size": 527,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_statement"
-        },
-        {
-          "size": 24,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_immediate_reg"
-        },
-        {
-          "size": 18,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_no_operands"
-        },
-        {
-          "size": 196,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_compute_offsets_statement"
-        },
-        {
-          "size": 345,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references_expression"
-        },
-        {
-          "size": 345,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references_expression"
-        },
-        {
-          "size": 345,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references_expression"
-        },
-        {
-          "size": 345,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references_expression"
-        },
-        {
-          "size": 345,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_find_references_expression"
-        },
-        {
-          "size": 1419,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_expression"
-        },
-        {
-          "size": 1419,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_expression"
-        },
-        {
-          "size": 1419,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_expression"
-        },
-        {
-          "size": 1419,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_expression"
-        },
-        {
-          "size": 1419,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_type_check_expression"
-        },
-        {
-          "size": 18,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_no_operands"
-        },
-        {
-          "size": 1143,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_expression"
-        },
-        {
-          "size": 1143,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_expression"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 1143,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_expression"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 1143,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_expression"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 1143,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_code_expression"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 49,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_lookup"
-        },
-        {
-          "size": 49,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_lookup"
-        },
-        {
-          "size": 49,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_lookup"
-        },
-        {
-          "size": 49,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_lookup"
-        },
-        {
-          "size": 49,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_lookup"
-        },
-        {
-          "size": 29,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_is_l_value"
-        },
-        {
-          "size": 29,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_is_l_value"
-        },
-        {
-          "size": 29,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_is_l_value"
-        },
-        {
-          "size": 29,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_is_l_value"
-        },
-        {
-          "size": 29,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_is_l_value"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_direct"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 252,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_l_value"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 21,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_reg_indirect"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        },
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_indirect_reg"
-        }
-      ],
-      "name": "Category 25"
-    },
-    {
-      "children": [
-        {
-          "size": 58,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_compiler_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 26"
-    },
-    {
-      "children": [
-        {
-          "size": 0,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash___init___dot_py_slash_body"
-        }
-      ],
-      "name": "Category 27"
-    },
-    {
-      "children": [
-        {
-          "size": 0,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash___init___dot_py_slash_body"
-        }
-      ],
-      "name": "Category 28"
-    },
-    {
-      "children": [
-        {
-          "size": 214,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_code_generator_test_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 29"
-    },
-    {
-      "children": [
-        {
-          "size": 160,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_type_checker_test_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 30"
-    },
-    {
-      "children": [
-        {
-          "size": 0,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash___init___dot_py_slash_body"
-        }
-      ],
-      "name": "Category 31"
-    },
-    {
-      "children": [
-        {
-          "size": 112,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_parser_test_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 32"
-    },
-    {
-      "children": [
-        {
-          "size": 0,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash___init___dot_py_slash_body"
-        }
-      ],
-      "name": "Category 33"
-    },
-    {
-      "children": [
-        {
-          "size": 0,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash___init___dot_py_slash_body"
-        }
-      ],
-      "name": "Category 34"
-    },
-    {
-      "children": [
-        {
-          "size": 65,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_return_statement"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 35"
-    },
-    {
-      "children": [
-        {
-          "size": 57,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_expression_statement"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 36"
-    },
-    {
-      "children": [
-        {
-          "size": 168,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_param"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash___init__"
-        },
-        {
-          "size": 51,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash_is_type_token"
-        },
-        {
-          "size": 25,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash___init__"
-        },
-        {
-          "size": 41,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 38,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 37"
-    },
-    {
-      "children": [
-        {
-          "size": 10,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_program"
-        }
-      ],
-      "name": "Category 38"
-    },
-    {
-      "children": [
-        {
-          "size": 101,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_if_statement"
-        },
-        {
-          "size": 44,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 39"
-    },
-    {
-      "children": [
-        {
-          "size": 302,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_declaration"
-        },
-        {
-          "size": 48,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 40"
-    },
-    {
-      "children": [
-        {
-          "size": 105,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_statement_list"
-        }
-      ],
-      "name": "Category 41"
-    },
-    {
-      "children": [
-        {
-          "size": 90,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_param_list"
-        }
-      ],
-      "name": "Category 42"
-    },
-    {
-      "children": [
-        {
-          "size": 86,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_E"
-        },
-        {
-          "size": 44,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 41,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash_is_add_op"
-        }
-      ],
-      "name": "Category 43"
-    },
-    {
-      "children": [
-        {
-          "size": 136,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_statement"
-        }
-      ],
-      "name": "Category 44"
-    },
-    {
-      "children": [
-        {
-          "size": 52,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_writeln_statement"
-        },
-        {
-          "size": 20,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 45"
-    },
-    {
-      "children": [
-        {
-          "size": 139,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_F"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 46"
-    },
-    {
-      "children": [
-        {
-          "size": 56,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_compound_statement"
-        },
-        {
-          "size": 36,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 47"
-    },
-    {
-      "children": [
-        {
-          "size": 353,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_factor"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 34,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 42,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 34,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 37,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        },
-        {
-          "size": 20,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 48"
-    },
-    {
-      "children": [
-        {
-          "size": 64,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_while_statement"
-        },
-        {
-          "size": 36,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parsetree_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 49"
-    },
-    {
-      "children": [
-        {
-          "size": 82,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_args"
-        }
-      ],
-      "name": "Category 50"
-    },
-    {
-      "children": [
-        {
-          "size": 86,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_T"
-        },
-        {
-          "size": 51,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash_is_mul_op"
-        }
-      ],
-      "name": "Category 51"
-    },
-    {
-      "children": [
-        {
-          "size": 52,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_expect"
-        }
-      ],
-      "name": "Category 52"
-    },
-    {
-      "children": [
-        {
-          "size": 55,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_declaration_list"
-        }
-      ],
-      "name": "Category 53"
-    },
-    {
-      "children": [
-        {
-          "size": 160,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_expression"
-        },
-        {
-          "size": 81,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash_is_rel_op"
-        }
-      ],
-      "name": "Category 54"
-    },
-    {
-      "children": [
-        {
-          "size": 62,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_write_statement"
-        }
-      ],
-      "name": "Category 55"
-    },
-    {
-      "children": [
-        {
-          "size": 68,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_local_decs"
-        }
-      ],
-      "name": "Category 56"
-    },
-    {
-      "children": [
-        {
-          "size": 2453,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_parser_slash_parser_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 57"
-    },
-    {
-      "children": [
-        {
-          "size": 0,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash___init___dot_py_slash_body"
-        }
-      ],
-      "name": "Category 58"
-    },
-    {
-      "children": [
-        {
-          "size": 428,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 59"
-    },
-    {
-      "children": [
-        {
-          "size": 1691,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 60"
-    },
-    {
-      "children": [
-        {
-          "size": 126,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_test_slash_scanner_test_dot_py_slash_body"
-        },
-        {
-          "size": 1564,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash_get_next_token"
-        },
-        {
-          "size": 1564,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash_get_next_token"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 28,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_scanner_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        },
-        {
-          "size": 31,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_scanner_slash_token_dot_py_slash___init__"
-        }
-      ],
-      "name": "Category 61"
-    },
-    {
-      "children": [
-        {
-          "size": 2986,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_type_checker_slash_type_checker_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 62"
-    },
-    {
-      "children": [
-        {
-          "size": 27,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_gen_immediate_indirect"
-        }
-      ],
-      "name": "Category 63"
-    },
-    {
-      "children": [
-        {
-          "size": 3220,
-          "name": "bpl_dash_compyler_dash_master_slash_bpl_slash_code_generator_slash_code_generator_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 64"
-    },
-    {
-      "children": [
-        {
-          "size": 39,
-          "name": "bpl_dash_compyler_dash_master_slash_setup_dot_py_slash_body"
-        }
-      ],
-      "name": "Category 65"
     }
   ],
   "name": "data"
