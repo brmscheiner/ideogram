@@ -1,5 +1,6 @@
 import json
 import os
+import random 
 
 def jsPath(path):
     '''Returns a relative path without \, -, and . so that 
@@ -83,7 +84,8 @@ def jsonHierarchy(fdefs,calls,outfile='hout.json'):
         cat = dict()
         cat["name"]="Category "+str(n)
         cat["children"]=[]
-        x=s.pop()
+        x=random.choice(s)
+        s.remove(x)
         line=[x]
         while line:
             current = line.pop()
