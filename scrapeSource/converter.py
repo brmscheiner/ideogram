@@ -259,8 +259,8 @@ def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
             else:
                 fn_node = [x for x in fdefs[mod] if x.name==func]
                 cls_node = [x for x in cdefs[mod] if x.name==func]
-                assert len(fn_node) in [1,0]
-                assert len(cls_node) in [1,0]
+                #assert len(fn_node) in [1,0]
+                #assert len(cls_node) in [1,0]
                 if cls_node:
                     imp_classes[source] += cls_node
                 if fn_node:

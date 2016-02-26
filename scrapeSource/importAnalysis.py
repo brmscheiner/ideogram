@@ -4,16 +4,16 @@ import sys
 def getModulePath(project_path,module_name):
     '''Searches for module_name in searchpath and returns the filepath.
     If no filepath was found, returns None.'''
+    if not module_name:
+        return None
     sys.path.append(project_path)
     try:
         package = pkgutil.get_loader(module_name)
     except ImportError:
-        if module_name:
-            print("Parent module for "+module_name+" not found.")
+        print("Parent module for "+module_name+" not found.")
         return None
     except:
-        if module_name:
-            print(module_name+" not loaded for bizarre reasons")
+        print(module_name+" not loaded for bizarre reasons")
     try:
         if package: 
                 if package.get_code(module_name):
@@ -25,20 +25,16 @@ def getModulePath(project_path,module_name):
                     pass #perhaps filename is in package.find_spec(module_name).origin?
                     pass #a good reference is https://www.python.org/dev/peps/pep-0302/
     except ImportError:
-        if module_name:
-            print("Code object unavailable for "+module_name)
+        print("Code object unavailable for "+module_name)
         return None
     except AttributeError:
-        if module_name:
-            print(module_name+" is an ExtensionFileLoader object")
+        print(module_name+" is an ExtensionFileLoader object")
         return None
     except:
-        if module_name:
-            print(module_name+" not loaded for bizarre reasons")
+        print(module_name+" not loaded for bizarre reasons")
         return None
     else:
-        if module_name:
-            print ("Module "+module_name+" not found.")
+        print ("Module "+module_name+" not found.")
         return None
 
 def getImportFromModule(node,filepath):
