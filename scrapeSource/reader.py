@@ -5,6 +5,7 @@ import subprocess
 def fetch(project_path):
     ASTs=[]
     for (dirpath,__,files) in os.walk(project_path):
+        print(dirpath)
         python_files = [x for x in files if x.endswith('.py')]
         for pfile in python_files:
             path = os.path.join(dirpath,pfile)

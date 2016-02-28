@@ -14,6 +14,7 @@ text {
 var diameter = 600,
     format = d3.format(",d"),
     color = d3.scale.category20c();
+    start = Date.now()
 
 var bubble = d3.layout.pack()
     .sort(null)
@@ -33,13 +34,12 @@ d3.json("hout.json", function(error, root) {
       .filter(function(d) { return !d.children; }))
     .enter().append("g")
       .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
   node.append("title")
       .text(function(d) { txt = d.className.replace(/_slash_/g,"/")
-									    .replace(/_dot_/g,".")
-										.replace(/_dash_/g,"-");
-							return txt; });
+									                .replace(/_dot_/g,".")
+									               	.replace(/_dash_/g,"-");
+							            return txt; });
 	  
   node.append("g")
   .append("path")
@@ -70,6 +70,15 @@ function gear(d) {
 return path.join(""); }
 
 });
+
+
+d3.timer(function() {
+  var angle = (Date.now() - start) * .014,
+      transform = function(d) { return "translate(" + d.x + "," + d.y + ")"
+                                              + "rotate("+angle+")"; };
+  svg.selectAll(".node").attr("transform", transform);
+});
+
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
