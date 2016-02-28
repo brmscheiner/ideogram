@@ -18,7 +18,7 @@ def convert(ASTs,project_path,verbose=False):
     copy_ASTs = copy.deepcopy(ASTs)
     if verbose:
         print("Making first pass..")
-    fdefs,imp_obj_strs,imp_mods,cdefs = firstPass(ASTs)
+    fdefs,imp_obj_strs,imp_mods,cdefs = firstPass(ASTs,verbose)
     imp_funcs,imp_classes=matchImpObjStrs(fdefs,imp_obj_strs,cdefs)
     if verbose:
         print("Making second pass..")
@@ -47,7 +47,7 @@ def traversal(root):
             node.children = set(children)
             stack.append(node)
             
-def firstPass(ASTs):
+def firstPass(ASTs,verbose):
     '''Return a dictionary of function definition nodes, a dictionary of  
     imported object names and a dictionary of imported module names. All three 
     dictionaries use source file paths as keys.'''
@@ -65,16 +65,16 @@ def firstPass(ASTs):
             if isinstance(node,ast.FunctionDef):
                 fdefs[path].append(formatFunctionNode(node,path,stack))
             elif isinstance(node,ast.ImportFrom):
-                module = ia.getImportFromModule(node,path)
+                module = ia.getImportFromModule(node,path,verbose)
                 if module:
                     fn_names = ia.getImportFromObjects(node)
                     for fn_name in fn_names:
                         imp_obj_strs[path].append((module,fn_name))
                 else:
-                    #print("No module found "+ast.dump(node))
-                    pass
+                    if verbose:
+                        print("No module found "+ast.dump(node))
             elif isinstance(node,ast.Import):
-                module = ia.getImportModule(node,path)
+                module = ia.getImportModule(node,path,verbose)
                 imp_mods[path].append(module)
             elif isinstance(node,ast.ClassDef):
                 node.path=path
@@ -240,7 +240,7 @@ def getTargetFnDef(node,path,fdefs,cdefs,imp_funcs,imp_mods,imp_classes):
 def matchImpObjStrs(fdefs,imp_obj_strs,cdefs):
     '''returns imp_funcs, a dictionary with filepath keys that contains 
     lists of function definition nodes that were imported using
-     "from __ import __" style syntax. also returns imp_classes, which 
+     from __ import __ style syntax. also returns imp_classes, which 
     is the same for class definition nodes.'''
     imp_funcs=dict()
     imp_classes=dict()
