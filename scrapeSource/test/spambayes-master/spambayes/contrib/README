@@ -1,0 +1,29 @@
+Directory Contents
+------------------
+
+nway.py - demonstration script which can be used to perform n-way
+classification.
+
+nway-train.py - training script to use with nway.py.
+
+SmarterHTTPServer.py - ???
+
+bulkgraph.py, bulktrain.sh, procmailrc - see BULK.txt.
+
+spambayes.el - Emacs Lisp code to integrate SpamBayes into the Gnus and VM
+mail readers.
+
+muttrc - Mutt key bindings for SpamBayes.
+
+mod_spambayes.py - Plugin for Amit Patel's proxy3 web proxy.
+
+spamcounts.py - print spam and ham counts and spam probability for a
+messages for for select tokens
+
+findbest.py - Find the next "best" unsure message to train on.
+
+pycksum.py - A fuzzy checksum program designed for email messages.
+
+sb_culler.py - Andrew Dalke's POP3 culler.
+
+tte.py - A utility script for 'train to exhaustion'.

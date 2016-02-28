@@ -14,12 +14,14 @@ import copy
     not picking up asname imports 
     '''
     
-def convert(ASTs,project_path):
+def convert(ASTs,project_path,verbose=False):
     copy_ASTs = copy.deepcopy(ASTs)
-    print("Making first pass..")
+    if verbose:
+        print("Making first pass..")
     fdefs,imp_obj_strs,imp_mods,cdefs = firstPass(ASTs)
     imp_funcs,imp_classes=matchImpObjStrs(fdefs,imp_obj_strs,cdefs)
-    print("Making second pass..")
+    if verbose:
+        print("Making second pass..")
     calls = secondPass(copy_ASTs,fdefs,cdefs,imp_funcs,imp_mods,imp_classes)
     return fdefs,calls
     
