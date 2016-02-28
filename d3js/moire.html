@@ -43,21 +43,19 @@ d3.json("hout.json", function(error, root) {
 	  
   node.append("g")
   .append("path")
-    .attr("d", gear)
-    .attr("fill", function(d) { return color(d.packageName); })
-    .attr("stroke", "black" );
+    .attr("d", gear);
 	
   node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
 	  
 function gear(d) {
-  var n = 12;             // number of teeth
+  var n = 80;             // number of teeth
       r2 = Math.abs(d.r), // middle of tooth
       r0 = r2 - 5,        // outer radius
-      r1 = r2 + 4,        // height of tooth
+      r1 = r2 + 10,        // height of tooth
      // r3 = 1,            // inner radius 
-      r3 = 5,            // inner radius 
+      r3 = Math.abs(d.r)-10,            // inner radius 
       da = Math.PI / n,
       a0 = -Math.PI / 2,
       i = -1,
@@ -76,9 +74,8 @@ return path.join(""); }
 
 
 d3.timer(function() {
-
-  transform = function(d) {   var angle = (Date.now() - start) * 1 / d.r;
-                              return "translate(" + d.x + "," + d.y + ")"
+  var angle = (Date.now() - start) * .014;
+  transform = function(d) { return "translate(" + d.x + "," + d.y + ")"
                                               + "rotate("+angle+")"; };
   svg.selectAll(".node").attr("transform", transform);
 });
