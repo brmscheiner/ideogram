@@ -98,7 +98,7 @@ def jsonHierarchy(fdefs,calls,outfile='hout.json'):
         data["children"].append(cat)
         n+=1
         
-    with open(outpath, 'w') as f:
+    with open(outpath, 'w+') as f:
         f.write(json.dumps(data, indent=2))
     return
     
@@ -140,7 +140,7 @@ def jsonGraph(fdefs,calls,outfile='nout.json'):
     
     data["links"] = linklist
     data["nodes"] = nodelist
-    with open(outpath, 'w') as f:
+    with open(outpath, 'w+') as f:
         f.write(json.dumps(data, indent=2))
     return
     

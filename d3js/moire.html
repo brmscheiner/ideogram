@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+text {
+  font: 10px sans-serif;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var diameter = 600,
+    format = d3.format(",d"),
+    color = d3.scale.category20c();
+    start = Date.now()
+
+var bubble = d3.layout.pack()
+    .sort(null)
+    .size([diameter, diameter])
+    .padding(1.5);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
+
+d3.json("hout.json", function(error, root) {
+  if (error) throw error;
+
+  var node = svg.selectAll(".node")
+      .data(bubble.nodes(classes(root))
+      .filter(function(d) { return !d.children; }))
+    .enter().append("g")
+      .attr("class", "node")
+
+  node.append("title")
+      .text(function(d) { txt = d.className.replace(/_slash_/g,"/")
+									                .replace(/_dot_/g,".")
+									               	.replace(/_dash_/g,"-");
+							            return txt; });
+	  
+  node.append("g")
+  .append("path")
+    .attr("d", gear);
+	
+  node.append("text")
+      .attr("dy", ".3em")
+      .style("text-anchor", "middle")
+	  
+function gear(d) {
+  var n = 80;             // number of teeth
+      r2 = Math.abs(d.r), // middle of tooth
+      r0 = r2 - 5,        // outer radius
+      r1 = r2 + 10,        // height of tooth
+     // r3 = 1,            // inner radius 
+      r3 = Math.abs(d.r)-10,            // inner radius 
+      da = Math.PI / n,
+      a0 = -Math.PI / 2,
+      i = -1,
+      path = ["M", r0 * Math.cos(a0), ",", r0 * Math.sin(a0)];
+  while (++i < n) path.push(
+      "A", r0, ",", r0, " 0 0,1 ", r0 * Math.cos(a0 += da), ",", r0 * Math.sin(a0),
+      "L", r2 * Math.cos(a0), ",", r2 * Math.sin(a0),
+      "L", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+      "A", r1, ",", r1, " 0 0,1 ", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+      "L", r2 * Math.cos(a0 += da / 3), ",", r2 * Math.sin(a0),
+      "L", r0 * Math.cos(a0), ",", r0 * Math.sin(a0));
+  path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
+return path.join(""); }
+
+});
+
+
+d3.timer(function() {
+  var angle = (Date.now() - start) * .014;
+  transform = function(d) { return "translate(" + d.x + "," + d.y + ")"
+                                              + "rotate("+angle+")"; };
+  svg.selectAll(".node").attr("transform", transform);
+});
+
+
+// Returns a flattened hierarchy containing all leaf nodes under the root.
+function classes(root) {
+  var classes = [];
+
+  function recurse(name, node) {
+    if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+    else classes.push({packageName: name, className: node.name, value: node.size});
+  }
+
+  recurse(null, root);
+  return {children: classes};
+}
+
+d3.select(self.frameElement).style("height", diameter + "px");
+
+</script>
