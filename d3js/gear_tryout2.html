@@ -33,6 +33,7 @@ d3.json("hout.json", function(error, root) {
       .filter(function(d) { return !d.children; }))
     .enter().append("g")
       .attr("class", "node")
+	  //write in rotation transform here? function of clock or something..
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
   node.append("title")
