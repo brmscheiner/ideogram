@@ -1,4 +1,332 @@
 {
-  "links": [],
-  "nodes": []
+  "links": [
+    {
+      "value": 1,
+      "source": 16,
+      "target": 18
+    },
+    {
+      "value": 1,
+      "source": 16,
+      "target": 9
+    },
+    {
+      "value": 1,
+      "source": 16,
+      "target": 11
+    },
+    {
+      "value": 1,
+      "source": 18,
+      "target": 19
+    },
+    {
+      "value": 1,
+      "source": 18,
+      "target": 10
+    },
+    {
+      "value": 1,
+      "source": 18,
+      "target": 15
+    },
+    {
+      "value": 1,
+      "source": 13,
+      "target": 14
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 13
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 19
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 17
+    },
+    {
+      "value": 1,
+      "source": 17,
+      "target": 12
+    },
+    {
+      "value": 1,
+      "source": 17,
+      "target": 14
+    },
+    {
+      "value": 1,
+      "source": 26,
+      "target": 28
+    },
+    {
+      "value": 1,
+      "source": 27,
+      "target": 28
+    },
+    {
+      "value": 3,
+      "source": 22,
+      "target": 23
+    },
+    {
+      "value": 1,
+      "source": 22,
+      "target": 25
+    },
+    {
+      "value": 1,
+      "source": 22,
+      "target": 24
+    },
+    {
+      "value": 3,
+      "source": 25,
+      "target": 23
+    },
+    {
+      "value": 1,
+      "source": 20,
+      "target": 21
+    },
+    {
+      "value": 1,
+      "source": 29,
+      "target": 30
+    },
+    {
+      "value": 1,
+      "source": 0,
+      "target": 4
+    },
+    {
+      "value": 1,
+      "source": 0,
+      "target": 3
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 5
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 7
+    },
+    {
+      "value": 1,
+      "source": 4,
+      "target": 2
+    },
+    {
+      "value": 1,
+      "source": 1,
+      "target": 8
+    },
+    {
+      "value": 1,
+      "source": 1,
+      "target": 5
+    },
+    {
+      "value": 1,
+      "source": 1,
+      "target": 6
+    }
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "name": "test/self_slash_writer_dot_py_slash_jsonGraph",
+      "weight": 224,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 1,
+      "name": "test/self_slash_writer_dot_py_slash_jsonHierarchy",
+      "weight": 233,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 2,
+      "name": "test/self_slash_writer_dot_py_slash_assignID",
+      "weight": 73,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 3,
+      "name": "test/self_slash_writer_dot_py_slash_isInCalls",
+      "weight": 32,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 4,
+      "name": "test/self_slash_writer_dot_py_slash_getTaggedNode",
+      "weight": 98,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 5,
+      "name": "test/self_slash_writer_dot_py_slash_jsName",
+      "weight": 58,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 6,
+      "name": "test/self_slash_writer_dot_py_slash_getNewKids",
+      "weight": 35,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 7,
+      "name": "test/self_slash_writer_dot_py_slash_jsPath",
+      "weight": 45,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 8,
+      "name": "test/self_slash_writer_dot_py_slash_getStartNodes",
+      "weight": 63,
+      "path": "test/self_slash_writer_dot_py"
+    },
+    {
+      "id": 9,
+      "name": "test/self_slash_converter_dot_py_slash_matchImpObjStrs",
+      "weight": 262,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 10,
+      "name": "test/self_slash_converter_dot_py_slash_getTargetFnDef",
+      "weight": 546,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 11,
+      "name": "test/self_slash_converter_dot_py_slash_firstPass",
+      "weight": 271,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 12,
+      "name": "test/self_slash_converter_dot_py_slash_getCurrentClass",
+      "weight": 22,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 13,
+      "name": "test/self_slash_converter_dot_py_slash_formatBodyNode",
+      "weight": 42,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 14,
+      "name": "test/self_slash_converter_dot_py_slash_calcFnWeight",
+      "weight": 69,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 15,
+      "name": "test/self_slash_converter_dot_py_slash_getSourceFnDef",
+      "weight": 87,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 16,
+      "name": "test/self_slash_converter_dot_py_slash_convert",
+      "weight": 80,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 17,
+      "name": "test/self_slash_converter_dot_py_slash_formatFunctionNode",
+      "weight": 36,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 18,
+      "name": "test/self_slash_converter_dot_py_slash_secondPass",
+      "weight": 115,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 19,
+      "name": "test/self_slash_converter_dot_py_slash_traversal",
+      "weight": 126,
+      "path": "test/self_slash_converter_dot_py"
+    },
+    {
+      "id": 20,
+      "name": "test/self_slash_reader_dot_py_slash_fetch",
+      "weight": 85,
+      "path": "test/self_slash_reader_dot_py"
+    },
+    {
+      "id": 21,
+      "name": "test/self_slash_reader_dot_py_slash_getAST",
+      "weight": 81,
+      "path": "test/self_slash_reader_dot_py"
+    },
+    {
+      "id": 22,
+      "name": "test/self_slash_printing_dot_py_slash_printFnDefs",
+      "weight": 94,
+      "path": "test/self_slash_printing_dot_py"
+    },
+    {
+      "id": 23,
+      "name": "test/self_slash_printing_dot_py_slash_limitChars",
+      "weight": 69,
+      "path": "test/self_slash_printing_dot_py"
+    },
+    {
+      "id": 24,
+      "name": "test/self_slash_printing_dot_py_slash_getClassString",
+      "weight": 12,
+      "path": "test/self_slash_printing_dot_py"
+    },
+    {
+      "id": 25,
+      "name": "test/self_slash_printing_dot_py_slash_getPrettyPath",
+      "weight": 72,
+      "path": "test/self_slash_printing_dot_py"
+    },
+    {
+      "id": 26,
+      "name": "test/self_slash_importAnalysis_dot_py_slash_getImportFromModule",
+      "weight": 32,
+      "path": "test/self_slash_importAnalysis_dot_py"
+    },
+    {
+      "id": 27,
+      "name": "test/self_slash_importAnalysis_dot_py_slash_getImportModule",
+      "weight": 53,
+      "path": "test/self_slash_importAnalysis_dot_py"
+    },
+    {
+      "id": 28,
+      "name": "test/self_slash_importAnalysis_dot_py_slash_getModulePath",
+      "weight": 100,
+      "path": "test/self_slash_importAnalysis_dot_py"
+    },
+    {
+      "id": 29,
+      "name": "test/self_slash_scrapeSource_dot_py_slash_body",
+      "weight": 87,
+      "path": "test/self_slash_scrapeSource_dot_py"
+    },
+    {
+      "id": 30,
+      "name": "test/self_slash_scrapeSource_dot_py_slash_genGraphData",
+      "weight": 48,
+      "path": "test/self_slash_scrapeSource_dot_py"
+    }
+  ]
 }
