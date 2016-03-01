@@ -1,4 +1,266 @@
 {
-  "children": [],
+  "children": [
+    {
+      "children": [
+        {
+          "name": "test/self_slash_importAnalysis_dot_py_slash_getImportFromObjects",
+          "size": 51
+        }
+      ],
+      "name": "Category 0"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_importAnalysis_dot_py_slash_getImportModule",
+          "size": 53
+        },
+        {
+          "name": "test/self_slash_importAnalysis_dot_py_slash_getModulePath",
+          "size": 100
+        }
+      ],
+      "name": "Category 1"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_reader_dot_py_slash_fetch",
+          "size": 85
+        },
+        {
+          "name": "test/self_slash_reader_dot_py_slash_getAST",
+          "size": 81
+        }
+      ],
+      "name": "Category 2"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_writer_dot_py_slash_body",
+          "size": 874
+        }
+      ],
+      "name": "Category 3"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_reader_dot_py_slash_body",
+          "size": 174
+        }
+      ],
+      "name": "Category 4"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_printing_dot_py_slash_show",
+          "size": 13
+        }
+      ],
+      "name": "Category 5"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_printing_dot_py_slash_printFnDefs",
+          "size": 94
+        },
+        {
+          "name": "test/self_slash_printing_dot_py_slash_limitChars",
+          "size": 69
+        },
+        {
+          "name": "test/self_slash_printing_dot_py_slash_getClassString",
+          "size": 12
+        },
+        {
+          "name": "test/self_slash_printing_dot_py_slash_limitChars",
+          "size": 69
+        },
+        {
+          "name": "test/self_slash_printing_dot_py_slash_getPrettyPath",
+          "size": 72
+        },
+        {
+          "name": "test/self_slash_printing_dot_py_slash_limitChars",
+          "size": 69
+        }
+      ],
+      "name": "Category 6"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_printing_dot_py_slash_body",
+          "size": 399
+        }
+      ],
+      "name": "Category 7"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_writer_dot_py_slash_jsonGraph",
+          "size": 224
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_isInCalls",
+          "size": 32
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_getTaggedNode",
+          "size": 98
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_assignID",
+          "size": 73
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_jsPath",
+          "size": 45
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_jsName",
+          "size": 58
+        }
+      ],
+      "name": "Category 8"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_converter_dot_py_slash_convert",
+          "size": 80
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_firstPass",
+          "size": 271
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_matchImpObjStrs",
+          "size": 262
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_secondPass",
+          "size": 115
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_formatFunctionNode",
+          "size": 36
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_traversal",
+          "size": 126
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_formatBodyNode",
+          "size": 42
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_getSourceFnDef",
+          "size": 87
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_getTargetFnDef",
+          "size": 546
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_traversal",
+          "size": 126
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_calcFnWeight",
+          "size": 69
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_getCurrentClass",
+          "size": 22
+        },
+        {
+          "name": "test/self_slash_converter_dot_py_slash_calcFnWeight",
+          "size": 69
+        }
+      ],
+      "name": "Category 9"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_converter_dot_py_slash_body",
+          "size": 1677
+        }
+      ],
+      "name": "Category 10"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_printing_dot_py_slash_printImpFuncStrs",
+          "size": 75
+        }
+      ],
+      "name": "Category 11"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_importAnalysis_dot_py_slash_getImportFromModule",
+          "size": 32
+        }
+      ],
+      "name": "Category 12"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_printing_dot_py_slash_printImpObjs",
+          "size": 57
+        }
+      ],
+      "name": "Category 13"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_writer_dot_py_slash_jsonHierarchy",
+          "size": 233
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_getNewKids",
+          "size": 35
+        },
+        {
+          "name": "test/self_slash_writer_dot_py_slash_getStartNodes",
+          "size": 63
+        }
+      ],
+      "name": "Category 14"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_importAnalysis_dot_py_slash_body",
+          "size": 244
+        }
+      ],
+      "name": "Category 15"
+    },
+    {
+      "children": [
+        {
+          "name": "test/self_slash_scrapeSource_dot_py_slash_body",
+          "size": 87
+        },
+        {
+          "name": "test/self_slash_scrapeSource_dot_py_slash_genGraphData",
+          "size": 48
+        }
+      ],
+      "name": "Category 16"
+    }
+  ],
   "name": "data"
 }
