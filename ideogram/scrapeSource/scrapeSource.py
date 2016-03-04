@@ -1,21 +1,16 @@
 import reader, converter, writer # 
 import os, sys
 import urllib.request,zipfile,shutil # downloading, unzipping and cleaning gh projects
+# shutil.rmtree(directory) will delete a directory and all of its contents
 
 def getDeepestDirectory(path):
-    '''return the deepest directory of a path string.
-    For example, "/asdf/cwfe/dascd/basdf" returns "basdf" '''
-    i = path.find('/')
-    while i!=-1:
-        i = path.find('/')
-        path=path[i+1:]
-    return path
+    # ''' Returns the substring following the last backslash in a string. '''
+    return path.split(sep='/')[-1]
 
 def addProject(gh_link):
-    '''adds a github project to the data folder, unzips it and returns 
-    the project name and the path to the project folder'''
+    ''' Adds a github project to the data folder, unzips it, and deletes the zip file.
+    Returns the project name and the path to the project folder. '''
     name = getDeepestDirectory(gh_link)
-    print(name)
     zipurl = gh_link+"/archive/master.zip"
     outzip = os.path.join('data',name+'.zip')
     urllib.request.urlretrieve(zipurl,outzip)
@@ -27,10 +22,10 @@ def addProject(gh_link):
     return name,outpath
 
 def isPath(string):
-    return False
+    return True
     
 def isGithubLink(string):
-    return True
+    return False
     
 class Generator:
     def __init__(self,path_or_github):
@@ -43,14 +38,13 @@ class Generator:
             print('Cannot create a generator with input '+path_or_github)
             print('Please provide the path to a project directory or a github link.')
             raise(ValueError)
-
-def getName(project_path):
-    return project_path.split(sep='/')[-1]
+        print(self.name)
+        print(self.path)
 
 def genGraphData(project_path):
     ASTs         = reader.fetch(project_path)
     fdefs,calls  = converter.convert(ASTs,project_path)
-    project_name = getName(project_path)
+    project_name = getDeepestDirectory(project_path)
     writer.jsonHierarchy(fdefs,calls,outfile=project_name+"_hout.json")
     writer.jsonGraph(    fdefs,calls,outfile=project_name+"_nout.json")
 
