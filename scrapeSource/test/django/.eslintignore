@@ -1,3 +1,0 @@
-**/{*.min,jquery}.js
-django/contrib/gis/templates/**/*.js
-node_modules/**.js
