@@ -105,16 +105,37 @@ def getChildren(current,calls,blacklist=[]):
 def jsonTree(fdefs,calls,outfile='tout.json'):
     outpath = os.path.join('data',outfile)
     nodes=[]
+    fdef_master_list=[]
     for fdeflist in fdefs.values():
         for x in fdeflist:
             nodes.append(jsName(x.path,x.name))
+            fdef_master_list.append(x)
     edges = [[jsName(c.source.path,c.source.name),jsName(c.source.path,c.target.name)] for c in calls]
     root = graphToForest(nodes,edges)
     root = noEmptyNests(root)
+    root = tagAttributes(fdef_master_list,root)
     with open(outpath, 'w+') as f:
         f.write(json.dumps(root, indent=2))
     return root
 
+def tagAttributes(fdef_master_list,node,depth=0):
+    '''recursively tag objects with sizes, depths and path names '''
+    if type(node)==list:
+        for i in node:
+            depth+=1
+            tagAttributes(fdef_master_list,i,depth)
+    if type(node)==dict:
+        for x in fdef_master_list:
+            if jsName(x.path,x.name)==node['name']:
+                node['path']=x.path
+                node['depth']=depth
+                if "children" not in node:
+                    node["size"]=x.weight
+        for i in node.values():
+            depth+=1
+            tagAttributes(fdef_master_list,i,depth)
+    return node
+    
 def noEmptyNests(node):
     '''recursively make sure that no dictionaries inside node contain empty children lists '''
     if type(node)==list:
@@ -125,7 +146,6 @@ def noEmptyNests(node):
             noEmptyNests(i)
         if node["children"] == []:
             node.pop("children")
-            node["size"]=2
     return node
 
 def graphToForest(nodes, edges):

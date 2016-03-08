@@ -1,0 +1,260 @@
+{
+  "name": "data",
+  "children": [
+    {
+      "name": "test_slash_self_slash_printing_dot_py_slash_limitChars",
+      "children": [
+        {
+          "name": "test_slash_self_slash_printing_dot_py_slash_printFnDefs",
+          "children": [
+            {
+              "name": "test_slash_self_slash_printing_dot_py_slash_getClassString",
+              "path": "test\\self\\printing.py",
+              "depth": 9,
+              "size": 12
+            }
+          ],
+          "path": "test\\self\\printing.py",
+          "depth": 6
+        },
+        {
+          "name": "test_slash_self_slash_printing_dot_py_slash_getPrettyPath",
+          "path": "test\\self\\printing.py",
+          "depth": 7,
+          "size": 72
+        }
+      ],
+      "path": "test\\self\\printing.py",
+      "depth": 3
+    },
+    {
+      "name": "test_slash_self_slash_converter_dot_py_slash_secondPass",
+      "children": [
+        {
+          "name": "test_slash_self_slash_converter_dot_py_slash_traversal",
+          "children": [
+            {
+              "name": "test_slash_self_slash_converter_dot_py_slash_firstPass",
+              "children": [
+                {
+                  "name": "test_slash_self_slash_converter_dot_py_slash_formatBodyNode",
+                  "children": [
+                    {
+                      "name": "test_slash_self_slash_converter_dot_py_slash_calcFnWeight",
+                      "path": "test\\self\\converter.py",
+                      "depth": 16,
+                      "size": 69
+                    }
+                  ],
+                  "path": "test\\self\\converter.py",
+                  "depth": 13
+                },
+                {
+                  "name": "test_slash_self_slash_converter_dot_py_slash_formatFunctionNode",
+                  "children": [
+                    {
+                      "name": "test_slash_self_slash_converter_dot_py_slash_getCurrentClass",
+                      "path": "test\\self\\converter.py",
+                      "depth": 17,
+                      "size": 22
+                    }
+                  ],
+                  "path": "test\\self\\converter.py",
+                  "depth": 14
+                }
+              ],
+              "path": "test\\self\\converter.py",
+              "depth": 10
+            }
+          ],
+          "path": "test\\self\\converter.py",
+          "depth": 7
+        },
+        {
+          "name": "test_slash_self_slash_converter_dot_py_slash_getSourceFnDef",
+          "path": "test\\self\\converter.py",
+          "depth": 8,
+          "size": 87
+        },
+        {
+          "name": "test_slash_self_slash_converter_dot_py_slash_getTargetFnDef",
+          "path": "test\\self\\converter.py",
+          "depth": 9,
+          "size": 546
+        },
+        {
+          "name": "test_slash_self_slash_converter_dot_py_slash_convert",
+          "children": [
+            {
+              "name": "test_slash_self_slash_converter_dot_py_slash_matchImpObjStrs",
+              "path": "test\\self\\converter.py",
+              "depth": 13,
+              "size": 262
+            }
+          ],
+          "path": "test\\self\\converter.py",
+          "depth": 10
+        }
+      ],
+      "path": "test\\self\\converter.py",
+      "depth": 4
+    },
+    {
+      "name": "test_slash_self_slash_writer_dot_py_slash_getTaggedNode",
+      "children": [
+        {
+          "name": "test_slash_self_slash_writer_dot_py_slash_jsonGraph",
+          "children": [
+            {
+              "name": "test_slash_self_slash_writer_dot_py_slash_isInCalls",
+              "path": "test\\self\\writer.py",
+              "depth": 11,
+              "size": 32
+            }
+          ],
+          "path": "test\\self\\writer.py",
+          "depth": 8
+        },
+        {
+          "name": "test_slash_self_slash_writer_dot_py_slash_jsName",
+          "children": [
+            {
+              "name": "test_slash_self_slash_writer_dot_py_slash_jsonHierarchy",
+              "children": [
+                {
+                  "name": "test_slash_self_slash_writer_dot_py_slash_getStartNodes",
+                  "path": "test\\self\\writer.py",
+                  "depth": 15,
+                  "size": 63
+                },
+                {
+                  "name": "test_slash_self_slash_writer_dot_py_slash_getNewKids",
+                  "path": "test\\self\\writer.py",
+                  "depth": 16,
+                  "size": 35
+                }
+              ],
+              "path": "test\\self\\writer.py",
+              "depth": 12
+            }
+          ],
+          "path": "test\\self\\writer.py",
+          "depth": 9
+        },
+        {
+          "name": "test_slash_self_slash_writer_dot_py_slash_jsPath",
+          "path": "test\\self\\writer.py",
+          "depth": 10,
+          "size": 45
+        },
+        {
+          "name": "test_slash_self_slash_writer_dot_py_slash_assignID",
+          "path": "test\\self\\writer.py",
+          "depth": 11,
+          "size": 73
+        }
+      ],
+      "path": "test\\self\\writer.py",
+      "depth": 5
+    },
+    {
+      "name": "test_slash_self_slash_importAnalysis_dot_py_slash_getModulePath",
+      "children": [
+        {
+          "name": "test_slash_self_slash_importAnalysis_dot_py_slash_getImportFromModule",
+          "path": "test\\self\\importAnalysis.py",
+          "depth": 9,
+          "size": 32
+        },
+        {
+          "name": "test_slash_self_slash_importAnalysis_dot_py_slash_getImportModule",
+          "path": "test\\self\\importAnalysis.py",
+          "depth": 10,
+          "size": 53
+        }
+      ],
+      "path": "test\\self\\importAnalysis.py",
+      "depth": 6
+    },
+    {
+      "name": "test_slash_self_slash_reader_dot_py_slash_fetch",
+      "children": [
+        {
+          "name": "test_slash_self_slash_reader_dot_py_slash_getAST",
+          "path": "test\\self\\reader.py",
+          "depth": 10,
+          "size": 81
+        }
+      ],
+      "path": "test\\self\\reader.py",
+      "depth": 7
+    },
+    {
+      "name": "test_slash_self_slash_scrapeSource_dot_py_slash_body",
+      "children": [
+        {
+          "name": "test_slash_self_slash_scrapeSource_dot_py_slash_genGraphData",
+          "path": "test\\self\\scrapeSource.py",
+          "depth": 11,
+          "size": 48
+        }
+      ],
+      "path": "test\\self\\scrapeSource.py",
+      "depth": 8
+    },
+    {
+      "name": "test_slash_self_slash_converter_dot_py_slash_body",
+      "path": "test\\self\\converter.py",
+      "depth": 9,
+      "size": 1677
+    },
+    {
+      "name": "test_slash_self_slash_writer_dot_py_slash_body",
+      "path": "test\\self\\writer.py",
+      "depth": 10,
+      "size": 874
+    },
+    {
+      "name": "test_slash_self_slash_printing_dot_py_slash_body",
+      "path": "test\\self\\printing.py",
+      "depth": 11,
+      "size": 399
+    },
+    {
+      "name": "test_slash_self_slash_printing_dot_py_slash_printImpFuncStrs",
+      "path": "test\\self\\printing.py",
+      "depth": 12,
+      "size": 75
+    },
+    {
+      "name": "test_slash_self_slash_printing_dot_py_slash_printImpObjs",
+      "path": "test\\self\\printing.py",
+      "depth": 13,
+      "size": 57
+    },
+    {
+      "name": "test_slash_self_slash_printing_dot_py_slash_show",
+      "path": "test\\self\\printing.py",
+      "depth": 14,
+      "size": 13
+    },
+    {
+      "name": "test_slash_self_slash_reader_dot_py_slash_body",
+      "path": "test\\self\\reader.py",
+      "depth": 15,
+      "size": 174
+    },
+    {
+      "name": "test_slash_self_slash_importAnalysis_dot_py_slash_body",
+      "path": "test\\self\\importAnalysis.py",
+      "depth": 16,
+      "size": 244
+    },
+    {
+      "name": "test_slash_self_slash_importAnalysis_dot_py_slash_getImportFromObjects",
+      "path": "test\\self\\importAnalysis.py",
+      "depth": 17,
+      "size": 51
+    }
+  ]
+}
