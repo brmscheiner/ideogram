@@ -67,10 +67,6 @@ def getStartNodes(fdefs,calls):
                 s.append(fn)
     return s
     
-def getNewKids(current,calls,used):
-    '''return a list of the children of current that are not in used'''
-    return [c.target for c in calls if c.source==current and c.target not in used]
-    
 def jsonHierarchy(fdefs,calls,outfile='hout.json'):
     outpath = os.path.join('data',outfile)
     s=getStartNodes(fdefs,calls)
@@ -81,9 +77,9 @@ def jsonHierarchy(fdefs,calls,outfile='hout.json'):
     n=0
     used=[]
     while s:
-        cat = dict()
-        cat["name"]="Category "+str(n)
-        cat["children"]=[]
+        root = dict()
+        root["name"]="Category "+str(n)
+        root["children"]=[]
         x=random.choice(s)
         s.remove(x)
         line=[x]
@@ -94,54 +90,100 @@ def jsonHierarchy(fdefs,calls,outfile='hout.json'):
             newfn=dict()
             newfn["name"]=jsName(current.path,current.name)
             newfn["size"]=current.weight
-            cat["children"].append(newfn)
-        data["children"].append(cat)
+            root["children"].append(newfn)
+        data["children"].append(root)
         n+=1
         
     with open(outpath, 'w+') as f:
         f.write(json.dumps(data, indent=2))
     return
     
-def jsonGraph(fdefs,calls,outfile='nout.json'):
-    '''For reference, each node has:
+def getChildren(current,calls,blacklist=[]):
+    ''' Return a list of the children of current that are not in used. '''
+    return [c.target for c in calls if c.source==current and c.target not in blacklist]
     
-    node.name   (string)
-    node.source (string)
-    node.weight (int)
-    node.pclass (class node object) 
-    
-    Each call contains a node in call.source and call.target
-    '''
+def jsonTree(fdefs,calls,outfile='tout.json'):
     outpath = os.path.join('data',outfile)
-    data = dict()
-    ids = dict()
-    nodelist = []
-    for fnlist in fdefs.values():
-        for fn in fnlist:
-            if isInCalls(fn,calls):
-                tagged_node = getTaggedNode(fn,ids)
-                nodelist.append(tagged_node)
-            else:
-                #print("omitted")
-                pass
-    linklist = [] #list of links, NOT a linked list ;D
-    for call in calls:
-        for link in linklist:
-            if call.source.id == link["source"]:
-                if call.target.id == link["target"]:
-                    link["value"] += 1
-                    break
-        else:
-            link = dict()
-            link["source"] = call.source.id
-            link["target"] = call.target.id
-            link["value"]  = 1
-            linklist.append(link)
-    
-    data["links"] = linklist
-    data["nodes"] = nodelist
+    nodes=[]
+    for fdeflist in fdefs.values():
+        for x in fdeflist:
+            nodes.append(jsName(x.path,x.name))
+    edges = [[jsName(c.source.path,c.source.name),jsName(c.source.path,c.target.name)] for c in calls]
+    root = graphToForest(nodes,edges)
+    root = noEmptyNests(root)
     with open(outpath, 'w+') as f:
-        f.write(json.dumps(data, indent=2))
-    return
-    
+        f.write(json.dumps(root, indent=2))
+    return root
+
+def noEmptyNests(node):
+    '''recursively make sure that no dictionaries inside node contain empty children lists '''
+    if type(node)==list:
+        for i in node:
+            noEmptyNests(i)
+    if type(node)==dict:
+        for i in node.values():
+            noEmptyNests(i)
+        if node["children"] == []:
+            node.pop("children")
+            node["size"]=2
+    return node
+
+def graphToForest(nodes, edges):
+    root_objs = dict()
+    root_objs["name"]="data"
+    root_objs["children"]=[]
+    unused_nodes = nodes
+
+    # Objectize the nodes as a dictionary from the names
+    node_objs = []
+    for node in unused_nodes:
+        node_objs.append({'name':node, 'children':[]})
+
+    while len(unused_nodes):
+        root_node = unused_nodes[0]
+        max_edges = 0
+        # find the root
+        for node in unused_nodes:
+            edge_count = len(list_connected_nodes(node, edges))
+
+            if max_edges < edge_count:
+                max_edges = edge_count
+                root_node = node
+
+        # Save the root as the entry point to the tree
+        root_obj = find_node_object(node_objs, root_node)
+
+        # Generate the children
+        parent_queue = [root_obj]
+        unused_nodes.remove(root_node)
+        while len(parent_queue):
+            parent = parent_queue.pop(0)
+            children = list_connected_nodes(parent['name'], edges)
+            for child in children:
+                if child in unused_nodes:
+                    unused_nodes.remove(child)
+                    child_obj = find_node_object(node_objs, child)
+                    parent_queue.append(child_obj)
+                    parent['children'].append(child_obj)
+
+        root_objs["children"].append(root_obj)
+
+    return root_objs
+
+def list_connected_nodes(node, edges):
+    output = []
+    for edge in edges:
+        if (edge[0] == node):
+            output.append(edge[1])
+        elif (edge[1] == node):
+            output.append(edge[0])
+    return output
+
+def find_node_object(node_objs, node_name):
+    # Find the node by name in the objectized objects
+    for node in node_objs:
+        if node['name'] == node_name:
+            output_node = node
+            break
+    return output_node
 
