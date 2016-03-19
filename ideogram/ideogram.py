@@ -3,8 +3,6 @@ import ideogram.converter as converter
 import ideogram.writer as writer
 import os, sys, shutil, requests, urllib.request, zipfile 
 
-#os.path.abspath(path)
-
 class Chart:
     def __init__(self,outdir,mode,title='',colorscheme=[(0,0,0)],bgcolor=(0,0,0)):
         self.outdir = os.path.abspath(outdir)
@@ -48,12 +46,12 @@ class Chart:
                 writer.jsonHierarchy(fdefs,calls,csvpath)
 
 def generate(path_or_github,charts):
-        if isPath(path_or_github):
-            path = os.path.abspath(path_or_github)
-            name = getDeepestDirectory(path_or_github)
-        elif isGithubLink(path_or_github):
+        if isGithubLink(path_or_github):
             name,path = addProject(path_or_github)
             path = os.path.abspath(path)
+        elif os.path.isdir(path_or_github):
+            path = os.path.abspath(path_or_github)
+            name = os.path.basename(path_or_github)
         else:
             print('Cannot make a generator with input '+path_or_github)
             print('Please provide the path to a project directory or a github link.')
@@ -77,11 +75,6 @@ def addProject(gh_link):
     os.remove(outzip)
     return name,outpath
     
-def isPath(a):
-    if "github.com" in a or not os.path.isdir(a):
-        return False
-    return True
-    
 def isGithubLink(a):
     if "github.com" not in a:
         return False
@@ -92,10 +85,3 @@ def isGithubLink(a):
     except:
         return False
     return True
-    
-def getDeepestDirectory(path):
-    # ''' Returns the substring following the last backslash in a string. '''
-    return path.split(sep='/')[-1]
-    
-if __name__=="__main__":
-    pass
