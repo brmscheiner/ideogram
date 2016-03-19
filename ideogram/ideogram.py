@@ -4,7 +4,7 @@ import ideogram.writer as writer
 import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
 class Chart:
-    def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color=(255,255,255), colorscheme=[(0,0,0)], bgcolor=(0,0,0)):
+    def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color=(255,255,255), colorscheme='RdBu', bgcolor=(0,0,0)):
         self.outdir = os.path.abspath(outdir)
         self.mode = mode
         self.title = title
@@ -24,7 +24,9 @@ class Chart:
         hout = False
         htmlpath = os.path.abspath(os.path.join(self.outdir, "index.html"))
         d3path = os.path.join("ideogram","templates", "d3.js")
+        brewpath = os.path.join("ideogram","templates", "colorbrewer.js")
         shutil.copyfile(d3path, os.path.abspath(os.path.join(self.outdir, "d3.js")))
+        shutil.copyfile(brewpath, os.path.abspath(os.path.join(self.outdir, "colorbrewer.js")))
         if os.path.isfile(os.path.join(self.outdir, "nout.json")):
             nout = True
         if os.path.isfile(os.path.join(self.outdir, "hout.json")):
@@ -58,6 +60,7 @@ class Chart:
             subs["has_title"]=False
         subs["size"] = self.font_size
         subs["font"] = self.font_family
+        subs["colorscheme"] = self.colorscheme
         with open(mustachepath,'r') as infile:
             mustache_text = pystache.render(infile.read(), subs)
             with open(htmlpath,'w+') as outfile:
