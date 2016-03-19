@@ -1,13 +1,16 @@
 import ideogram.reader as reader
 import ideogram.converter as converter
 import ideogram.writer as writer
-import os, sys, shutil, requests, urllib.request, zipfile 
+import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
 class Chart:
-    def __init__(self,outdir,mode,title='',colorscheme=[(0,0,0)],bgcolor=(0,0,0)):
+    def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color=(255,255,255), colorscheme=[(0,0,0)], bgcolor=(0,0,0)):
         self.outdir = os.path.abspath(outdir)
         self.mode = mode
         self.title = title
+        self.font_family = font_family
+        self.font_size = font_size
+        self.title_color = title_color
         self.colorscheme = colorscheme
         self.bgcolor = bgcolor 
         self.makeDir()
@@ -27,8 +30,8 @@ class Chart:
         if os.path.isfile(os.path.join(self.outdir, "hout.json")):
             hout = True
         if self.mode=='network':
-            templatepath=os.path.join("ideogram","templates", "force_layout.html")
-            shutil.copyfile(templatepath,htmlpath)
+            templatepath=os.path.join("ideogram","templates", "force_layout.mustache")
+            self.makeHTML(templatepath,htmlpath)
             if not nout:
                 csvpath = os.path.join(self.outdir, "nout.json")
                 writer.jsonGraph(fdefs,calls,csvpath)
@@ -44,6 +47,21 @@ class Chart:
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
+                
+    def makeHTML(self,mustachepath,htmlpath):
+        '''Write an html file by applying this chart's attributes to a mustache template. '''
+        subs = dict()
+        if self.title:
+            subs["title"]=self.title
+            subs["has_title"]=True
+        else:
+            subs["has_title"]=False
+        subs["size"] = self.font_size
+        subs["font"] = self.font_family
+        with open(mustachepath,'r') as infile:
+            mustache_text = pystache.render(infile.read(), subs)
+            with open(htmlpath,'w+') as outfile:
+                outfile.write(mustache_text)
 
 def generate(path_or_github,charts):
         if isGithubLink(path_or_github):

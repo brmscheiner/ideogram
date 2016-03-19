@@ -27,7 +27,7 @@ var color = d3.scale.category20();
 var svg = d3.select("body").append("svg")
                 .attr("width",width)
                 .attr("height",height);
-                
+               
 var force = d3.layout.force()
     .charge(-90)
     .linkDistance(50)
@@ -74,6 +74,13 @@ d3.json("nout.json", function(error,graph) {
       node.attr("cx", function(d) { return d.x; })
           .attr("cy", function(d) { return d.y; });
     });
+    
+    svg.append("text")
+    .attr("x",width/2)
+    .attr("y",height/2)
+    .attr("text-anchor","middle")
+    .attr("text-decoration","bold")
+    .text("TEST")
 });
 
 </script>

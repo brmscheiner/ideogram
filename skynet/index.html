@@ -75,6 +75,15 @@ d3.json("nout.json", function(error,graph) {
           .attr("cy", function(d) { return d.y; });
     });
     
+    svg.append("text")
+    .attr("x",width/2)
+    .attr("y",height/2)
+    .attr("text-anchor","middle")
+    .attr("text-decoration","bold")
+    .attr("font-size","46px")
+    .attr("font-family","sans-serif")
+    .text("I am Skynet.")
+});
 
 </script>
 </body>

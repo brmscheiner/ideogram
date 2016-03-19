@@ -75,6 +75,17 @@ d3.json("nout.json", function(error,graph) {
           .attr("cy", function(d) { return d.y; });
     });
     
+{{#has_title}}
+    svg.append("text")
+    .attr("x",width/2)
+    .attr("y",height/2)
+    .attr("text-anchor","middle")
+    .attr("text-decoration","bold")
+    .attr("font-size","{{size}}")
+    .attr("font-family","{{font}}")
+    .text("{{title}}")
+});
+{{/has_title}}
 
 </script>
 </body>
