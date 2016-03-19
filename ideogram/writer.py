@@ -67,6 +67,48 @@ def getStartNodes(fdefs,calls):
                 s.append(fn)
     return s
     
+def jsonGraph(fdefs,calls,outfile='nout.json'):
+    '''For reference, each node has:
+    
+    node.name   (string)
+    node.source (string)
+    node.weight (int)
+    node.pclass (class node object) 
+    
+    Each call contains a node in call.source and call.target
+    '''
+    outpath = os.path.join('data',outfile)
+    data = dict()
+    ids = dict()
+    nodelist = []
+    for fnlist in fdefs.values():
+        for fn in fnlist:
+            if isInCalls(fn,calls):
+                tagged_node = getTaggedNode(fn,ids)
+                nodelist.append(tagged_node)
+            else:
+                #print("omitted")
+                pass
+    linklist = [] #list of links, NOT a linked list ;D
+    for call in calls:
+        for link in linklist:
+            if call.source.id == link["source"]:
+                if call.target.id == link["target"]:
+                    link["value"] += 1
+                    break
+        else:
+            link = dict()
+            link["source"] = call.source.id
+            link["target"] = call.target.id
+            link["value"]  = 1
+            linklist.append(link)
+    
+    data["links"] = linklist
+    data["nodes"] = nodelist
+    with open(outpath, 'w+') as f:
+        f.write(json.dumps(data, indent=2))
+    return
+    
 def jsonHierarchy(fdefs,calls,outfile='hout.json'):
     outpath = os.path.join('data',outfile)
     s=getStartNodes(fdefs,calls)
@@ -93,7 +135,6 @@ def jsonHierarchy(fdefs,calls,outfile='hout.json'):
             root["children"].append(newfn)
         data["children"].append(root)
         n+=1
-        
     with open(outpath, 'w+') as f:
         f.write(json.dumps(data, indent=2))
     return

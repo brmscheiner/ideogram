@@ -1,7 +1,50 @@
 import reader, converter, writer # 
-import os, sys
+import os, sys, shutil
 import requests, urllib.request, zipfile, shutil # downloading, unzipping and cleaning gh projects
 # shutil.rmtree(directory) will delete a directory and all of its contents
+
+class Chart:
+    def __init__(self,outdir,mode,title="",colorscheme=[(0,0,0)],bgcolor=(0,0,0)):
+        self.outdir = outdir
+        self.mode = mode
+        self.title = title
+        self.colorscheme = colorscheme
+        self.bgcolor = bgcolor 
+        self.makeDir()
+
+    def makeDir(self):
+        if not os.path.isdir(self.outdir):
+            os.mkdir(self.outdir)
+
+    def build(self,fdefs,calls):
+        nout = False
+        hout = False
+        htmlpath = os.path.join(self.outdir, "index.html")
+        if os.path.isfile(os.path.join(self.outdir, "nout.json")):
+            nout = True
+        if os.path.isfile(os.path.join(self.outdir, "hout.json")):
+            hout = True
+        if self.mode=='network':
+            templatepath=os.path.join("templates", "force_layout.html")
+            shutil.copyfile(templatepath,htmlpath)
+            if not nout:
+                csvpath = os.path.join(self.outdir, "nout.json")
+                writer.jsonGraph(fdefs,calls,csvpath)
+        if self.mode=='moire':
+            templatepath=os.path.join("templates", "moire.html")
+            shutil.copyfile(templatepath,htmlpath)
+            if not hout:
+                csvpath = os.path.join(self.outdir, "hout.json")
+                writer.jsonHierarchy(fdefs,calls,csvpath)
+        if self.mode=='pack':
+            templatepath=os.path.join("templates", "pack_layout.html")
+            shutil.copyfile(templatepath,htmlpath)
+            if not hout:
+                csvpath = os.path.join(self.outdir, "hout.json")
+                writer.jsonHierarchy(fdefs,calls,csvpath)
+            
+def generate():
+    pass
 
 class Generator:
     def __init__(self,path_or_github):
