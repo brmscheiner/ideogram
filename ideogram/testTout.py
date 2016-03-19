@@ -1,4 +1,6 @@
-import converter, writer, reader
+import ideogram.reader as reader
+import ideogram.converter as converter
+import ideogram.writer as writer
 import os
 
 asts = reader.fetch(os.path.join('test','django'))

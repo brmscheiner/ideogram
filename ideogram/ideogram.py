@@ -1,11 +1,13 @@
-import reader, converter, writer # 
-import os, sys, shutil
-import requests, urllib.request, zipfile, shutil # downloading, unzipping and cleaning gh projects
-# shutil.rmtree(directory) will delete a directory and all of its contents
+import ideogram.reader as reader
+import ideogram.converter as converter
+import ideogram.writer as writer
+import os, sys, shutil, requests, urllib.request, zipfile 
+
+#os.path.abspath(path)
 
 class Chart:
-    def __init__(self,outdir,mode,title="",colorscheme=[(0,0,0)],bgcolor=(0,0,0)):
-        self.outdir = outdir
+    def __init__(self,outdir,mode,title='',colorscheme=[(0,0,0)],bgcolor=(0,0,0)):
+        self.outdir = os.path.abspath(outdir)
         self.mode = mode
         self.title = title
         self.colorscheme = colorscheme
@@ -19,56 +21,47 @@ class Chart:
     def build(self,fdefs,calls):
         nout = False
         hout = False
-        htmlpath = os.path.join(self.outdir, "index.html")
+        htmlpath = os.path.abspath(os.path.join(self.outdir, "index.html"))
+        d3path = os.path.join("ideogram","templates", "d3.js")
+        shutil.copyfile(d3path, os.path.abspath(os.path.join(self.outdir, "d3.js")))
         if os.path.isfile(os.path.join(self.outdir, "nout.json")):
             nout = True
         if os.path.isfile(os.path.join(self.outdir, "hout.json")):
             hout = True
         if self.mode=='network':
-            templatepath=os.path.join("templates", "force_layout.html")
+            templatepath=os.path.join("ideogram","templates", "force_layout.html")
             shutil.copyfile(templatepath,htmlpath)
             if not nout:
                 csvpath = os.path.join(self.outdir, "nout.json")
                 writer.jsonGraph(fdefs,calls,csvpath)
         if self.mode=='moire':
-            templatepath=os.path.join("templates", "moire.html")
+            templatepath=os.path.join("ideogram","templates", "moire.html")
             shutil.copyfile(templatepath,htmlpath)
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
         if self.mode=='pack':
-            templatepath=os.path.join("templates", "pack_layout.html")
+            templatepath=os.path.join("ideogram","templates", "pack_layout.html")
             shutil.copyfile(templatepath,htmlpath)
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
-            
-def generate():
-    pass
 
-class Generator:
-    def __init__(self,path_or_github):
+def generate(path_or_github,charts):
         if isPath(path_or_github):
-            self.path = path_or_github
-            self.name = getDeepestDirectory(path_or_github)
+            path = os.path.abspath(path_or_github)
+            name = getDeepestDirectory(path_or_github)
         elif isGithubLink(path_or_github):
-            self.name,self.path = addProject(path_or_github)
+            name,path = addProject(path_or_github)
+            path = os.path.abspath(path)
         else:
             print('Cannot make a generator with input '+path_or_github)
             print('Please provide the path to a project directory or a github link.')
             raise(ValueError)
-        self.ASTs = reader.fetch(self.path)
-        self.fdefs, self.calls = converter.convert(self.ASTs,self.path)
-        
-    def getNetwork(self):
-        outfile = os.path.join(data,self.name+"_nout.json")
-        writer.jsonGraph(self.fdefs,self.calls,outfile)
-        return outfile
-        
-    def getHierarchy(self):
-        outfile = os.path.join(data,self.name+"_hout.json")
-        writer.jsonHierarchy(fdefs,calls,outfile)
-        return outfile
+        ASTs = reader.fetch(path)
+        fdefs,calls = converter.convert(ASTs,path)
+        for c in charts:
+            c.build(fdefs,calls)
 
 def addProject(gh_link):
     ''' Adds a github project to the data folder, unzips it, and deletes the zip file.
@@ -105,5 +98,4 @@ def getDeepestDirectory(path):
     return path.split(sep='/')[-1]
     
 if __name__=="__main__":
-    path_or_github = sys.argv[1]
-    g = Generator(path_or_github)
+    pass
