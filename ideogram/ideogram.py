@@ -22,15 +22,19 @@ class Chart:
     def build(self,fdefs,calls):
         nout = False
         hout = False
+        tout = False
+        if os.path.isfile(os.path.join(self.outdir, "nout.json")):
+            nout = True
+        if os.path.isfile(os.path.join(self.outdir, "hout.json")):
+            hout = True
+        if os.path.isfile(os.path.join(self.outdir, "tout.json")):
+            hout = True
+        
         htmlpath = os.path.abspath(os.path.join(self.outdir, "index.html"))
         d3path = os.path.join("ideogram","templates", "d3.js")
         brewpath = os.path.join("ideogram","templates", "colorbrewer.js")
         shutil.copyfile(d3path, os.path.abspath(os.path.join(self.outdir, "d3.js")))
         shutil.copyfile(brewpath, os.path.abspath(os.path.join(self.outdir, "colorbrewer.js")))
-        if os.path.isfile(os.path.join(self.outdir, "nout.json")):
-            nout = True
-        if os.path.isfile(os.path.join(self.outdir, "hout.json")):
-            hout = True
         if self.mode=='network':
             templatepath=os.path.join("ideogram","templates", "force_layout.mustache")
             self.makeHTML(templatepath,htmlpath)
@@ -38,17 +42,23 @@ class Chart:
                 csvpath = os.path.join(self.outdir, "nout.json")
                 writer.jsonGraph(fdefs,calls,csvpath)
         if self.mode=='moire':
-            templatepath=os.path.join("ideogram","templates", "moire.html")
-            shutil.copyfile(templatepath,htmlpath)
+            templatepath=os.path.join("ideogram","templates", "moire_layout.mustache")
+            self.makeHTML(templatepath,htmlpath)
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
         if self.mode=='pack':
-            templatepath=os.path.join("ideogram","templates", "pack_layout.html")
-            shutil.copyfile(templatepath,htmlpath)
+            templatepath=os.path.join("ideogram","templates", "pack_layout.mustache")
+            self.makeHTML(templatepath,htmlpath)
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
+        if self.mode=='depth':
+            templatepath=os.path.join("ideogram","templates", "depth_layout.mustache")
+            self.makeHTML(templatepath,htmlpath)
+            if not tout:
+                csvpath = os.path.join(self.outdir, "tout.json")
+                writer.jsonTree(fdefs,calls,csvpath)
                 
     def makeHTML(self,mustachepath,htmlpath):
         '''Write an html file by applying this chart's attributes to a mustache template. '''
@@ -58,9 +68,11 @@ class Chart:
             subs["has_title"]=True
         else:
             subs["has_title"]=False
-        subs["size"] = self.font_size
-        subs["font"] = self.font_family
+        subs["font_size"] = self.font_size
+        subs["font_family"] = self.font_family
         subs["colorscheme"] = self.colorscheme
+        subs["title_color"] = self.title_color
+        subs["bgcolor"] = self.bgcolor
         with open(mustachepath,'r') as infile:
             mustache_text = pystache.render(infile.read(), subs)
             with open(htmlpath,'w+') as outfile:

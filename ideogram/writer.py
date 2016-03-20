@@ -128,7 +128,7 @@ def jsonHierarchy(fdefs,calls,outfile='hout.json'):
         while line:
             current = line.pop()
             used.append(current)
-            line=getNewKids(current,calls,used)+line
+            line=getChildren(current,calls,used)+line
             newfn=dict()
             newfn["name"]=jsName(current.path,current.name)
             newfn["size"]=current.weight

@@ -31,7 +31,7 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr('width','100%')
     .attr('height','100%')
-    .attr('fill','{{bgcolor}}')
+    .attr('fill','(0, 0, 0)')
                
 var force = d3.layout.force()
     .charge(-90)
@@ -48,7 +48,7 @@ d3.json("nout.json", function(error,graph) {
     force = force.links(graph.links);
     force = force.start();
     
-    var colorschemes = colorbrewer.{{colorscheme}}
+    var colorschemes = colorbrewer.[(0, 0, 0), (220, 431, 23), (122, 20, 102), (255, 255, 255)]
     var paths = [];
     for (i=0; i<graph.nodes.length; i++) {
         if (paths.indexOf(graph.nodes[i].path) === -1) {
@@ -98,18 +98,6 @@ d3.json("nout.json", function(error,graph) {
           .attr("cy", function(d) { return d.y; });
     });
     
-{{#has_title}}
-    svg.append("text")
-    .attr('x',width/2)
-    .attr('y',height/2)
-    .attr('pointer-events', 'none')
-    .attr('text-anchor','middle')
-    .attr('text-decoration','bold')
-    .attr('font-size','{{font_size}}')
-    .attr('font-family','{{font_family}}')
-    .attr('fill','{{title_color}}')
-    .text("{{title}}")
-{{/has_title}}
 
 });
 
