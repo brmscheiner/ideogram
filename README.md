@@ -5,47 +5,53 @@ Create a visual fingerprint of your Python project's source code!
 This project is currently under development. Soon, Ideogram will be hosted on PyPi.
 
 ## How to use it 
-In order to get started creating Ideograms, you must create some Chart objects and `generate` them. For example:
+In order to get started creating, you must create some Ideogram objects and `generate` them. For example:
 ```python
-net = ideogram.Chart(outdir='skynet',
-                     mode='network',
-                     title='I am Skynet.',
-                     font_family='sans-serif',
-                     font_size='46px',
-                     title_color=(255,255,255),
-                     colorscheme=[(0,0,0),(220,431,23),(122,20,102),(255,255,255)],
-                     bgcolor=(0,0,0)
-                     )
-moire = ideogram.Chart(outdir='output-moire',
-                       mode='network',
-                       colorscheme=[(0,0,0),(220,431,23),(122,20,102),(255,255,255)],
-                       bgcolor=(0,0,0)
-                       )
-ideogram.generate('ideogram',[net,moire])
+import ideogram 
+
+netwk = ideogram.Ideogram(outdir='chemtrails_network',
+                                           mode='network',
+                                           title='chemtrails_bot',
+                                           font_family='sans-serif',
+                                           font_size='60px',
+                                           title_color='rgb(50,25,60)',
+                                           colorscheme='Spectral',
+                                           bgcolor='rgb(155,45,0)'
+                                           )
+pack = ideogram.Ideogram(outdir='chemtrails_pack',
+                                         mode='pack',
+                                         colorscheme='Paired',
+                                         bgcolor='rgb(0,0,0)'
+                                         )
+ideogram.generate('https://github.com/brmscheiner/chemtrails_bot',network,pack)
 ```
-Chart objects are instantiated with up to 8 arguments, most of which control some aspect of the final product.
+Ideogram objects are instantiated with up to 8 arguments, most of which control some aspect of the final product.
 
-| Argument    | Usage     | Description                                                                                        |
-|-------------|-----------|----------------------------------------------------------------------------------------------------|
-| outdir      | mandatory | Specify the path to the directory to dump the output html, js, and csv files.                      |
-| mode        | mandatory | What kind of Ideogram are you making? The options are 'network', 'moire', and 'pack'.              |
-| title       | optional  | The title of your Ideogram.                                                                        |
-| font_family | optional  | The font-family css attribute for the title.                                                       |
-| font_size   | optional  | The font-size css attribute for the title. '40px', '2.0em', and '200%' are all valid.              |
-| title_color | optional  | The color attribute for the title text, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.          |
-| colorscheme | optional  |                                                                                                    |
-| bgcolor     | optional  | The color attribute for the Ideogram background, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'. |
+| Argument    | Usage     | Description                                                                                          |
+|-------------|-----------|------------------------------------------------------------------------------------------------------|
+| outdir      | mandatory | Specify the path to the directory to put the output html, js, and csv files.                         |
+| mode        | mandatory | What kind of Ideogram are you making? The options are 'network', 'moire', 'depth', and 'pack'.       |
+| title       | optional  |                                                                                                      |
+| font_family | optional  | The font-family css attribute for the title.                                                         |
+| font_size   | optional  | The font-size css attribute for the title. '40px', '2.0em', and '200%' are all valid.                |
+| title_color | optional  | The color attribute for the title text, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.            |
+| colorscheme | optional  | The name of the colorbrewer colorscheme you would like to use. Explore the options [here](https://bl.ocks.org/mbostock/5577023).             |
+| bgcolor     | optional  | The color attribute for the background, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.            |
 
-After Creating any number of Chart objects, pass them to the `generate` function along with the project directory that contains your source code. 
+After you're done building your Ideogram objects, pass them to the `generate` function along with the path to a local directory that contains some Python source code. 
 ```python
-ideogram.generate('path/to/project',[Chart1,Chart2,Chart3,...])
+ideogram.generate('Desktop/code/myproject',thing1,thing2,thing3)
 ```
-To see your creation, you will need to host the visualization files on a server. Probably the easiest way is to use [SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (Python 2.x) or [http.server](https://docs.python.org/3/library/http.server.html) (Python 3.x). Open the terminal and type `python --version` if you're not sure which version of Python is on your computer. We only need the basic functionality of these modules: 
+The `generate` function also accepts links to github projects.
+```python
+ideogram.generate('https://github.com/brmscheiner/ideogram',thing1,thing2,thing3,thing4)
+```
+Still here? OK, last step! To see your creation, you need to host the output files on a server. Depending on your background that might sound intimidating, but the good news is there's an easy-to-use Python module that takes care of the heavy lifting for you. If you have Python 2, it's called [SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html). In Python 3 it's called [http.server](https://docs.python.org/3/library/http.server.html). If you're not sure which version of Python is on your computer, just open the terminal and type `python --version`. Now, navigate to the directory where you put your Ideograms and start serving:
 ```bash
 cd path/to/output/files
 python -m http.server 8080       OR        python -m SimpleHTTPServer 8080
 ```
-Now, open Chrome or Firefox and navigate to [http://localhost:8080/](http://localhost:8080/). If the server is working properly, you should be able to see your visualization! For large projects, it could take a minute for the page to load.
+You should see a message like `Serving HTTP on 0.0.0.0 port 8080 ...`, possibly followed by some gibberish. All you have to do now is open Chrome or Firefox and navigate to [http://localhost:8080/](http://localhost:8080/). If everything went according to plan, you should see your visualization! For large projects, it could take a minute for the page to load and process the data.
 ## Examples 
 Check out the [Ideogram gallery](http://scheinerbock.com/ideogram.html).
 
