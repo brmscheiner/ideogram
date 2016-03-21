@@ -1,76 +1,103 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+
+<html>
+<head>
 <style>
 
-text {
-  font: 10px sans-serif;
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
 }
 
 </style>
-<body>
-<script src="//d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="d3.js"></script>
 <script type="text/javascript" src="colorbrewer.js"></script>
+</head>
+<body>
 <script>
-
-var diameter = 600,
-    format = d3.format(",d"),
-    color = d3.scale.category20c();
-    start = Date.now()
-
-var bubble = d3.layout.pack()
-    .sort(null)
-    .size([diameter, diameter])
-    .padding(1.5);
+var width = 800;
+var height = 500;
 
 var svg = d3.select("body").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
-    .attr("class", "bubble");
-
-d3.json("hout.json", function(error, root) {
-  if (error) throw error;
-
-  var node = svg.selectAll(".node")
-      .data(bubble.nodes(classes(root))
-      .filter(function(d) { return !d.children; }))
-    .enter().append("g")
-      .attr("class", "node")
-
-  node.append("title")
-      .text(function(d) { txt = d.className.replace(/_slash_/g,"/")
-									                .replace(/_dot_/g,".")
-									               	.replace(/_dash_/g,"-");
-							            return txt; });
-	  
-  node.append("g")
-  .append("path")
-    .attr("d", gear);
+                .attr("width",width)
+                .attr("height",height);
+                
+svg.append("rect")
+    .attr('width','100%')
+    .attr('height','100%')
+    .attr('fill','rgb(155,45,0)')
+               
+var force = d3.layout.force()
+    .charge(-90)
+    .linkDistance(50)
+	.friction(0.73)
+	.chargeDistance(400)
+	.gravity(0.08)
+    .size([width, height]);
 	
-  node.append("text")
-      .attr("dy", ".3em")
-      .style("text-anchor", "middle")
-	  
-function gear(d) {
-  var n = 80;             // number of teeth
-      r2 = Math.abs(d.r), // middle of tooth
-      r0 = r2 - 5,        // outer radius
-      r1 = r2 + 10,        // height of tooth
-     // r3 = 1,            // inner radius 
-      r3 = Math.abs(d.r)-10,            // inner radius 
-      da = Math.PI / n,
-      a0 = -Math.PI / 2,
-      i = -1,
-      path = ["M", r0 * Math.cos(a0), ",", r0 * Math.sin(a0)];
-  while (++i < n) path.push(
-      "A", r0, ",", r0, " 0 0,1 ", r0 * Math.cos(a0 += da), ",", r0 * Math.sin(a0),
-      "L", r2 * Math.cos(a0), ",", r2 * Math.sin(a0),
-      "L", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
-      "A", r1, ",", r1, " 0 0,1 ", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
-      "L", r2 * Math.cos(a0 += da / 3), ",", r2 * Math.sin(a0),
-      "L", r0 * Math.cos(a0), ",", r0 * Math.sin(a0));
-  path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
-return path.join(""); }
-
+    
+d3.json("nout.json", function(error,graph) {
+    if (error) throw error;
+    force = force.nodes(graph.nodes);
+    force = force.links(graph.links);
+    force = force.start();
+    
+    var colorschemes = colorbrewer.Spectral
+    var paths = [];
+    for (i=0; i<graph.nodes.length; i++) {
+        if (paths.indexOf(graph.nodes[i].path) === -1) {
+            paths.push(graph.nodes[i].path)
+        }
+    }
+    var nschemes = Object.keys(colorschemes).length
+    if ( paths.length < Object.keys(colorschemes)[0] ) {
+        color_array = colorschemes[ Object.keys(colorschemes)[0] ]
+    } else if (paths.length > nschemes  ) {
+        color_array = colorschemes[ nschemes-1 ]
+    } else {
+        color_array = colorschemes[ paths.length-1 ]
+    }
+    var color = d3.scale.ordinal()
+          .domain(paths)
+          .range(color_array)
+    
+    
+    var link = svg.selectAll(".link")
+        .data(graph.links)
+      .enter().append("line")
+        .attr("class", "link")
+        .style("stroke-width", function(d) { return Math.sqrt(d.value);});
+    
+    var node = svg.selectAll(".node")
+        .data(graph.nodes)
+      .enter().append("circle")
+        .attr("class", "node")
+        .attr("r", function(d) { return 5*Math.sqrt(d.weight); })
+		.style("fill", function(d) { return color(d.path); })
+        .call(force.drag);
+        
+    node.append("title")
+        .text(function(d) { txt = d.name.replace(/_slash_/g,"/")
+									    .replace(/_dot_/g,".")
+										.replace(/_dash_/g,"-");
+							return txt; });
+    
+    force.on("tick", function() {
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+    
+      node.attr("cx", function(d) { return d.x; })
+          .attr("cy", function(d) { return d.y; });
+    });
+    
     svg.append("text")
     .attr('x',width/2)
     .attr('y',height/2)
@@ -79,33 +106,12 @@ return path.join(""); }
     .attr('text-decoration','bold')
     .attr('font-size','60px')
     .attr('font-family','sans-serif')
-    .attr('fill','rgb(50,150,150)')
-    .text("jackalope")
+    .attr('fill','rgb(50,25,60)')
+    .text("chemtrails_bot")
 
 });
-
-
-d3.timer(function() {
-  var angle = (Date.now() - start) * .014;
-  transform = function(d) { return "translate(" + d.x + "," + d.y + ")"
-                                              + "rotate("+angle+")"; };
-  svg.selectAll(".node").attr("transform", transform);
-});
-
-
-// Returns a flattened hierarchy containing all leaf nodes under the root.
-function classes(root) {
-  var classes = [];
-
-  function recurse(name, node) {
-    if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
-    else classes.push({packageName: name, className: node.name, value: node.size});
-  }
-
-  recurse(null, root);
-  return {children: classes};
-}
-
-d3.select(self.frameElement).style("height", diameter + "px");
 
 </script>
+</body>
+</html>
+

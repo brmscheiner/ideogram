@@ -3,11 +3,11 @@ import sys
 
 if __name__=="__main__":
     netwk = ideogram.Chart(outdir='brewery',
-                                          mode='moire',
-                                          title='jackalope',
+                                          mode='network',
+                                          title='chemtrails_bot',
                                           font_family='sans-serif',
                                           font_size='60px',
-                                          title_color='rgb(50,150,150)',
+                                          title_color='rgb(50,25,60)',
                                           colorscheme='Spectral',
                                           bgcolor='rgb(155,45,0)'
                                           )
@@ -16,5 +16,5 @@ if __name__=="__main__":
                                           # colorscheme=[(0,0,0),(220,431,23),(122,20,102),(255,255,255)],
                                           # bgcolor=(0,0,0)
                                           # )
-    ideogram.generate('ideogram',[netwk])
+    ideogram.generate('https://github.com/brmscheiner/chemtrails_bot',netwk)
     

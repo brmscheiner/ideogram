@@ -4,7 +4,7 @@ import ideogram.writer as writer
 import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
 class Chart:
-    def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color=(255,255,255), colorscheme='RdBu', bgcolor=(0,0,0)):
+    def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color='rgb(0,0,0)', colorscheme='Spectral', bgcolor='rgb(255,255,255)'):
         self.outdir = os.path.abspath(outdir)
         self.mode = mode
         self.title = title
@@ -78,7 +78,7 @@ class Chart:
             with open(htmlpath,'w+') as outfile:
                 outfile.write(mustache_text)
 
-def generate(path_or_github,charts):
+def generate(path_or_github,*args):
         if isGithubLink(path_or_github):
             name,path = addProject(path_or_github)
             path = os.path.abspath(path)
@@ -91,18 +91,22 @@ def generate(path_or_github,charts):
             raise(ValueError)
         ASTs = reader.fetch(path)
         fdefs,calls = converter.convert(ASTs,path)
-        for c in charts:
+        for c in args:
             c.build(fdefs,calls)
+        if isGithubLink(path_or_github):
+            shutil.rmtree('temp_data')
 
 def addProject(gh_link):
     ''' Adds a github project to the data folder, unzips it, and deletes the zip file.
     Returns the project name and the path to the project folder. '''
-    name = getDeepestDirectory(gh_link)
+    name = os.path.basename(gh_link)
     zipurl = gh_link+"/archive/master.zip"
-    outzip = os.path.join('data',name+'.zip')
+    outzip = os.path.join('temp_data',name+'.zip')
+    if not os.path.exists('temp_data'):
+        os.makedirs('temp_data')
     urllib.request.urlretrieve(zipurl,outzip)
     zip = zipfile.ZipFile(outzip,mode='r')
-    outpath = os.path.join('data',name)
+    outpath = os.path.join('temp_data',name)
     zip.extractall(outpath)
     zip.close()
     os.remove(outzip)
