@@ -82,15 +82,15 @@ d3.json("tout.json", function(error, root) {
       .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
+  node.append("circle")
+      .attr("r", function(d) { return d.r; })
+      .style("fill", function(d) { return color(d.path); });  // could also be d.depth or d.name
+      
   node.append("title")
       .text(function(d) { txt = d.name.replace(/_slash_/g,"/")
 									    .replace(/_dot_/g,".")
 										.replace(/_dash_/g,"-");
 							return txt; });
-
-  node.append("circle")
-      .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.path); });  // could also be d.depth or d.name
       
 {{#has_title}}
     svg.append("text")

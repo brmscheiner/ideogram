@@ -9,6 +9,7 @@ text {
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="colorbrewer.js"></script>
 <script>
 
 var diameter = 600,
@@ -69,6 +70,19 @@ function gear(d) {
       "L", r0 * Math.cos(a0), ",", r0 * Math.sin(a0));
   path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
 return path.join(""); }
+
+{{#has_title}}
+    svg.append("text")
+    .attr('x',width/2)
+    .attr('y',height/2)
+    .attr('pointer-events', 'none')
+    .attr('text-anchor','middle')
+    .attr('text-decoration','bold')
+    .attr('font-size','{{font_size}}')
+    .attr('font-family','{{font_family}}')
+    .attr('fill','{{title_color}}')
+    .text("{{title}}")
+{{/has_title}}
 
 });
 

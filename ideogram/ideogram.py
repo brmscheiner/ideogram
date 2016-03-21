@@ -28,7 +28,7 @@ class Chart:
         if os.path.isfile(os.path.join(self.outdir, "hout.json")):
             hout = True
         if os.path.isfile(os.path.join(self.outdir, "tout.json")):
-            hout = True
+            tout = True
         
         htmlpath = os.path.abspath(os.path.join(self.outdir, "index.html"))
         d3path = os.path.join("ideogram","templates", "d3.js")

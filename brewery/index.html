@@ -15,6 +15,7 @@ text {
 var diameter = 600,
     format = d3.format(",d"),
     color = d3.scale.category20c();
+    start = Date.now()
 
 var bubble = d3.layout.pack()
     .sort(null)
@@ -25,61 +26,72 @@ var svg = d3.select("body").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
     .attr("class", "bubble");
-    
 
 d3.json("hout.json", function(error, root) {
   if (error) throw error;
-  if (error) throw error;
 
-  var colorschemes = colorbrewer.{{colorscheme}}
-    var nschemes = Object.keys(colorschemes).length
-    if ( paths.length < Object.keys(colorschemes)[0] ) {
-        color_array = colorschemes[ Object.keys(colorschemes)[0] ]
-    } else if (paths.length > nschemes  ) {
-        color_array = colorschemes[ nschemes-1 ]
-    } else {
-        color_array = colorschemes[ paths.length-1 ]
-    }
-    var color = d3.scale.ordinal()
-          .domain(paths)
-          .range(color_array)
-  
-  
   var node = svg.selectAll(".node")
       .data(bubble.nodes(classes(root))
       .filter(function(d) { return !d.children; }))
     .enter().append("g")
       .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
   node.append("title")
       .text(function(d) { txt = d.className.replace(/_slash_/g,"/")
-									    .replace(/_dot_/g,".")
-										.replace(/_dash_/g,"-");
-							return txt; });
-
-  node.append("circle")
-      .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.packageName); });
-
+									                .replace(/_dot_/g,".")
+									               	.replace(/_dash_/g,"-");
+							            return txt; });
+	  
+  node.append("g")
+  .append("path")
+    .attr("d", gear);
+	
   node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
-      
-{{#has_title}}
+	  
+function gear(d) {
+  var n = 80;             // number of teeth
+      r2 = Math.abs(d.r), // middle of tooth
+      r0 = r2 - 5,        // outer radius
+      r1 = r2 + 10,        // height of tooth
+     // r3 = 1,            // inner radius 
+      r3 = Math.abs(d.r)-10,            // inner radius 
+      da = Math.PI / n,
+      a0 = -Math.PI / 2,
+      i = -1,
+      path = ["M", r0 * Math.cos(a0), ",", r0 * Math.sin(a0)];
+  while (++i < n) path.push(
+      "A", r0, ",", r0, " 0 0,1 ", r0 * Math.cos(a0 += da), ",", r0 * Math.sin(a0),
+      "L", r2 * Math.cos(a0), ",", r2 * Math.sin(a0),
+      "L", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+      "A", r1, ",", r1, " 0 0,1 ", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+      "L", r2 * Math.cos(a0 += da / 3), ",", r2 * Math.sin(a0),
+      "L", r0 * Math.cos(a0), ",", r0 * Math.sin(a0));
+  path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
+return path.join(""); }
+
     svg.append("text")
     .attr('x',width/2)
     .attr('y',height/2)
     .attr('pointer-events', 'none')
     .attr('text-anchor','middle')
     .attr('text-decoration','bold')
-    .attr('font-size','{{font_size}}')
-    .attr('font-family','{{font_family}}')
-    .attr('fill','{{title_color}}')
-    .text("{{title}}")
-{{/has_title}}
-      
+    .attr('font-size','60px')
+    .attr('font-family','sans-serif')
+    .attr('fill','rgb(50,150,150)')
+    .text("jackalope")
+
 });
+
+
+d3.timer(function() {
+  var angle = (Date.now() - start) * .014;
+  transform = function(d) { return "translate(" + d.x + "," + d.y + ")"
+                                              + "rotate("+angle+")"; };
+  svg.selectAll(".node").attr("transform", transform);
+});
+
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
