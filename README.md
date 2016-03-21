@@ -10,22 +10,22 @@ In order to get started creating, you must create some Ideogram objects and `gen
 import ideogram 
 
 netwk = ideogram.Ideogram(outdir='chemtrails_network',
-                                           mode='network',
-                                           title='chemtrails_bot',
-                                           font_family='sans-serif',
-                                           font_size='60px',
-                                           title_color='rgb(50,25,60)',
-                                           colorscheme='Spectral',
-                                           bgcolor='rgb(155,45,0)'
-                                           )
+                          mode='network',
+                          title='chemtrails_bot',
+                          font_family='sans-serif',
+                          font_size='60px',
+                          title_color='rgb(50,25,60)',
+                          colorscheme='Spectral',
+                          bgcolor='rgb(155,45,0)'
+                          )
 pack = ideogram.Ideogram(outdir='chemtrails_pack',
-                                         mode='pack',
-                                         colorscheme='Paired',
-                                         bgcolor='rgb(0,0,0)'
-                                         )
+                         mode='pack',
+                         colorscheme='Paired',
+                         bgcolor='rgb(0,0,0)'
+                         )
 ideogram.generate('https://github.com/brmscheiner/chemtrails_bot',network,pack)
 ```
-Ideogram objects are instantiated with up to 8 arguments, most of which control some aspect of the final product.
+Ideogram objects are instantiated with several keyword arguments, which afford some control over the final product.
 
 | Argument    | Usage     | Description                                                                                          |
 |-------------|-----------|------------------------------------------------------------------------------------------------------|
@@ -35,7 +35,7 @@ Ideogram objects are instantiated with up to 8 arguments, most of which control 
 | font_family | optional  | The font-family css attribute for the title.                                                         |
 | font_size   | optional  | The font-size css attribute for the title. '40px', '2.0em', and '200%' are all valid.                |
 | title_color | optional  | The color attribute for the title text, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.            |
-| colorscheme | optional  | The name of the colorbrewer colorscheme you would like to use. Explore the options [here](https://bl.ocks.org/mbostock/5577023).             |
+| colorscheme | optional  | The colorbrewer colorscheme you would like to use. Explore the options [here](https://bl.ocks.org/mbostock/5577023).                        |
 | bgcolor     | optional  | The color attribute for the background, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.            |
 
 After you're done building your Ideogram objects, pass them to the `generate` function along with the path to a local directory that contains some Python source code. 
