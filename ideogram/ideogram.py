@@ -3,7 +3,7 @@ import ideogram.converter as converter
 import ideogram.writer as writer
 import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
-class Chart:
+class Ideogram:
     def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color='rgb(0,0,0)', colorscheme='Spectral', bgcolor='rgb(255,255,255)'):
         self.outdir = os.path.abspath(outdir)
         self.mode = mode
@@ -61,7 +61,7 @@ class Chart:
                 writer.jsonTree(fdefs,calls,csvpath)
                 
     def makeHTML(self,mustachepath,htmlpath):
-        '''Write an html file by applying this chart's attributes to a mustache template. '''
+        '''Write an html file by applying this ideogram's attributes to a mustache template. '''
         subs = dict()
         if self.title:
             subs["title"]=self.title

@@ -29,13 +29,13 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr('width','100%')
     .attr('height','100%')
-    .attr('fill','{{bgcolor}}')
+    .attr('fill','rgb(0,0,0)')
     
 d3.json("hout.json", function(error, root) {
   if (error) throw error;
   if (error) throw error;
 
-  var colorschemes = colorbrewer.{{colorscheme}}
+  var colorschemes = colorbrewer.Paired
   var nschemes = Object.keys(colorschemes).length
   var color_array = colorschemes[ nschemes-1 ]
   var color = d3.scale.ordinal()
@@ -63,18 +63,6 @@ d3.json("hout.json", function(error, root) {
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
       
-{{#has_title}}
-    svg.append("text")
-    .attr('x',width/2)
-    .attr('y',height/2)
-    .attr('pointer-events', 'none')
-    .attr('text-anchor','middle')
-    .attr('text-decoration','bold')
-    .attr('font-size','{{font_size}}')
-    .attr('font-family','{{font_family}}')
-    .attr('fill','{{title_color}}')
-    .text("{{title}}")
-{{/has_title}}
       
 });
 

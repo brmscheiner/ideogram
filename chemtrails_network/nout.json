@@ -1,0 +1,67 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "weight": 30,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_topusers_dot_py_slash_isUntagged",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_topusers_dot_py"
+    },
+    {
+      "id": 1,
+      "weight": 138,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_topusers_dot_py_slash_getTopUser",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_topusers_dot_py"
+    },
+    {
+      "id": 2,
+      "weight": 22,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_topusers_dot_py_slash_updateTaggedList",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_topusers_dot_py"
+    },
+    {
+      "id": 3,
+      "weight": 437,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_chemtrails_bot_dot_py_slash_body",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_chemtrails_bot_dot_py"
+    },
+    {
+      "id": 4,
+      "weight": 52,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_chemtrails_bot_dot_py_slash_twitterSetup",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_chemtrails_bot_dot_py"
+    },
+    {
+      "id": 5,
+      "weight": 49,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_chemtrails_bot_dot_py_slash_buildTweet",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_chemtrails_bot_slash_chemtrails_bot_dash_master_slash_chemtrails_bot_dot_py"
+    }
+  ],
+  "links": [
+    {
+      "value": 1,
+      "target": 4,
+      "source": 3
+    },
+    {
+      "value": 1,
+      "target": 5,
+      "source": 3
+    },
+    {
+      "value": 1,
+      "target": 5,
+      "source": 5
+    },
+    {
+      "value": 1,
+      "target": 0,
+      "source": 1
+    },
+    {
+      "value": 1,
+      "target": 2,
+      "source": 1
+    }
+  ]
+}
