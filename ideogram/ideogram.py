@@ -1,7 +1,7 @@
 import ideogram.reader as reader
 import ideogram.converter as converter
 import ideogram.writer as writer
-import os, sys, shutil, requests, urllib.request, zipfile, pystache
+import os, sys, shutil, requests, zipfile, pystache
 
 class Ideogram:
     def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color='rgb(0,0,0)', colorscheme='Spectral', bgcolor='rgb(255,255,255)'):
@@ -104,7 +104,7 @@ def addProject(gh_link):
     outzip = os.path.join('temp_data',name+'.zip')
     if not os.path.exists('temp_data'):
         os.makedirs('temp_data')
-    urllib.request.urlretrieve(zipurl,outzip)
+    downloadFile(zipurl,outzip)
     zip = zipfile.ZipFile(outzip,mode='r')
     outpath = os.path.join('temp_data',name)
     zip.extractall(outpath)
@@ -122,3 +122,14 @@ def isGithubLink(a):
     except:
         return False
     return True
+
+def downloadFile(url,outfile=None): 
+    ''' Copied from  http://stackoverflow.com/questions/16694907/how-to-download-large-file-in-python-with-requests-py '''
+    if not outfile:
+        outfile = url.split('/')[-1]
+    r = requests.get(url, stream=True)
+    with open(outfile, 'wb') as f:
+        for chunk in r.iter_content(chunk_size=1024): 
+            if chunk: 
+                f.write(chunk)
+    return outfile
