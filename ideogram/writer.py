@@ -1,6 +1,4 @@
-import json
-import os
-import random 
+import json, os, random
 
 def jsPath(path):
     '''Returns a relative path without \, -, and . so that 

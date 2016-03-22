@@ -1,6 +1,9 @@
-import ideogram.reader as reader
-import ideogram.converter as converter
-import ideogram.writer as writer
+from . import reader
+from . import converter
+from . import writer
+# import ideogram.reader as reader
+# import ideogram.converter as converter
+# import ideogram.writer as writer
 import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
 class Ideogram:
@@ -30,31 +33,32 @@ class Ideogram:
         if os.path.isfile(os.path.join(self.outdir, "tout.json")):
             tout = True
         
+        BASE_SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
         htmlpath = os.path.abspath(os.path.join(self.outdir, "index.html"))
-        d3path = os.path.join("ideogram","templates", "d3.js")
-        brewpath = os.path.join("ideogram","templates", "colorbrewer.js")
+        d3path = os.path.join(BASE_SCRIPT_PATH,"templates", "d3.js")
+        brewpath = os.path.join(BASE_SCRIPT_PATH,"templates", "colorbrewer.js")
         shutil.copyfile(d3path, os.path.abspath(os.path.join(self.outdir, "d3.js")))
         shutil.copyfile(brewpath, os.path.abspath(os.path.join(self.outdir, "colorbrewer.js")))
         if self.mode=='network':
-            templatepath=os.path.join("ideogram","templates", "force_layout.mustache")
+            templatepath=os.path.join(BASE_SCRIPT_PATH,"templates", "force_layout.mustache")
             self.makeHTML(templatepath,htmlpath)
             if not nout:
                 csvpath = os.path.join(self.outdir, "nout.json")
                 writer.jsonGraph(fdefs,calls,csvpath)
         if self.mode=='moire':
-            templatepath=os.path.join("ideogram","templates", "moire_layout.mustache")
+            templatepath=os.path.join(BASE_SCRIPT_PATH,"templates", "moire_layout.mustache")
             self.makeHTML(templatepath,htmlpath)
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
         if self.mode=='pack':
-            templatepath=os.path.join("ideogram","templates", "pack_layout.mustache")
+            templatepath=os.path.join(BASE_SCRIPT_PATH,"templates", "pack_layout.mustache")
             self.makeHTML(templatepath,htmlpath)
             if not hout:
                 csvpath = os.path.join(self.outdir, "hout.json")
                 writer.jsonHierarchy(fdefs,calls,csvpath)
         if self.mode=='depth':
-            templatepath=os.path.join("ideogram","templates", "depth_layout.mustache")
+            templatepath=os.path.join(BASE_SCRIPT_PATH,"templates", "depth_layout.mustache")
             self.makeHTML(templatepath,htmlpath)
             if not tout:
                 csvpath = os.path.join(self.outdir, "tout.json")
