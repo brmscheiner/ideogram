@@ -7,6 +7,6 @@ setup(name='ideogram',
          author_email='brmscheiner@gmail.com',
          url='https://github.com/brmscheiner/ideogram',
          packages=['ideogram','ideogram.polarfract'],
-         install_requires=['pystache','requests'],
+         install_requires=['pystache>=0.5.4','requests>=2.9.0'],
          package_data={'ideogram':['ideogram/templates/*.js','ideogram/templates/*.mustache']}
          )
