@@ -6,7 +6,7 @@ import sys
 if __name__=="__main__":
     netwk = ideogram.Ideogram(outdir='chemtrails_network',
                                                mode='network',
-                                               title='chemtrails_bot',
+                                               title='Hi James',
                                                font_family='sans-serif',
                                                font_size='60px',
                                                title_color='rgb(50,25,60)',
@@ -26,5 +26,5 @@ if __name__=="__main__":
                                               mode='depth',
                                               colorscheme='Set3'
                                               )
-    ideogram.generate('https://github.com/brmscheiner/chemtrails_bot',netwk,moire,pack,depth)
+    ideogram.generate('https://github.com/brmscheiner/ideogram',netwk,moire,pack,depth)
     
