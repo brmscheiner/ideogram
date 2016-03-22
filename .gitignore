@@ -1,4 +1,9 @@
 test/**
+build/
+dist/
+*.egg-info
+*.egg
+*.pyc
 
 # Windows image file caches
 Thumbs.db

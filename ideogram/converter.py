@@ -1,7 +1,6 @@
-import ast
-import ideogram.printer as pr
-import ideogram.importAnalysis as ia
-import copy
+from . import printer as pr
+from . import importAnalysis as ia
+import ast, copy
 
 ''' known bugs:
 
