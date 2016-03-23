@@ -6,12 +6,12 @@ import sys
 if __name__=="__main__":
     netwk = ideogram.Ideogram(outdir='chemtrails_network',
                                                mode='network',
-                                               title='Hi James',
+                                               title='Hi Sean',
                                                font_family='sans-serif',
                                                font_size='60px',
-                                               title_color='rgb(50,25,60)',
-                                               colorscheme='Spectral',
-                                               bgcolor='rgb(155,45,0)'
+                                               title_color='random',
+                                               colorscheme='random',
+                                               bgcolor='random'
                                                )
     moire = ideogram.Ideogram(outdir='chemtrails_moire',
                                               mode='moire',

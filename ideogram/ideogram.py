@@ -1,7 +1,8 @@
 from . import reader
 from . import converter
 from . import writer
-import os, sys, shutil, requests, urllib.request, zipfile, pystache
+from . import options_list
+import os, sys, shutil, requests, random, zipfile, pystache
 
 ''' Known bugs:
 Clean tout, hout, nout.json on each run (files aren't getting replaced).
@@ -23,9 +24,19 @@ class Ideogram:
         self.title = title
         self.font_family = font_family
         self.font_size = font_size
-        self.title_color = title_color
-        self.colorscheme = colorscheme
-        self.bgcolor = bgcolor 
+        if title_color.lower() == 'random':
+            self.title_color = random.choice(options_list.colors)
+        else:
+            self.title_color = title_color
+        if colorscheme.lower() == 'random':
+            self.colorscheme = random.choice(options_list.schemes)
+        else:
+            self.colorscheme = colorscheme
+        if bgcolor.lower() == 'random':
+            self.bgcolor = random.choice(options_list.colors)
+        else:
+            self.bgcolor = bgcolor 
+            
         self.makeDir()
 
     def makeDir(self):

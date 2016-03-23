@@ -31,7 +31,7 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr('width','100%')
     .attr('height','100%')
-    .attr('fill','rgb(155,45,0)')
+    .attr('fill','#79CDCD,#528B8B')
                
 var force = d3.layout.force()
     .charge(-90)
@@ -48,7 +48,7 @@ d3.json("nout.json", function(error,graph) {
     force = force.links(graph.links);
     force = force.start();
     
-     var colorschemes = colorbrewer.Spectral
+     var colorschemes = colorbrewer.Blues
      var paths = [];
      for (i=0; i<graph.nodes.length; i++) {
          if (paths.indexOf(graph.nodes[i].path) === -1) {
@@ -105,8 +105,8 @@ d3.json("nout.json", function(error,graph) {
     .attr('text-decoration','bold')
     .attr('font-size','60px')
     .attr('font-family','sans-serif')
-    .attr('fill','rgb(50,25,60)')
-    .text("Hi James")
+    .attr('fill','#90EE90')
+    .text("Hi Sean")
 
 });
 

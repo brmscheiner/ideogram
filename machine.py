@@ -3,41 +3,7 @@ import sys
 import os
 import random 
 
-# For help choosing colorschemes: https://bl.ocks.org/mbostock/5577023
-
 if __name__=="__main__":
-    schemes = ['YlGn',
-                      'YlGnBu',
-                      'GnBu',
-                      'BuGn',
-                      'PuBu',
-                      'BuPu',
-                      'RdPu',
-                      'PuRd',
-                      'OrRd',
-                      'YlOrRd',
-                      'YlOrBr',
-                      'Purples',
-                      'Blues',
-                      'Oranges',
-                      'Reds',
-                      'Greys',
-                      'PuOr',
-                      'BrBG',
-                      'PiYG',
-                      'RdBu',
-                      'RdGy',
-                      'RdYlBu',
-                      'Spectral',
-                      'RdYlGn',
-                      'Accent',
-                      'Dark2',
-                      'Paired',
-                      'Pastel1',
-                      'Pastel2',
-                      'Set1',
-                      'Set2',
-                      'Set3']
     projs = ["https://github.com/pybuilder/pybuilder",
                  "https://github.com/platformio/platformio",
                  "https://github.com/pyinstaller/pyinstaller",
@@ -76,7 +42,7 @@ if __name__=="__main__":
                                                        font_family='sans-serif',
                                                        font_size='60px',
                                                        title_color='rgb(50,25,60)',
-                                                       colorscheme=random.choice(schemes),
+                                                       colorscheme='random',
                                                        bgcolor='rgb(155,45,0)'
                                                        )
             moire = ideogram.Ideogram(outdir=proj+'_moire',
