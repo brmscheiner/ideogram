@@ -5,10 +5,7 @@ from . import options_list
 import os, sys, shutil, requests, random, zipfile, pystache
 
 ''' Known bugs:
-Clean tout, hout, nout.json on each run (files aren't getting replaced).
 Maximum recursion depth exceeded in depth writer .
-Depth layout viewport is too large. 
-Depth layout make objects transparent. 
 Moire effect does not display well for large projects.
 Use tempfiles library 
 

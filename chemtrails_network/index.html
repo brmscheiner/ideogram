@@ -20,7 +20,7 @@
 <script type="text/javascript" src="colorbrewer.js"></script>
 </head>
 <body>
-<p>colorscheme: {{colorscheme}}</p>
+<p>colorscheme: YlOrBr</p>
 <script>
 var width = 800;
 var height = 500;
@@ -32,7 +32,7 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr('width','100%')
     .attr('height','100%')
-    .attr('fill','{{bgcolor}}')
+    .attr('fill','#8B5F65')
                
 var force = d3.layout.force()
     .charge(-90)
@@ -49,7 +49,7 @@ d3.json("nout.json", function(error,graph) {
     force = force.links(graph.links);
     force = force.start();
     
-     var colorschemes = colorbrewer.{{colorscheme}}
+     var colorschemes = colorbrewer.YlOrBr
      var paths = [];
      for (i=0; i<graph.nodes.length; i++) {
          if (paths.indexOf(graph.nodes[i].path) === -1) {
@@ -98,18 +98,16 @@ d3.json("nout.json", function(error,graph) {
           .attr("cy", function(d) { return d.y; });
     });
     
-{{#has_title}}
     svg.append("text")
     .attr('x',width/2)
     .attr('y',height/2)
     .attr('pointer-events', 'none')
     .attr('text-anchor','middle')
     .attr('text-decoration','bold')
-    .attr('font-size','{{font_size}}')
-    .attr('font-family','{{font_family}}')
-    .attr('fill','{{title_color}}')
-    .text("{{title}}")
-{{/has_title}}
+    .attr('font-size','60px')
+    .attr('font-family','sans-serif')
+    .attr('fill','#008080')
+    .text("Hi Sean")
 
 });
 

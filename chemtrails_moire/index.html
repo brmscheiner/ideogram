@@ -8,7 +8,7 @@ text {
 
 </style>
 <body>
-<p>colorscheme: {{colorscheme}}</p>
+<p>colorscheme: Purples</p>
 <script type="text/javascript" src="d3.js"></script>
 <script type="text/javascript" src="colorbrewer.js"></script>
 <script>
@@ -30,7 +30,7 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr('width','100%')
     .attr('height','100%')
-    .attr('fill','{{bgcolor}}')
+    .attr('fill','rgb(255,255,255)')
 
 d3.json("hout.json", function(error, root) {
   if (error) throw error;
@@ -78,18 +78,6 @@ d3.json("hout.json", function(error, root) {
       path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
     return path.join(""); }
 
-    {{#has_title}}
-        svg.append("text")
-        .attr('x',width/2)
-        .attr('y',height/2)
-        .attr('pointer-events', 'none')
-        .attr('text-anchor','middle')
-        .attr('text-decoration','bold')
-        .attr('font-size','{{font_size}}')
-        .attr('font-family','{{font_family}}')
-        .attr('fill','{{title_color}}')
-        .text("{{title}}")
-    {{/has_title}}
 
 });
 
