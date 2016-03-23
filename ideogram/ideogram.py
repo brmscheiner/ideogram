@@ -5,9 +5,10 @@ import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
 ''' Known bugs:
 Clean tout, hout, nout.json on each run (files aren't getting replaced).
-Maximum recursion depth exceeded in depth layout .
+Maximum recursion depth exceeded in depth writer .
 Depth layout viewport is too large. 
 Moire effect does not display well for large projects.
+Use tempfiles library 
 '''
 
 

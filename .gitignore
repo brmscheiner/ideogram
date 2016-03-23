@@ -4,6 +4,8 @@ dist/
 *.egg-info
 *.egg
 *.pyc
+reference/**
+__pycache__
 
 # Windows image file caches
 Thumbs.db
