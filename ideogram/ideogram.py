@@ -37,8 +37,18 @@ class Ideogram:
         else:
             self.bgcolor = bgcolor 
             
+        self.cleanDir()
         self.makeDir()
 
+    def cleanDir(self):
+        ''' Remove existing json datafiles in the target directory. '''
+        if os.path.isdir(self.outdir):
+            baddies = ['tout.json','nout.json','hout.json']
+            for file in baddies:
+                filepath = os.path.join(self.outdir,file)
+                if os.path.isfile(filepath):
+                    os.remove(filepath)
+        
     def makeDir(self):
         if not os.path.isdir(self.outdir):
             os.mkdir(self.outdir)
