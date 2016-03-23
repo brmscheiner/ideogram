@@ -3,6 +3,14 @@ from . import converter
 from . import writer
 import os, sys, shutil, requests, urllib.request, zipfile, pystache
 
+''' Known bugs:
+Clean tout, hout, nout.json on each run (files aren't getting replaced).
+Maximum recursion depth exceeded in depth layout .
+Depth layout viewport is too large. 
+Moire effect does not display well for large projects.
+'''
+
+
 class Ideogram:
     def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color='rgb(0,0,0)', colorscheme='Spectral', bgcolor='rgb(255,255,255)'):
         self.outdir = os.path.abspath(outdir)

@@ -1,7 +1,5 @@
 from setuptools import setup,find_packages
 
-# bug: clean tout, hout, nout.json on each run
-
 setup(name='ideogram',
          version='0.1',
          description="Python developers: Create a visual fingerprint for your project's source code!",
