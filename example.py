@@ -26,5 +26,5 @@ if __name__=="__main__":
                                               mode='depth',
                                               colorscheme='Set3'
                                               )
-    ideogram.generate('https://github.com/brmscheiner/ideogram',netwk,moire,pack,depth)
+    ideogram.generate('reference/test/self',netwk,moire,pack,depth)
     

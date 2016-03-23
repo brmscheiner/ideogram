@@ -7,8 +7,12 @@ import os, sys, shutil, requests, urllib.request, zipfile, pystache
 Clean tout, hout, nout.json on each run (files aren't getting replaced).
 Maximum recursion depth exceeded in depth writer .
 Depth layout viewport is too large. 
+Depth layout make objects transparent. 
 Moire effect does not display well for large projects.
 Use tempfiles library 
+
+os.path.isdir(path_or_github) is FALSE for
+ideogram.generate('ideogram\reference\test\self',netwk,moire,pack,depth)
 '''
 
 
@@ -98,6 +102,7 @@ def generate(path_or_github,*args):
         else:
             print('Cannot make a generator with input '+path_or_github)
             print('Please provide the path to a project directory or a github link.')
+            print('Argument supplied: '+path_or_github)
             raise(ValueError)
         ASTs = reader.fetch(path)
         fdefs,calls = converter.convert(ASTs,path)

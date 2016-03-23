@@ -3,7 +3,7 @@
 <style>
 
 circle {
-  fill-opacity: .6;
+  fill-opacity: .25;
   stroke-width: 0px;
 }
 
@@ -40,7 +40,7 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr('width','100%')
     .attr('height','100%')
-    .attr('fill','{{bgcolor}}')
+    .attr('fill','rgb(255,255,255)')
 
 var paths= []
 
@@ -64,7 +64,7 @@ function getPaths(obj) {
 d3.json("tout.json", function(error, root) {
   if (error) throw error;
     getPaths(root)
-    var colorschemes = colorbrewer.{{colorscheme}}
+    var colorschemes = colorbrewer.Set3
     var nschemes = Object.keys(colorschemes).length
     if ( paths.length < Object.keys(colorschemes)[0] ) {
         color_array = colorschemes[ Object.keys(colorschemes)[0] ]
@@ -94,18 +94,6 @@ d3.json("tout.json", function(error, root) {
 										.replace(/_dash_/g,"-");
 							return txt; });
       
-{{#has_title}}
-    svg.append("text")
-    .attr('x',width/2)
-    .attr('y',height/2)
-    .attr('pointer-events', 'none')
-    .attr('text-anchor','middle')
-    .attr('text-decoration','bold')
-    .attr('font-size','{{font_size}}')
-    .attr('font-family','{{font_family}}')
-    .attr('fill','{{title_color}}')
-    .text("{{title}}")
-{{/has_title}}
 });
 
 d3.select(self.frameElement).style("height", diameter + "px");

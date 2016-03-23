@@ -1,0 +1,352 @@
+{
+  "links": [
+    {
+      "value": 1,
+      "source": 17,
+      "target": 14
+    },
+    {
+      "value": 1,
+      "source": 17,
+      "target": 18
+    },
+    {
+      "value": 1,
+      "source": 17,
+      "target": 21
+    },
+    {
+      "value": 1,
+      "source": 12,
+      "target": 13
+    },
+    {
+      "value": 1,
+      "source": 16,
+      "target": 15
+    },
+    {
+      "value": 1,
+      "source": 16,
+      "target": 13
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 12
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 16
+    },
+    {
+      "value": 1,
+      "source": 11,
+      "target": 21
+    },
+    {
+      "value": 1,
+      "source": 20,
+      "target": 19
+    },
+    {
+      "value": 1,
+      "source": 20,
+      "target": 11
+    },
+    {
+      "value": 1,
+      "source": 20,
+      "target": 17
+    },
+    {
+      "value": 1,
+      "source": 1,
+      "target": 2
+    },
+    {
+      "value": 1,
+      "source": 0,
+      "target": 2
+    },
+    {
+      "value": 3,
+      "source": 9,
+      "target": 7
+    },
+    {
+      "value": 3,
+      "source": 10,
+      "target": 7
+    },
+    {
+      "value": 1,
+      "source": 10,
+      "target": 9
+    },
+    {
+      "value": 1,
+      "source": 10,
+      "target": 8
+    },
+    {
+      "value": 1,
+      "source": 3,
+      "target": 4
+    },
+    {
+      "value": 1,
+      "source": 6,
+      "target": 3
+    },
+    {
+      "value": 1,
+      "source": 6,
+      "target": 20
+    },
+    {
+      "value": 1,
+      "source": 6,
+      "target": 27
+    },
+    {
+      "value": 1,
+      "source": 6,
+      "target": 26
+    },
+    {
+      "value": 1,
+      "source": 5,
+      "target": 6
+    },
+    {
+      "value": 1,
+      "source": 27,
+      "target": 30
+    },
+    {
+      "value": 1,
+      "source": 27,
+      "target": 29
+    },
+    {
+      "value": 1,
+      "source": 30,
+      "target": 24
+    },
+    {
+      "value": 1,
+      "source": 30,
+      "target": 28
+    },
+    {
+      "value": 1,
+      "source": 30,
+      "target": 22
+    },
+    {
+      "value": 1,
+      "source": 26,
+      "target": 25
+    },
+    {
+      "value": 1,
+      "source": 26,
+      "target": 23
+    },
+    {
+      "value": 1,
+      "source": 26,
+      "target": 22
+    }
+  ],
+  "nodes": [
+    {
+      "weight": 53,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getImportModule",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py",
+      "id": 0
+    },
+    {
+      "weight": 32,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getImportFromModule",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py",
+      "id": 1
+    },
+    {
+      "weight": 100,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getModulePath",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py",
+      "id": 2
+    },
+    {
+      "weight": 85,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py_slash_fetch",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py",
+      "id": 3
+    },
+    {
+      "weight": 81,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py_slash_getAST",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py",
+      "id": 4
+    },
+    {
+      "weight": 87,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_scrapeSource_dot_py_slash_body",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_scrapeSource_dot_py",
+      "id": 5
+    },
+    {
+      "weight": 48,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_scrapeSource_dot_py_slash_genGraphData",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_scrapeSource_dot_py",
+      "id": 6
+    },
+    {
+      "weight": 69,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_limitChars",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py",
+      "id": 7
+    },
+    {
+      "weight": 12,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_getClassString",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py",
+      "id": 8
+    },
+    {
+      "weight": 72,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_getPrettyPath",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py",
+      "id": 9
+    },
+    {
+      "weight": 94,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_printFnDefs",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py",
+      "id": 10
+    },
+    {
+      "weight": 271,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_firstPass",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 11
+    },
+    {
+      "weight": 42,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_formatBodyNode",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 12
+    },
+    {
+      "weight": 69,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_calcFnWeight",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 13
+    },
+    {
+      "weight": 87,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_getSourceFnDef",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 14
+    },
+    {
+      "weight": 22,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_getCurrentClass",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 15
+    },
+    {
+      "weight": 36,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_formatFunctionNode",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 16
+    },
+    {
+      "weight": 115,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_secondPass",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 17
+    },
+    {
+      "weight": 546,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_getTargetFnDef",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 18
+    },
+    {
+      "weight": 262,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_matchImpObjStrs",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 19
+    },
+    {
+      "weight": 80,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_convert",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 20
+    },
+    {
+      "weight": 126,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_traversal",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py",
+      "id": 21
+    },
+    {
+      "weight": 58,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsName",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 22
+    },
+    {
+      "weight": 35,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_getNewKids",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 23
+    },
+    {
+      "weight": 45,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsPath",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 24
+    },
+    {
+      "weight": 63,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_getStartNodes",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 25
+    },
+    {
+      "weight": 233,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsonHierarchy",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 26
+    },
+    {
+      "weight": 224,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsonGraph",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 27
+    },
+    {
+      "weight": 73,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_assignID",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 28
+    },
+    {
+      "weight": 32,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_isInCalls",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 29
+    },
+    {
+      "weight": 98,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_getTaggedNode",
+      "path": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py",
+      "id": 30
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "name": "data",
+  "children": [
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_limitChars",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_getPrettyPath",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+          "depth": 7,
+          "size": 72
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_printFnDefs",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_getClassString",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+              "depth": 12,
+              "size": 12
+            }
+          ],
+          "depth": 8
+        }
+      ],
+      "depth": 3
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_scrapeSource_dot_py_slash_genGraphData",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\scrapeSource.py",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_scrapeSource_dot_py_slash_body",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\scrapeSource.py",
+          "depth": 8,
+          "size": 87
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_firstPass",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_formatBodyNode",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_calcFnWeight",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+              "depth": 13,
+              "size": 69
+            }
+          ],
+          "depth": 9
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_formatFunctionNode",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_getCurrentClass",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+              "depth": 14,
+              "size": 22
+            }
+          ],
+          "depth": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_traversal",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_secondPass",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+              "children": [
+                {
+                  "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_getSourceFnDef",
+                  "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+                  "depth": 19,
+                  "size": 87
+                },
+                {
+                  "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_getTargetFnDef",
+                  "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+                  "depth": 20,
+                  "size": 546
+                }
+              ],
+              "depth": 15
+            }
+          ],
+          "depth": 11
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_convert",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_matchImpObjStrs",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+              "depth": 16,
+              "size": 262
+            }
+          ],
+          "depth": 12
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_getTaggedNode",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsonGraph",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_isInCalls",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+              "depth": 14,
+              "size": 32
+            }
+          ],
+          "depth": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsPath",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+          "depth": 11,
+          "size": 45
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_assignID",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+          "depth": 12,
+          "size": 73
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsName",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+          "children": [
+            {
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_jsonHierarchy",
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+              "children": [
+                {
+                  "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_getStartNodes",
+                  "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+                  "depth": 21,
+                  "size": 63
+                },
+                {
+                  "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_getNewKids",
+                  "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+                  "depth": 22,
+                  "size": 35
+                }
+              ],
+              "depth": 17
+            }
+          ],
+          "depth": 13
+        }
+      ],
+      "depth": 6
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getModulePath",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\importAnalysis.py",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getImportFromModule",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\importAnalysis.py",
+          "depth": 11,
+          "size": 32
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getImportModule",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\importAnalysis.py",
+          "depth": 12,
+          "size": 53
+        }
+      ],
+      "depth": 7
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py_slash_fetch",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\reader.py",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py_slash_getAST",
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\reader.py",
+          "depth": 12,
+          "size": 81
+        }
+      ],
+      "depth": 8
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_body",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\importAnalysis.py",
+      "depth": 9,
+      "size": 244
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_importAnalysis_dot_py_slash_getImportFromObjects",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\importAnalysis.py",
+      "depth": 10,
+      "size": 51
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_reader_dot_py_slash_body",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\reader.py",
+      "depth": 11,
+      "size": 174
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_body",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+      "depth": 12,
+      "size": 399
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_printImpObjs",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+      "depth": 13,
+      "size": 57
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_show",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+      "depth": 14,
+      "size": 13
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_printing_dot_py_slash_printImpFuncStrs",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\printing.py",
+      "depth": 15,
+      "size": 75
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_converter_dot_py_slash_body",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\converter.py",
+      "depth": 16,
+      "size": 1677
+    },
+    {
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_reference_slash_test_slash_self_slash_writer_dot_py_slash_body",
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\reference\\test\\self\\writer.py",
+      "depth": 17,
+      "size": 874
+    }
+  ]
+}
