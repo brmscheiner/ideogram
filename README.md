@@ -29,14 +29,14 @@ Ideogram objects are instantiated with several keyword arguments, which afford s
 
 | Argument    | Usage     | Description                                                                                          |
 |-------------|-----------|------------------------------------------------------------------------------------------------------|
-| outdir      | mandatory | Specify the path to the directory to put the output html, js, and csv files.                         |
-| mode        | mandatory | What kind of Ideogram are you making? The options are 'network', 'moire', 'depth', and 'pack'.       |
-| title       | optional  |                                                                                                      |
-| font_family | optional  | The font-family css attribute for the title.                                                         |
-| font_size   | optional  | The font-size css attribute for the title. '40px', '2.0em', and '200%' are all valid.                |
-| title_color | optional  | The color attribute for the title text, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.            |
-| colorscheme | optional  | The colorbrewer colorscheme you would like to use. Explore the options [here](https://bl.ocks.org/mbostock/5577023).                        |
-| bgcolor     | optional  | The color attribute for the background, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'.            |
+| outdir      | mandatory | Specify the path to the directory to put the output html, js, and csv files                          |
+| mode        | mandatory | What kind of Ideogram are you making? The options are 'network', 'moire', 'depth', and 'pack'        |
+| title       | optional  | A string that will be displayed in the center of your visualization                                  |
+| font_family | optional  | The font-family css attribute for the title                                                          |
+| font_size   | optional  | The font-size css attribute for the title. '40px', '2.0em', and '200%' are all valid                 |
+| title_color | optional  | The color attribute for the title text, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'             |
+| colorscheme | optional  | The colorbrewer colorscheme you would like to use. [Colorbrewer schemes](https://bl.ocks.org/mbostock/5577023)                         |
+| bgcolor     | optional  | The color attribute for the background, such as 'red', 'rgb(0,0,0)' or 'rgba(0,0,0,0.5)'             |
 
 After you're done building your Ideogram objects, pass them to the `generate` function along with the path to a local directory that contains some Python source code. 
 ```python
