@@ -157,6 +157,7 @@ def jsonTree(fdefs,calls,outfile='tout.json'):
         f.write(json.dumps(root, indent=2))
     return root
 
+# DEPRECATED DUE TO STACK OVERFLOW ISSUES
 def tagAttributes(fdef_master_list,node,depth=0):
     '''recursively tag objects with sizes, depths and path names '''
     if type(node)==list:
@@ -175,7 +176,27 @@ def tagAttributes(fdef_master_list,node,depth=0):
             tagAttributes(fdef_master_list,i,depth)
     return node
     
-def noEmptyNests(node):
+def tagAttributes_while(fdef_master_list,root):
+    '''Tag each node under root with the appropriate depth. '''
+    depth = 0
+    current = root
+    untagged_nodes = [root]
+    while untagged_nodes:
+        current = untagged_nodes.pop()
+        for x in fdef_master_list:
+            if jsName(x.path,x.name) == current['name']:
+                current['path'] = x.path
+        if children in current:
+            for child in children:
+                child["depth"] = depth
+                untagged_nodes.append(child)
+        if depth not in current:
+            current["depth"] = depth
+            depth += 1
+    return root 
+    
+# DEPRECATED DUE TO STACK OVERFLOW ISSUES
+def noEmptyNests(node): 
     '''recursively make sure that no dictionaries inside node contain empty children lists '''
     if type(node)==list:
         for i in node:
@@ -186,6 +207,9 @@ def noEmptyNests(node):
         if node["children"] == []:
             node.pop("children")
     return node
+    
+def noEmptyNests_while(node):
+    pass
 
 def graphToForest(nodes, edges):
     root_objs = dict()

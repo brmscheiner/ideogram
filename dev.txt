@@ -1,0 +1,2 @@
+
+Create force layout where like objects repel each other and unlike objects attract. Sequentially label connected nodes "A" and "B" and then you'll be set up for perfect gearing!
