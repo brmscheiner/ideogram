@@ -9,21 +9,21 @@ In order to get started creating, you must create some Ideogram objects and `gen
 ```python
 import ideogram 
 
-netwk = ideogram.Ideogram(outdir='chemtrails_network',
+netwk = ideogram.Ideogram(outdir='network_viz',
                           mode='network',
-                          title='chemtrails_bot',
+                          title='Hola, mundo!',
                           font_family='sans-serif',
                           font_size='60px',
-                          title_color='rgb(50,25,60)',
+                          title_color='rgb(0,0,0)',
                           colorscheme='Spectral',
                           bgcolor='rgb(155,45,0)'
                           )
-pack = ideogram.Ideogram(outdir='chemtrails_pack',
+pack = ideogram.Ideogram(outdir='pack_viz',
                          mode='pack',
-                         colorscheme='Paired',
-                         bgcolor='rgb(0,0,0)'
+                         colorscheme='random',
+                         bgcolor='random'
                          )
-ideogram.generate('https://github.com/brmscheiner/chemtrails_bot',network,pack)
+ideogram.generate('https://github.com/brmscheiner/ideogram',netwk,pack)
 ```
 Ideogram objects are instantiated with several keyword arguments, which afford some control over the final product.
 
@@ -56,4 +56,4 @@ You should see a message like `Serving HTTP on 0.0.0.0 port 8080 ...`, possibly 
 Check out the [Ideogram gallery](http://scheinerbock.com/ideogram.html).
 
 ## Credit
-Many thanks to Drew Garrido, Diwank Tomer, and Oren Shoham for their valuable insight. 
+This is my first Python package! Many thanks to Drew Garrido, James Porter, Diwank Tomer, and Oren Shoham for their help putting it all together. 
