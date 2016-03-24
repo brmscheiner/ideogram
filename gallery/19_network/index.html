@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+<head>
+<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+</style>
+<script type="text/javascript" src="d3.js"></script>
+<script type="text/javascript" src="colorbrewer.js"></script>
+</head>
+<body>
+<p>colorscheme: Purples</p>
+<script>
+var width = 800;
+var height = 500;
+
+var svg = d3.select("body").append("svg")
+                .attr("width",width)
+                .attr("height",height);
+                
+svg.append("rect")
+    .attr('width','100%')
+    .attr('height','100%')
+    .attr('fill','#FFE1FF ')
+               
+var force = d3.layout.force()
+    .charge(-90)
+    .linkDistance(50)
+	.friction(0.73)
+	.chargeDistance(400)
+	.gravity(0.08)
+    .size([width, height]);
+	
+    
+d3.json("nout.json", function(error,graph) {
+    if (error) throw error;
+    force = force.nodes(graph.nodes);
+    force = force.links(graph.links);
+    force = force.start();
+    
+     var colorschemes = colorbrewer.Purples
+     var paths = [];
+     for (i=0; i<graph.nodes.length; i++) {
+         if (paths.indexOf(graph.nodes[i].path) === -1) {
+             paths.push(graph.nodes[i].path)
+         }
+     }
+     var nschemes = Object.keys(colorschemes).length
+     if ( paths.length < Object.keys(colorschemes)[0] ) {
+         color_array = colorschemes[ Object.keys(colorschemes)[0] ]
+     } else if (paths.length > nschemes  ) {
+         color_array = colorschemes[ nschemes-1 ]
+     } else {
+         color_array = colorschemes[ paths.length-1 ]
+     }
+     var color = d3.scale.ordinal()
+           .range(color_array)
+    
+    
+    var link = svg.selectAll(".link")
+        .data(graph.links)
+      .enter().append("line")
+        .attr("class", "link")
+        .style("stroke-width", function(d) { return Math.sqrt(d.value);});
+    
+    var node = svg.selectAll(".node")
+        .data(graph.nodes)
+      .enter().append("circle")
+        .attr("class", "node")
+        .attr("r", function(d) { return 5*Math.sqrt(d.weight); })
+		.style("fill", function(d) { return color(d.path); })
+        .call(force.drag);
+        
+    node.append("title")
+        .text(function(d) { txt = d.name.replace(/_slash_/g,"/")
+									    .replace(/_dot_/g,".")
+										.replace(/_dash_/g,"-");
+							return txt; });
+    
+    force.on("tick", function() {
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+    
+      node.attr("cx", function(d) { return d.x; })
+          .attr("cy", function(d) { return d.y; });
+    });
+    
+
+});
+
+</script>
+</body>
+</html>
+

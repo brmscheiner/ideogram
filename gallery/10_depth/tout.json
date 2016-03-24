@@ -1,0 +1,563 @@
+{
+  "name": "data",
+  "children": [
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+      "depth": 3,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_weekdays_with_zeros",
+      "children": [
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 8,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_weekdays_with_negative_numbers",
+          "size": 47
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 9,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_week_addition_equals_weekday_manipulation",
+          "size": 68
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 10,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_weekdays_can_be_manipulated",
+          "size": 78
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 11,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_weekdays_with_larger_number_into_new_year",
+          "size": 43
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 12,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_function_with_datetime",
+          "size": 30
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 13,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_function_with_string",
+          "size": 25
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 14,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_property",
+          "size": 29
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 15,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_utcnow_function",
+          "size": 88
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 16,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_function_with_args",
+          "size": 27
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 17,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_utc_function_with_args",
+          "size": 32
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 18,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_function_takes_a_string",
+          "size": 26
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 19,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_now_function_with_current_date",
+          "size": 90
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 20,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_moment_unix_command",
+          "size": 36
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 21,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_function_with_iterable",
+          "size": 29
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 22,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_moment_can_subtract_another_moment",
+          "size": 35
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 23,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_moment_can_subtract_a_datetime",
+          "size": 31
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 24,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_moment_can_transfer_between_datetime_and_moment",
+          "size": 29
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 25,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_date_function_with_unicode",
+          "size": 25
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 26,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_zero_property",
+          "size": 34
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 27,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_a_datetime_can_subtract_a_moment",
+          "size": 31
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 28,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_chaining_with_format",
+          "size": 51
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 29,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_chaining_with_replace_method",
+          "size": 53
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 30,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_add_with_keywords",
+          "size": 53
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 31,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_properties_after_chaining",
+          "size": 30
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 32,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_simple_chaining_commands",
+          "size": 56
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+          "depth": 33,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_test_subtract_with_keywords",
+          "size": 53
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 4,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_now",
+      "children": [
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 9,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_utc",
+          "size": 45
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 10,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_locale",
+          "size": 77
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 11,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_utcnow",
+          "size": 32
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 12,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_timezone",
+          "size": 53
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 13,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash___str__",
+          "size": 39
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 5,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_seconds",
+      "children": [
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+          "depth": 10,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_update_month",
+          "children": [
+            {
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+              "depth": 15,
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_subtract_month",
+              "size": 27
+            },
+            {
+              "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+              "depth": 16,
+              "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_add_month",
+              "size": 27
+            }
+          ]
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+          "depth": 11,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_replace",
+          "size": 230
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+          "depth": 12,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_add",
+          "size": 282
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+          "depth": 13,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_subtract",
+          "size": 282
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+          "depth": 14,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_epoch",
+          "size": 58
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 6,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash___init__",
+      "children": [
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 11,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_copy",
+          "size": 12
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+          "depth": 12,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_clone",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\parse.py",
+      "depth": 7,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_parse_dot_py_slash_parse_date_and_formula",
+      "children": [
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\parse.py",
+          "depth": 12,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_parse_dot_py_slash__parse_arguments",
+          "size": 65
+        },
+        {
+          "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\parse.py",
+          "depth": 13,
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_parse_dot_py_slash_parse_js_date",
+          "size": 423
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 8,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_format",
+      "size": 23
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\api.py",
+      "depth": 9,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_api_dot_py_slash_date",
+      "size": 12
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\api.py",
+      "depth": 10,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_api_dot_py_slash_utcnow",
+      "size": 10
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\api.py",
+      "depth": 11,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_api_dot_py_slash_now",
+      "size": 10
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\api.py",
+      "depth": 12,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_api_dot_py_slash_unix",
+      "size": 17
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\api.py",
+      "depth": 13,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_api_dot_py_slash_utc",
+      "size": 15
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\tests.py",
+      "depth": 14,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_tests_dot_py_slash_body",
+      "size": 1227
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 15,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_body",
+      "size": 522
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 16,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_done",
+      "size": 9
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 17,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_strftime",
+      "size": 15
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 18,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_diff",
+      "size": 14
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 19,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash_unix",
+      "size": 60
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\core.py",
+      "depth": 20,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_core_dot_py_slash___repr__",
+      "size": 27
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\__init__.py",
+      "depth": 21,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash___init___dot_py_slash_body",
+      "size": 4
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\parse.py",
+      "depth": 22,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_parse_dot_py_slash_body",
+      "size": 639
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\api.py",
+      "depth": 23,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_api_dot_py_slash_body",
+      "size": 73
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\setup.py",
+      "depth": 24,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_setup_dot_py_slash_body",
+      "size": 52
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 25,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_body",
+      "size": 1625
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 26,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___eq__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 27,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___le__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 28,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_minute",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 29,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_weekday",
+      "size": 12
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 30,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_tzinfo",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 31,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___lt__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 32,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_month",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 33,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_date",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 34,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_hour",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 35,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_microsecond",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 36,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___init__",
+      "size": 10
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 37,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_hours",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 38,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_datetime",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 39,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___sub__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 40,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___gt__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 41,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___ne__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 42,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_minutes",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 43,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_microseconds",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 44,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_year",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 45,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_isoformat",
+      "size": 12
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 46,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___ge__",
+      "size": 42
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 47,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_second",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 48,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_day",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 49,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_zero",
+      "size": 23
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 50,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash__weekday",
+      "size": 66
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 51,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash___rsub__",
+      "size": 11
+    },
+    {
+      "path": "C:\\Users\\scheinerbock\\Desktop\\ideogram\\temp_data\\moment\\moment-master\\moment\\date.py",
+      "depth": 52,
+      "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_moment_slash_moment_dash_master_slash_moment_slash_date_dot_py_slash_sub",
+      "size": 22
+    }
+  ]
+}

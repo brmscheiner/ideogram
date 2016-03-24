@@ -1,0 +1,2217 @@
+{
+  "name": "data",
+  "children": [
+    {
+      "name": "Category 0",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_get_locals",
+          "size": 4
+        }
+      ]
+    },
+    {
+      "name": "Category 1",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_prompt",
+          "size": 11
+        }
+      ]
+    },
+    {
+      "name": "Category 2",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_is_buffer_multiline",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 3",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 44
+        }
+      ]
+    },
+    {
+      "name": "Category 4",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash__print",
+          "size": 71
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_data_received",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_data_received",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_data_received",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_data_received",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 5",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_get_completions",
+          "size": 55
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash___init__",
+          "size": 107
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash___init__",
+          "size": 30
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_create_lexer",
+          "size": 51
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_create_completer",
+          "size": 91
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_create_ipython_grammar",
+          "size": 8
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_create_ipython_grammar",
+          "size": 8
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash___init__",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 6",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash___init__",
+          "size": 132
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash_create_eventloop",
+          "size": 8
+        }
+      ]
+    },
+    {
+      "name": "Category 7",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_in_tokens",
+          "size": 29
+        }
+      ]
+    },
+    {
+      "name": "Category 8",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_in2_tokens",
+          "size": 11
+        }
+      ]
+    },
+    {
+      "name": "Category 9",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash___call__",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 10",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_style_dot_py_slash_body",
+          "size": 728
+        }
+      ]
+    },
+    {
+      "name": "Category 11",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_use_code_colorscheme",
+          "size": 31
+        }
+      ]
+    },
+    {
+      "name": "Category 12",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dash_with_dash_custom_dash_prompt_dot_py_slash_body",
+          "size": 131
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dash_with_dash_custom_dash_prompt_dot_py_slash_main",
+          "size": 14
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_embed",
+          "size": 190
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__handle_exception",
+          "size": 154
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash___init__",
+          "size": 67
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__handle_exception",
+          "size": 154
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_coroutine",
+          "size": 17
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__handle_exception",
+          "size": 154
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__lex_python_traceback",
+          "size": 18
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__lex_python_traceback",
+          "size": 18
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__lex_python_traceback",
+          "size": 18
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 615
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash_load_confirm_exit_bindings",
+          "size": 85
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_validator_dot_py_slash___init__",
+          "size": 11
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_style_dot_py_slash_get_all_code_styles",
+          "size": 39
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash_load_python_bindings",
+          "size": 453
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_style_dot_py_slash_get_all_ui_styles",
+          "size": 11
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash___init__",
+          "size": 41
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash_load_sidebar_bindings",
+          "size": 265
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash___call__",
+          "size": 40
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash___call__",
+          "size": 40
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash___call__",
+          "size": 40
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash_at_the_end",
+          "size": 35
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash_auto_newline",
+          "size": 82
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash___call__",
+          "size": 40
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash___call__",
+          "size": 40
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash___call__",
+          "size": 40
+        }
+      ]
+    },
+    {
+      "name": "Category 13",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_extra_condition",
+          "size": 45
+        }
+      ]
+    },
+    {
+      "name": "Category 14",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_f1",
+          "size": 11
+        }
+      ]
+    },
+    {
+      "name": "Category 15",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash___init___dot_py_slash_body",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Category 16",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash_double_quoted_wrapper",
+          "size": 15
+        }
+      ]
+    },
+    {
+      "name": "Category 17",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_in2_tokens",
+          "size": 35
+        }
+      ]
+    },
+    {
+      "name": "Category 18",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 147
+        }
+      ]
+    },
+    {
+      "name": "Category 19",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_add_key_binding",
+          "size": 64
+        }
+      ]
+    },
+    {
+      "name": "Category 20",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash__generate_style",
+          "size": 30
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_style_dot_py_slash_generate_style",
+          "size": 55
+        }
+      ]
+    },
+    {
+      "name": "Category 21",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_in_tokens",
+          "size": 37
+        }
+      ]
+    },
+    {
+      "name": "Category 22",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash___call__",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "name": "Category 23",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_get_globals",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "name": "Category 24",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_on_reset",
+          "size": 20
+        }
+      ]
+    },
+    {
+      "name": "Category 25",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_get_new_document",
+          "size": 116
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash___init__",
+          "size": 27
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash___init__",
+          "size": 27
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash___init__",
+          "size": 27
+        }
+      ]
+    },
+    {
+      "name": "Category 26",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_write",
+          "size": 26
+        }
+      ]
+    },
+    {
+      "name": "Category 27",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash_run_ptipython_dot_py_slash_configure",
+          "size": 33
+        }
+      ]
+    },
+    {
+      "name": "Category 28",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_invalidation_hash",
+          "size": 9
+        }
+      ]
+    },
+    {
+      "name": "Category 29",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_default_buffer_pos_changed",
+          "size": 77
+        }
+      ]
+    },
+    {
+      "name": "Category 30",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__execute",
+          "size": 268
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_compile_with_flags",
+          "size": 22
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__lex_python_result",
+          "size": 18
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_compile_with_flags",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 31",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_continuation_prompt",
+          "size": 14
+        }
+      ]
+    },
+    {
+      "name": "Category 32",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_down",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 33",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_in_tokens",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 34",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_body",
+          "size": 413
+        }
+      ]
+    },
+    {
+      "name": "Category 35",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_selected_option",
+          "size": 41
+        }
+      ]
+    },
+    {
+      "name": "Category 36",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_select_item",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "name": "Category 37",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash_single_quoted_wrapper",
+          "size": 15
+        }
+      ]
+    },
+    {
+      "name": "Category 38",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_toggle_paste_mode",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 39",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 28
+        }
+      ]
+    },
+    {
+      "name": "Category 40",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_goto_next",
+          "size": 27
+        }
+      ]
+    },
+    {
+      "name": "Category 41",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_option_count",
+          "size": 25
+        }
+      ]
+    },
+    {
+      "name": "Category 42",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_validator_dot_py_slash_body",
+          "size": 125
+        }
+      ]
+    },
+    {
+      "name": "Category 43",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_tests_slash_run_tests_dot_py_slash_body",
+          "size": 38
+        }
+      ]
+    },
+    {
+      "name": "Category 44",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash___main___dot_py_slash_body",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash_run_ptpython_dot_py_slash_run",
+          "size": 280
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_run_config",
+          "size": 143
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_enable_deprecation_warnings",
+          "size": 15
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_enter_to_continue",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_enter_to_continue",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 45",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 209
+        }
+      ]
+    },
+    {
+      "name": "Category 46",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash__create_buffer",
+          "size": 113
+        }
+      ]
+    },
+    {
+      "name": "Category 47",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dash_with_dash_custom_dash_prompt_dot_py_slash_in_tokens",
+          "size": 35
+        }
+      ]
+    },
+    {
+      "name": "Category 48",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_shell_requested",
+          "size": 4
+        }
+      ]
+    },
+    {
+      "name": "Category 49",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__create_path_completer_grammar",
+          "size": 73
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__path_completer_grammar",
+          "size": 29
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__path_completer_grammar",
+          "size": 29
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__path_completer_grammar",
+          "size": 29
+        }
+      ]
+    },
+    {
+      "name": "Category 50",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash_run_ptpython_dot_py_slash_configure",
+          "size": 33
+        }
+      ]
+    },
+    {
+      "name": "Category 51",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_python_dash_embed_dot_py_slash_body",
+          "size": 136
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_python_dash_embed_dot_py_slash_main",
+          "size": 31
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_python_dash_embed_dot_py_slash_interactive_shell",
+          "size": 31
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_python_dash_embed_dot_py_slash_print_counter",
+          "size": 39
+        }
+      ]
+    },
+    {
+      "name": "Category 52",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_add_binding_decorator",
+          "size": 41
+        }
+      ]
+    },
+    {
+      "name": "Category 53",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_out_tokens",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 54",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash__on_input_timeout",
+          "size": 227
+        }
+      ]
+    },
+    {
+      "name": "Category 55",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_setup_dot_py_slash_body",
+          "size": 73
+        }
+      ]
+    },
+    {
+      "name": "Category 56",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash__globals",
+          "size": 21
+        }
+      ]
+    },
+    {
+      "name": "Category 57",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_body",
+          "size": 1158
+        }
+      ]
+    },
+    {
+      "name": "Category 58",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_body",
+          "size": 2588
+        }
+      ]
+    },
+    {
+      "name": "Category 59",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_activate_previous",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "name": "Category 60",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_terminal_size_changed",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 61",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_install_ui_colorscheme",
+          "size": 36
+        }
+      ]
+    },
+    {
+      "name": "Category 62",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "name": "Category 63",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_out_tokens",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "name": "Category 64",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__get_bottom_toolbar_tokens",
+          "size": 149
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_inputmode_tokens",
+          "size": 268
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__toggle_help",
+          "size": 27
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__select_other_window",
+          "size": 38
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append",
+          "size": 203
+        }
+      ]
+    },
+    {
+      "name": "Category 65",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_enter_history",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "name": "Category 66",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_install_code_colorscheme",
+          "size": 36
+        }
+      ]
+    },
+    {
+      "name": "Category 67",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_create_application",
+          "size": 142
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_create_layout",
+          "size": 561
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash___init__",
+          "size": 77
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_show_sidebar_button_info",
+          "size": 184
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_status_bar",
+          "size": 299
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_show_completions_toolbar",
+          "size": 19
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_python_sidebar_help",
+          "size": 119
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_show_completions_menu",
+          "size": 19
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_show_multi_column_completions_menu",
+          "size": 19
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_signature_toolbar",
+          "size": 259
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_exit_confirmation",
+          "size": 84
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_meta_enter_message",
+          "size": 101
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_create_python_input_window",
+          "size": 206
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_python_sidebar",
+          "size": 406
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_python_sidebar_navigation",
+          "size": 143
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_prompt_style",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_prompt_style",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_move_cursor_up",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_current_description",
+          "size": 42
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_append_category",
+          "size": 33
+        }
+      ]
+    },
+    {
+      "name": "Category 68",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__complete_python_while_typing",
+          "size": 29
+        }
+      ]
+    },
+    {
+      "name": "Category 69",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash___call__",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "name": "Category 70",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 201
+        }
+      ]
+    },
+    {
+      "name": "Category 71",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 50
+        }
+      ]
+    },
+    {
+      "name": "Category 72",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_create_margin",
+          "size": 158
+        }
+      ]
+    },
+    {
+      "name": "Category 73",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_use_ui_colorscheme",
+          "size": 31
+        }
+      ]
+    },
+    {
+      "name": "Category 74",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dash_with_dash_custom_dash_prompt_dot_py_slash_configure",
+          "size": 95
+        }
+      ]
+    },
+    {
+      "name": "Category 75",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 49
+        }
+      ]
+    },
+    {
+      "name": "Category 76",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 21
+        }
+      ]
+    },
+    {
+      "name": "Category 77",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_handle_if_mouse_down",
+          "size": 25
+        }
+      ]
+    },
+    {
+      "name": "Category 78",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash___call__",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 79",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash___call__",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 80",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash_begin_auth",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "name": "Category 81",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 82",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__complete_path_while_typing",
+          "size": 29
+        }
+      ]
+    },
+    {
+      "name": "Category 83",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_tab",
+          "size": 11
+        }
+      ]
+    },
+    {
+      "name": "Category 84",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__get_top_toolbar_tokens",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 85",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_toggle_vi_mode",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 86",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enter_history",
+          "size": 84
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_create_history_application",
+          "size": 315
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_create_layout",
+          "size": 261
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_create_key_bindings",
+          "size": 555
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash___init__",
+          "size": 157
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_create_popup_window",
+          "size": 287
+        }
+      ]
+    },
+    {
+      "name": "Category 87",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash_run_ptpython_dot_py_slash_body",
+          "size": 308
+        }
+      ]
+    },
+    {
+      "name": "Category 88",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 5
+        }
+      ]
+    },
+    {
+      "name": "Category 89",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 52
+        }
+      ]
+    },
+    {
+      "name": "Category 90",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_body",
+          "size": 221
+        }
+      ]
+    },
+    {
+      "name": "Category 91",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_connection_made",
+          "size": 50
+        }
+      ]
+    },
+    {
+      "name": "Category 92",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_get_values",
+          "size": 29
+        }
+      ]
+    },
+    {
+      "name": "Category 93",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_get_compiler_flags",
+          "size": 40
+        }
+      ]
+    },
+    {
+      "name": "Category 94",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 95",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_get_completions",
+          "size": 73
+        }
+      ]
+    },
+    {
+      "name": "Category 96",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash_body",
+          "size": 430
+        }
+      ]
+    },
+    {
+      "name": "Category 97",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 20
+        }
+      ]
+    },
+    {
+      "name": "Category 98",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 308
+        }
+      ]
+    },
+    {
+      "name": "Category 99",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_key_bindings_registry",
+          "size": 11
+        }
+      ]
+    },
+    {
+      "name": "Category 100",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_body",
+          "size": 2577
+        }
+      ]
+    },
+    {
+      "name": "Category 101",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_input_dot_py_slash_body",
+          "size": 60
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_input_dot_py_slash_main",
+          "size": 41
+        }
+      ]
+    },
+    {
+      "name": "Category 102",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_create_margin",
+          "size": 157
+        }
+      ]
+    },
+    {
+      "name": "Category 103",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dot_py_slash_body",
+          "size": 30
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dot_py_slash_main",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "name": "Category 104",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_out_tokens",
+          "size": 42
+        }
+      ]
+    },
+    {
+      "name": "Category 105",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_if_mousedown",
+          "size": 33
+        }
+      ]
+    },
+    {
+      "name": "Category 106",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_done",
+          "size": 38
+        }
+      ]
+    },
+    {
+      "name": "Category 107",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_menu_position",
+          "size": 67
+        }
+      ]
+    },
+    {
+      "name": "Category 108",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_flush",
+          "size": 3
+        }
+      ]
+    },
+    {
+      "name": "Category 109",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 110",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash_unwrapper",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "name": "Category 111",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_in2_tokens",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 112",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_get_width",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "name": "Category 113",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash_body",
+          "size": 148
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash___init__",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash_main",
+          "size": 73
+        }
+      ]
+    },
+    {
+      "name": "Category 114",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__handle_keyboard_interrupt",
+          "size": 26
+        }
+      ]
+    },
+    {
+      "name": "Category 115",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash_get_completions",
+          "size": 154
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_get_jedi_script_from_document",
+          "size": 59
+        }
+      ]
+    },
+    {
+      "name": "Category 116",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_in2_tokens",
+          "size": 19
+        }
+      ]
+    },
+    {
+      "name": "Category 117",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_update_default_buffer",
+          "size": 32
+        }
+      ]
+    },
+    {
+      "name": "Category 118",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_activate_next",
+          "size": 86
+        }
+      ]
+    },
+    {
+      "name": "Category 119",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash___init___dot_py_slash_body",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Category 120",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_toggle_sidebar",
+          "size": 18
+        }
+      ]
+    },
+    {
+      "name": "Category 121",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash___init___dot_py_slash_body",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Category 122",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_prompt_style_dot_py_slash_in_tokens",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "name": "Category 123",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_validate",
+          "size": 34
+        }
+      ]
+    },
+    {
+      "name": "Category 124",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash___init__",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 125",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "name": "Category 126",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_body",
+          "size": 378
+        }
+      ]
+    },
+    {
+      "name": "Category 127",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_values",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 128",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_filters_dot_py_slash_body",
+          "size": 92
+        }
+      ]
+    },
+    {
+      "name": "Category 129",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash_done",
+          "size": 10
+        }
+      ]
+    },
+    {
+      "name": "Category 130",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_ptpython_config_slash_config_dot_py_slash_configure",
+          "size": 219
+        }
+      ]
+    },
+    {
+      "name": "Category 131",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_get_width",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "name": "Category 132",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash__create_options",
+          "size": 625
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_disable",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 36
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 36
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_disable",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_disable",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_disable",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_disable",
+          "size": 13
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 36
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_simple_option",
+          "size": 83
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash___init__",
+          "size": 66
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_enable",
+          "size": 16
+        }
+      ]
+    },
+    {
+      "name": "Category 133",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash_done",
+          "size": 14
+        }
+      ]
+    },
+    {
+      "name": "Category 134",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash_create_server",
+          "size": 9
+        }
+      ]
+    },
+    {
+      "name": "Category 135",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__process_document",
+          "size": 107
+        }
+      ]
+    },
+    {
+      "name": "Category 136",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_raw_input",
+          "size": 48
+        }
+      ]
+    },
+    {
+      "name": "Category 137",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash_run_ptipython_dot_py_slash_body",
+          "size": 364
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_entry_points_slash_run_ptipython_dot_py_slash_run",
+          "size": 340
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_embed",
+          "size": 102
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_initialize_extensions",
+          "size": 64
+        }
+      ]
+    },
+    {
+      "name": "Category 138",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash_body",
+          "size": 961
+        }
+      ]
+    },
+    {
+      "name": "Category 139",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_run",
+          "size": 175
+        }
+      ]
+    },
+    {
+      "name": "Category 140",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 141",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 36
+        }
+      ]
+    },
+    {
+      "name": "Category 142",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash__get_size",
+          "size": 48
+        }
+      ]
+    },
+    {
+      "name": "Category 143",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 41
+        }
+      ]
+    },
+    {
+      "name": "Category 144",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_body",
+          "size": 2675
+        }
+      ]
+    },
+    {
+      "name": "Category 145",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_ptpython_config_slash_config_dot_py_slash__",
+          "size": 43
+        }
+      ]
+    },
+    {
+      "name": "Category 146",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 19
+        }
+      ]
+    },
+    {
+      "name": "Category 147",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_body",
+          "size": 1012
+        }
+      ]
+    },
+    {
+      "name": "Category 148",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 21
+        }
+      ]
+    },
+    {
+      "name": "Category 149",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 22
+        }
+      ]
+    },
+    {
+      "name": "Category 150",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 90
+        }
+      ]
+    },
+    {
+      "name": "Category 151",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_python_input_dot_py_slash_get_current_value",
+          "size": 17
+        }
+      ]
+    },
+    {
+      "name": "Category 152",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_python_dash_embed_dash_with_dash_custom_dash_prompt_dot_py_slash_out_tokens",
+          "size": 35
+        }
+      ]
+    },
+    {
+      "name": "Category 153",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_apply_transformation",
+          "size": 69
+        }
+      ]
+    },
+    {
+      "name": "Category 154",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 60
+        }
+      ]
+    },
+    {
+      "name": "Category 155",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 34
+        }
+      ]
+    },
+    {
+      "name": "Category 156",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash__",
+          "size": 52
+        }
+      ]
+    },
+    {
+      "name": "Category 157",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash__inputhook",
+          "size": 25
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash__inputhook_tk",
+          "size": 139
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash_wait_using_polling",
+          "size": 35
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash_wait_using_filehandler",
+          "size": 66
+        }
+      ]
+    },
+    {
+      "name": "Category 158",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_history_browser_dot_py_slash_history_buffer_pos_changed",
+          "size": 72
+        }
+      ]
+    },
+    {
+      "name": "Category 159",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_ipython_dot_py_slash_out_tokens",
+          "size": 29
+        }
+      ]
+    },
+    {
+      "name": "Category 160",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash_get_globals",
+          "size": 4
+        }
+      ]
+    },
+    {
+      "name": "Category 161",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 12
+        }
+      ]
+    },
+    {
+      "name": "Category 162",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_repl_dot_py_slash__on_start",
+          "size": 90
+        }
+      ]
+    },
+    {
+      "name": "Category 163",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 49
+        }
+      ]
+    },
+    {
+      "name": "Category 164",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_ptpython_config_slash_config_dot_py_slash_body",
+          "size": 254
+        }
+      ]
+    },
+    {
+      "name": "Category 165",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_layout_dot_py_slash_get_tokens",
+          "size": 193
+        }
+      ]
+    },
+    {
+      "name": "Category 166",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_eventloop_dot_py_slash_body",
+          "size": 189
+        }
+      ]
+    },
+    {
+      "name": "Category 167",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_asyncio_dash_ssh_dash_python_dash_embed_dot_py_slash_session_requested",
+          "size": 10
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_contrib_slash_asyncssh_repl_dot_py_slash___init__",
+          "size": 168
+        }
+      ]
+    },
+    {
+      "name": "Category 168",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_examples_slash_ptpython_config_slash_config_dot_py_slash__",
+          "size": 24
+        }
+      ]
+    },
+    {
+      "name": "Category 169",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_completer_dot_py_slash__path_completer",
+          "size": 42
+        }
+      ]
+    },
+    {
+      "name": "Category 170",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_key_bindings_dot_py_slash__",
+          "size": 38
+        }
+      ]
+    },
+    {
+      "name": "Category 171",
+      "children": [
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_document_is_multiline_python",
+          "size": 138
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_ends_in_multiline_string",
+          "size": 52
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_line_ends_with_colon",
+          "size": 18
+        },
+        {
+          "name": "C:_slash_Users_slash_scheinerbock_slash_Desktop_slash_ideogram_slash_temp_data_slash_ptpython_slash_ptpython_dash_master_slash_ptpython_slash_utils_dot_py_slash_has_unclosed_brackets",
+          "size": 119
+        }
+      ]
+    }
+  ]
+}
