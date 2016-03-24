@@ -4,16 +4,6 @@ from . import writer
 from . import options_list
 import os, sys, shutil, requests, random, zipfile, pystache
 
-''' Known bugs:
-Maximum recursion depth exceeded in depth writer .
-Moire effect does not display well for large projects.
-Use tempfiles library 
-
-os.path.isdir(path_or_github) is FALSE for
-ideogram.generate('ideogram\reference\test\self',netwk,moire,pack,depth)
-'''
-
-
 class Ideogram:
     def __init__(self, outdir, mode, title='', font_family='sans-serif', font_size='16px', title_color='rgb(0,0,0)', colorscheme='Spectral', bgcolor='rgb(255,255,255)'):
         self.outdir = os.path.abspath(outdir)

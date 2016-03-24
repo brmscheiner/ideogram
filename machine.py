@@ -1,7 +1,4 @@
 import ideogram.ideogram as ideogram
-import sys 
-import os
-import random 
 
 if __name__=="__main__":
     projs = ["https://github.com/pybuilder/pybuilder",
@@ -9,7 +6,7 @@ if __name__=="__main__":
                  "https://github.com/pyinstaller/pyinstaller",
                  "https://github.com/mvantellingen/localshop",
                  "https://github.com/pypa/warehouse",
-                 "https://github.com/conda/conda/",
+                 "https://github.com/conda/conda",
                  "https://github.com/nvie/pip-tools",
                  "https://github.com/dirn/When.py",
                  "https://github.com/shnode/PyTime",
@@ -32,35 +29,37 @@ if __name__=="__main__":
                  "https://github.com/euske/pdfminer",
                  "https://github.com/koenbok/Cactus/",
                  "https://github.com/madisonmay/Tomorrow"]
+    n=0
     for proj in projs:
         failed = []
+        n+=1
+        projname = str(n)
+        print(projname)
         try:
-            projname = os.path.basename(proj)
-            netwk = ideogram.Ideogram(outdir=proj+'_network',
+            netwk = ideogram.Ideogram(outdir=projname+'_network',
                                                        mode='network',
-                                                       title='chemtrails_bot',
-                                                       font_family='sans-serif',
-                                                       font_size='60px',
-                                                       title_color='rgb(50,25,60)',
                                                        colorscheme='random',
-                                                       bgcolor='rgb(155,45,0)'
+                                                       bgcolor='random'
                                                        )
-            moire = ideogram.Ideogram(outdir=proj+'_moire',
+            moire = ideogram.Ideogram(outdir=projname+'_moire',
                                                       mode='moire',
-                                                      colorscheme=random.choice(schemes)
+                                                      colorscheme='random',
+                                                      bgcolor='random'
                                                       )
-            pack = ideogram.Ideogram(outdir=proj+'_pack',
+            pack = ideogram.Ideogram(outdir=projname+'_pack',
                                                      mode='pack',
-                                                     colorscheme=random.choice(schemes),
-                                                     bgcolor='rgb(0,0,0)'
+                                                     colorscheme='random',
+                                                     bgcolor='random'
                                                      )
-            depth = ideogram.Ideogram(outdir=proj+'_depth',
+            depth = ideogram.Ideogram(outdir=projname+'_depth',
                                                       mode='depth',
-                                                      colorscheme=random.choice(schemes)
+                                                      colorscheme='random',
+                                                      bgcolor='random'
                                                       )
             ideogram.generate(proj,netwk,moire,pack,depth)
         except:
             failed.append((proj,projname))
+            continue
+            
     print(failed)
     print("finished")
-    

@@ -1,0 +1,18 @@
+
+Known bugs
+
+
+Maximum recursion depth exceeded in depth writer.
+Also this...
+  File "C:\Users\scheinerbock\Desktop\ideogram\ideogram\writer.py", line 186, in noEmptyNests
+    if node["children"] == []:
+KeyError: 'children'
+
+Moire effect does not display well for large projects.
+
+Use tempfiles library 
+
+self.outdir for github files is wrong
+
+os.path.isdir(path_or_github) is FALSE 
+for ideogram.generate('ideogram\reference\test\self',netwk,moire,pack,depth)
