@@ -1,0 +1,15 @@
+body {
+  overflow-x: hidden;
+  padding-top: 40px;
+  font-family: 'Playfair Display'
+}
+
+.forcenode {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}

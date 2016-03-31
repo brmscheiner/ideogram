@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
-
-text {
-  font: 10px sans-serif;
-}
-
-.forcenode {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
-.link {
-  stroke: #999;
-  stroke-opacity: .6;
-}
-
-</style>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100' rel='stylesheet' type='text/css'>
+    <link href="index.css" rel="stylesheet" type="text/css" />
 <body>
 <script type="text/javascript" src="d3.js"></script>
 <script type="text/javascript" src="colorbrewer.js"></script>
@@ -31,11 +19,11 @@ var diameter = 500,
 
 var bubble = d3.layout.pack()
     .sort(null)
-    .size([diameter, diameter])
+    .size([800, diameter])
     .padding(1.5);
 
 var svg = d3.select("#place1").append("svg")
-    .attr("width", diameter)
+    .attr("width", 800)
     .attr("height", diameter)
     .attr("class", "bubble");
     
@@ -90,7 +78,7 @@ function classes(root) {
 
 
     
-d3.json("nout19.json", function(error,graph) {
+d3.json("nout17.json", function(error,graph) {
     if (error) throw error;
     
 
@@ -171,8 +159,15 @@ var force = d3.layout.force()
 });
 
 </script>
-
+<center>
+<div id="description1">
+An automatically generated visualization of <a href="https://github.com/koenbok/Cactus/">Cactus's </a> source code. Each node in this layout represents a Python function, and its size is a function of the number of the number of leaves below it in the abstract syntax tree (think of it as the complexity of the function). Created using D3's <a href="https://github.com/mbostock/d3/wiki/Pack-Layout">pack layout</a>.
+</div>
 <div id="place1"></div>
+<div id="description2">
+A force-directed graph that represents <a href=https://github.com/ahupp/python-magic">python-magic's</a> source code. Nodes have the same meaning as in the above graph, and edges represent function calls. The thickness of an edge is a function of the number of times one function calls another.
+</div>
 <div id="place2"></div>
+</center>
 
 </body>
