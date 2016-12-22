@@ -2,7 +2,7 @@
 Create a visual fingerprint of your Python project's source code!
 
 ## Installation
-This project is currently under development. Soon, Ideogram will be hosted on PyPi.
+It's not ready yet!
 
 ## How to use it 
 In order to get started creating, you must create some Ideogram objects and `generate` them. For example:
@@ -53,7 +53,7 @@ python -m http.server 8080       OR        python -m SimpleHTTPServer 8080
 ```
 You should see a message like `Serving HTTP on 0.0.0.0 port 8080 ...`, possibly followed by some gibberish. All you have to do now is open Chrome or Firefox and navigate to [http://localhost:8080/](http://localhost:8080/). If everything went according to plan, you should see your visualization! For large projects, it could take a minute for the page to load and process the data.
 ## Examples 
-Check out the [Ideogram gallery](http://scheinerbock.com/ideogram.html).
+removed for now
 
 ## Credit
 This is my first Python package! Many thanks to Drew Garrido, James Porter, Diwank Tomer, and Oren Shoham for their help putting it all together. 
